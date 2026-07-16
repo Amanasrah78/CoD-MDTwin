@@ -189,5 +189,3 @@ The software is distributed under the GNU General Public License version 3. See 
 ## Authors
 
 - Ahmed Manasrah
-- Thair Khdour
-- Tariq Alsboui

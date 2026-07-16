@@ -1,0 +1,30 @@
+cff-version: 1.2.0
+message: "If you use CoD-MDTwin, please cite this software release and the associated paper."
+title: "CoD-MDTwin"
+type: software
+version: 1.0.0
+date-released: 2026-07-16
+
+authors:
+  - family-names: "Manasrah"
+    given-names: "Ahmed"
+    affiliation: "Yarmouk University"
+
+abstract: >-
+  CoD-MDTwin is a Chain-of-Delegation authorization framework for
+  cross-domain Industrial Digital Twin agents. The artifact includes
+  an eight-service Docker prototype, experiment scripts, processed
+  evaluation results, and a 14-lemma Tamarin model.
+
+keywords:
+  - "Industrial Digital Twin"
+  - "delegated authorization"
+  - "Chain-of-Delegation"
+  - "verifiable credentials"
+  - "capability-based authorization"
+  - "Tamarin Prover"
+  - "cascading revocation"
+
+license: GPL-3.0-only
+repository-code: "https://github.com/Amanasrah78/CoD-MDTwin"
+url: "https://github.com/Amanasrah78/CoD-MDTwin"

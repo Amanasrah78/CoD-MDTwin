@@ -4,6 +4,9 @@ CoD-MDTwin is a Chain-of-Delegation authorization framework for cross-domain Ind
 
 This repository contains the research prototype, experiment scripts, processed results, and Tamarin model associated with the CoD-MDTwin paper.
 
+**Latest reproducible release:** [CoD-MDTwin v1.0.0](https://github.com/Amanasrah78/CoD-MDTwin/releases/tag/v1.0.0)
+
+
 ## Artifact contents
 
 | Location | Description |
@@ -180,7 +183,12 @@ Do not use the example identities, keys, policies, or deployment configuration i
 
 ## Citation
 
-Citation metadata will be provided through `CITATION.cff` and the archived software release. If you use this artifact before publication of the associated paper, cite the repository release and its version.
+If you use this artifact, cite the versioned software release:
+
+> Ahmed Manasrah. *CoD-MDTwin* (Version 1.0.0).  
+> https://github.com/Amanasrah78/CoD-MDTwin/releases/tag/v1.0.0
+
+Machine-readable citation metadata is provided in `CITATION.cff`.
 
 ## License
 

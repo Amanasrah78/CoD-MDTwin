@@ -1,0 +1,601 @@
+iteration,variant,accepted,latency_ms,reason
+1,cod_validation_only,True,1.10925,valid chain of delegation
+1,cod_validation_plus_capability_realization,True,3.924583,valid chain of delegation
+1,capability_verification_without_holder_proof,True,1.851083,valid capability in no-holder-proof ablation mode
+1,capability_verification_with_holder_proof_no_state,True,6.198084,valid holder-bound capability presentation
+1,full_stateful_holder_bound_capability_verification,True,6.654792,valid holder-bound capability presentation
+1,full_cod_mdtwin_holder_bound_flow,True,22.789292,valid holder-bound capability presentation
+2,cod_validation_only,True,1.070125,valid chain of delegation
+2,cod_validation_plus_capability_realization,True,3.032958,valid chain of delegation
+2,capability_verification_without_holder_proof,True,2.047125,valid capability in no-holder-proof ablation mode
+2,capability_verification_with_holder_proof_no_state,True,5.694334,valid holder-bound capability presentation
+2,full_stateful_holder_bound_capability_verification,True,6.791251,valid holder-bound capability presentation
+2,full_cod_mdtwin_holder_bound_flow,True,22.79325,valid holder-bound capability presentation
+3,cod_validation_only,True,1.075458,valid chain of delegation
+3,cod_validation_plus_capability_realization,True,2.988958,valid chain of delegation
+3,capability_verification_without_holder_proof,True,1.981,valid capability in no-holder-proof ablation mode
+3,capability_verification_with_holder_proof_no_state,True,6.113041,valid holder-bound capability presentation
+3,full_stateful_holder_bound_capability_verification,True,6.305334,valid holder-bound capability presentation
+3,full_cod_mdtwin_holder_bound_flow,True,22.9025,valid holder-bound capability presentation
+4,cod_validation_only,True,1.069333,valid chain of delegation
+4,cod_validation_plus_capability_realization,True,3.172291,valid chain of delegation
+4,capability_verification_without_holder_proof,True,1.944167,valid capability in no-holder-proof ablation mode
+4,capability_verification_with_holder_proof_no_state,True,5.461125,valid holder-bound capability presentation
+4,full_stateful_holder_bound_capability_verification,True,6.779207,valid holder-bound capability presentation
+4,full_cod_mdtwin_holder_bound_flow,True,22.825833,valid holder-bound capability presentation
+5,cod_validation_only,True,1.091833,valid chain of delegation
+5,cod_validation_plus_capability_realization,True,2.969125,valid chain of delegation
+5,capability_verification_without_holder_proof,True,2.154292,valid capability in no-holder-proof ablation mode
+5,capability_verification_with_holder_proof_no_state,True,5.764916,valid holder-bound capability presentation
+5,full_stateful_holder_bound_capability_verification,True,6.777251,valid holder-bound capability presentation
+5,full_cod_mdtwin_holder_bound_flow,True,24.10275,valid holder-bound capability presentation
+6,cod_validation_only,True,1.062084,valid chain of delegation
+6,cod_validation_plus_capability_realization,True,2.86225,valid chain of delegation
+6,capability_verification_without_holder_proof,True,1.730125,valid capability in no-holder-proof ablation mode
+6,capability_verification_with_holder_proof_no_state,True,5.913791,valid holder-bound capability presentation
+6,full_stateful_holder_bound_capability_verification,True,6.878333,valid holder-bound capability presentation
+6,full_cod_mdtwin_holder_bound_flow,True,23.690333,valid holder-bound capability presentation
+7,cod_validation_only,True,1.096166,valid chain of delegation
+7,cod_validation_plus_capability_realization,True,2.910833,valid chain of delegation
+7,capability_verification_without_holder_proof,True,1.821625,valid capability in no-holder-proof ablation mode
+7,capability_verification_with_holder_proof_no_state,True,5.837874,valid holder-bound capability presentation
+7,full_stateful_holder_bound_capability_verification,True,6.494958,valid holder-bound capability presentation
+7,full_cod_mdtwin_holder_bound_flow,True,22.802458,valid holder-bound capability presentation
+8,cod_validation_only,True,1.050292,valid chain of delegation
+8,cod_validation_plus_capability_realization,True,3.004333,valid chain of delegation
+8,capability_verification_without_holder_proof,True,2.023667,valid capability in no-holder-proof ablation mode
+8,capability_verification_with_holder_proof_no_state,True,5.927083,valid holder-bound capability presentation
+8,full_stateful_holder_bound_capability_verification,True,6.759375,valid holder-bound capability presentation
+8,full_cod_mdtwin_holder_bound_flow,True,22.8335,valid holder-bound capability presentation
+9,cod_validation_only,True,1.05025,valid chain of delegation
+9,cod_validation_plus_capability_realization,True,2.884917,valid chain of delegation
+9,capability_verification_without_holder_proof,True,2.024208,valid capability in no-holder-proof ablation mode
+9,capability_verification_with_holder_proof_no_state,True,5.667625,valid holder-bound capability presentation
+9,full_stateful_holder_bound_capability_verification,True,6.80046,valid holder-bound capability presentation
+9,full_cod_mdtwin_holder_bound_flow,True,22.9775,valid holder-bound capability presentation
+10,cod_validation_only,True,1.260625,valid chain of delegation
+10,cod_validation_plus_capability_realization,True,3.588584,valid chain of delegation
+10,capability_verification_without_holder_proof,True,1.961458,valid capability in no-holder-proof ablation mode
+10,capability_verification_with_holder_proof_no_state,True,6.110292,valid holder-bound capability presentation
+10,full_stateful_holder_bound_capability_verification,True,6.455583,valid holder-bound capability presentation
+10,full_cod_mdtwin_holder_bound_flow,True,25.646042,valid holder-bound capability presentation
+11,cod_validation_only,True,1.249334,valid chain of delegation
+11,cod_validation_plus_capability_realization,True,3.826458,valid chain of delegation
+11,capability_verification_without_holder_proof,True,2.053833,valid capability in no-holder-proof ablation mode
+11,capability_verification_with_holder_proof_no_state,True,6.250417,valid holder-bound capability presentation
+11,full_stateful_holder_bound_capability_verification,True,7.197832,valid holder-bound capability presentation
+11,full_cod_mdtwin_holder_bound_flow,True,26.559458,valid holder-bound capability presentation
+12,cod_validation_only,True,1.301166,valid chain of delegation
+12,cod_validation_plus_capability_realization,True,3.889,valid chain of delegation
+12,capability_verification_without_holder_proof,True,2.070084,valid capability in no-holder-proof ablation mode
+12,capability_verification_with_holder_proof_no_state,True,6.883,valid holder-bound capability presentation
+12,full_stateful_holder_bound_capability_verification,True,7.26425,valid holder-bound capability presentation
+12,full_cod_mdtwin_holder_bound_flow,True,26.040458,valid holder-bound capability presentation
+13,cod_validation_only,True,1.453125,valid chain of delegation
+13,cod_validation_plus_capability_realization,True,3.660083,valid chain of delegation
+13,capability_verification_without_holder_proof,True,2.278375,valid capability in no-holder-proof ablation mode
+13,capability_verification_with_holder_proof_no_state,True,7.980041,valid holder-bound capability presentation
+13,full_stateful_holder_bound_capability_verification,True,9.488666,valid holder-bound capability presentation
+13,full_cod_mdtwin_holder_bound_flow,True,27.837791,valid holder-bound capability presentation
+14,cod_validation_only,True,1.355208,valid chain of delegation
+14,cod_validation_plus_capability_realization,True,3.627,valid chain of delegation
+14,capability_verification_without_holder_proof,True,1.860625,valid capability in no-holder-proof ablation mode
+14,capability_verification_with_holder_proof_no_state,True,6.374875,valid holder-bound capability presentation
+14,full_stateful_holder_bound_capability_verification,True,6.937251,valid holder-bound capability presentation
+14,full_cod_mdtwin_holder_bound_flow,True,24.913375,valid holder-bound capability presentation
+15,cod_validation_only,True,1.19875,valid chain of delegation
+15,cod_validation_plus_capability_realization,True,3.211542,valid chain of delegation
+15,capability_verification_without_holder_proof,True,1.983083,valid capability in no-holder-proof ablation mode
+15,capability_verification_with_holder_proof_no_state,True,7.2335,valid holder-bound capability presentation
+15,full_stateful_holder_bound_capability_verification,True,6.783624,valid holder-bound capability presentation
+15,full_cod_mdtwin_holder_bound_flow,True,24.073792,valid holder-bound capability presentation
+16,cod_validation_only,True,1.161791,valid chain of delegation
+16,cod_validation_plus_capability_realization,True,3.719375,valid chain of delegation
+16,capability_verification_without_holder_proof,True,1.862625,valid capability in no-holder-proof ablation mode
+16,capability_verification_with_holder_proof_no_state,True,6.043708,valid holder-bound capability presentation
+16,full_stateful_holder_bound_capability_verification,True,6.840042,valid holder-bound capability presentation
+16,full_cod_mdtwin_holder_bound_flow,True,23.874375,valid holder-bound capability presentation
+17,cod_validation_only,True,1.065166,valid chain of delegation
+17,cod_validation_plus_capability_realization,True,3.04325,valid chain of delegation
+17,capability_verification_without_holder_proof,True,1.845083,valid capability in no-holder-proof ablation mode
+17,capability_verification_with_holder_proof_no_state,True,5.597709,valid holder-bound capability presentation
+17,full_stateful_holder_bound_capability_verification,True,7.254875,valid holder-bound capability presentation
+17,full_cod_mdtwin_holder_bound_flow,True,23.327,valid holder-bound capability presentation
+18,cod_validation_only,True,1.212833,valid chain of delegation
+18,cod_validation_plus_capability_realization,True,3.317958,valid chain of delegation
+18,capability_verification_without_holder_proof,True,1.938958,valid capability in no-holder-proof ablation mode
+18,capability_verification_with_holder_proof_no_state,True,5.789833,valid holder-bound capability presentation
+18,full_stateful_holder_bound_capability_verification,True,7.000042,valid holder-bound capability presentation
+18,full_cod_mdtwin_holder_bound_flow,True,22.936084,valid holder-bound capability presentation
+19,cod_validation_only,True,1.070667,valid chain of delegation
+19,cod_validation_plus_capability_realization,True,3.6155,valid chain of delegation
+19,capability_verification_without_holder_proof,True,1.9855,valid capability in no-holder-proof ablation mode
+19,capability_verification_with_holder_proof_no_state,True,5.489666,valid holder-bound capability presentation
+19,full_stateful_holder_bound_capability_verification,True,7.165167,valid holder-bound capability presentation
+19,full_cod_mdtwin_holder_bound_flow,True,24.928334,valid holder-bound capability presentation
+20,cod_validation_only,True,1.111292,valid chain of delegation
+20,cod_validation_plus_capability_realization,True,3.349417,valid chain of delegation
+20,capability_verification_without_holder_proof,True,1.967375,valid capability in no-holder-proof ablation mode
+20,capability_verification_with_holder_proof_no_state,True,5.972292,valid holder-bound capability presentation
+20,full_stateful_holder_bound_capability_verification,True,7.292043,valid holder-bound capability presentation
+20,full_cod_mdtwin_holder_bound_flow,True,24.144125,valid holder-bound capability presentation
+21,cod_validation_only,True,1.043291,valid chain of delegation
+21,cod_validation_plus_capability_realization,True,3.335541,valid chain of delegation
+21,capability_verification_without_holder_proof,True,2.008875,valid capability in no-holder-proof ablation mode
+21,capability_verification_with_holder_proof_no_state,True,6.096334,valid holder-bound capability presentation
+21,full_stateful_holder_bound_capability_verification,True,7.274334,valid holder-bound capability presentation
+21,full_cod_mdtwin_holder_bound_flow,True,24.2995,valid holder-bound capability presentation
+22,cod_validation_only,True,1.108541,valid chain of delegation
+22,cod_validation_plus_capability_realization,True,3.7215,valid chain of delegation
+22,capability_verification_without_holder_proof,True,1.953166,valid capability in no-holder-proof ablation mode
+22,capability_verification_with_holder_proof_no_state,True,6.151832,valid holder-bound capability presentation
+22,full_stateful_holder_bound_capability_verification,True,7.235333,valid holder-bound capability presentation
+22,full_cod_mdtwin_holder_bound_flow,True,24.798083,valid holder-bound capability presentation
+23,cod_validation_only,True,1.088083,valid chain of delegation
+23,cod_validation_plus_capability_realization,True,3.639458,valid chain of delegation
+23,capability_verification_without_holder_proof,True,1.943125,valid capability in no-holder-proof ablation mode
+23,capability_verification_with_holder_proof_no_state,True,6.147416,valid holder-bound capability presentation
+23,full_stateful_holder_bound_capability_verification,True,7.191417,valid holder-bound capability presentation
+23,full_cod_mdtwin_holder_bound_flow,True,24.90975,valid holder-bound capability presentation
+24,cod_validation_only,True,1.120875,valid chain of delegation
+24,cod_validation_plus_capability_realization,True,3.288292,valid chain of delegation
+24,capability_verification_without_holder_proof,True,2.044167,valid capability in no-holder-proof ablation mode
+24,capability_verification_with_holder_proof_no_state,True,5.993,valid holder-bound capability presentation
+24,full_stateful_holder_bound_capability_verification,True,7.087834,valid holder-bound capability presentation
+24,full_cod_mdtwin_holder_bound_flow,True,24.312625,valid holder-bound capability presentation
+25,cod_validation_only,True,1.051292,valid chain of delegation
+25,cod_validation_plus_capability_realization,True,3.415542,valid chain of delegation
+25,capability_verification_without_holder_proof,True,1.966125,valid capability in no-holder-proof ablation mode
+25,capability_verification_with_holder_proof_no_state,True,5.85604,valid holder-bound capability presentation
+25,full_stateful_holder_bound_capability_verification,True,7.231001,valid holder-bound capability presentation
+25,full_cod_mdtwin_holder_bound_flow,True,24.280833,valid holder-bound capability presentation
+26,cod_validation_only,True,1.099167,valid chain of delegation
+26,cod_validation_plus_capability_realization,True,3.239916,valid chain of delegation
+26,capability_verification_without_holder_proof,True,1.912334,valid capability in no-holder-proof ablation mode
+26,capability_verification_with_holder_proof_no_state,True,6.048709,valid holder-bound capability presentation
+26,full_stateful_holder_bound_capability_verification,True,7.048542,valid holder-bound capability presentation
+26,full_cod_mdtwin_holder_bound_flow,True,23.785166,valid holder-bound capability presentation
+27,cod_validation_only,True,1.101375,valid chain of delegation
+27,cod_validation_plus_capability_realization,True,3.213125,valid chain of delegation
+27,capability_verification_without_holder_proof,True,1.914042,valid capability in no-holder-proof ablation mode
+27,capability_verification_with_holder_proof_no_state,True,5.959875,valid holder-bound capability presentation
+27,full_stateful_holder_bound_capability_verification,True,7.078374,valid holder-bound capability presentation
+27,full_cod_mdtwin_holder_bound_flow,True,24.255708,valid holder-bound capability presentation
+28,cod_validation_only,True,1.043959,valid chain of delegation
+28,cod_validation_plus_capability_realization,True,4.030125,valid chain of delegation
+28,capability_verification_without_holder_proof,True,1.953667,valid capability in no-holder-proof ablation mode
+28,capability_verification_with_holder_proof_no_state,True,5.765375,valid holder-bound capability presentation
+28,full_stateful_holder_bound_capability_verification,True,6.977666,valid holder-bound capability presentation
+28,full_cod_mdtwin_holder_bound_flow,True,24.439625,valid holder-bound capability presentation
+29,cod_validation_only,True,1.112333,valid chain of delegation
+29,cod_validation_plus_capability_realization,True,3.131125,valid chain of delegation
+29,capability_verification_without_holder_proof,True,1.95075,valid capability in no-holder-proof ablation mode
+29,capability_verification_with_holder_proof_no_state,True,5.995083,valid holder-bound capability presentation
+29,full_stateful_holder_bound_capability_verification,True,7.199667,valid holder-bound capability presentation
+29,full_cod_mdtwin_holder_bound_flow,True,24.120541,valid holder-bound capability presentation
+30,cod_validation_only,True,1.052041,valid chain of delegation
+30,cod_validation_plus_capability_realization,True,3.229208,valid chain of delegation
+30,capability_verification_without_holder_proof,True,2.005292,valid capability in no-holder-proof ablation mode
+30,capability_verification_with_holder_proof_no_state,True,6.146624,valid holder-bound capability presentation
+30,full_stateful_holder_bound_capability_verification,True,7.258042,valid holder-bound capability presentation
+30,full_cod_mdtwin_holder_bound_flow,True,24.420583,valid holder-bound capability presentation
+31,cod_validation_only,True,1.150667,valid chain of delegation
+31,cod_validation_plus_capability_realization,True,3.406792,valid chain of delegation
+31,capability_verification_without_holder_proof,True,2.102667,valid capability in no-holder-proof ablation mode
+31,capability_verification_with_holder_proof_no_state,True,6.098417,valid holder-bound capability presentation
+31,full_stateful_holder_bound_capability_verification,True,7.068708,valid holder-bound capability presentation
+31,full_cod_mdtwin_holder_bound_flow,True,25.01925,valid holder-bound capability presentation
+32,cod_validation_only,True,1.449958,valid chain of delegation
+32,cod_validation_plus_capability_realization,True,4.102958,valid chain of delegation
+32,capability_verification_without_holder_proof,True,2.276917,valid capability in no-holder-proof ablation mode
+32,capability_verification_with_holder_proof_no_state,True,6.804542,valid holder-bound capability presentation
+32,full_stateful_holder_bound_capability_verification,True,8.101959,valid holder-bound capability presentation
+32,full_cod_mdtwin_holder_bound_flow,True,26.219333,valid holder-bound capability presentation
+33,cod_validation_only,True,1.173375,valid chain of delegation
+33,cod_validation_plus_capability_realization,True,3.710083,valid chain of delegation
+33,capability_verification_without_holder_proof,True,1.989041,valid capability in no-holder-proof ablation mode
+33,capability_verification_with_holder_proof_no_state,True,6.200917,valid holder-bound capability presentation
+33,full_stateful_holder_bound_capability_verification,True,7.199833,valid holder-bound capability presentation
+33,full_cod_mdtwin_holder_bound_flow,True,24.904917,valid holder-bound capability presentation
+34,cod_validation_only,True,1.067,valid chain of delegation
+34,cod_validation_plus_capability_realization,True,3.352542,valid chain of delegation
+34,capability_verification_without_holder_proof,True,1.980875,valid capability in no-holder-proof ablation mode
+34,capability_verification_with_holder_proof_no_state,True,6.087501,valid holder-bound capability presentation
+34,full_stateful_holder_bound_capability_verification,True,7.059,valid holder-bound capability presentation
+34,full_cod_mdtwin_holder_bound_flow,True,24.709208,valid holder-bound capability presentation
+35,cod_validation_only,True,1.079709,valid chain of delegation
+35,cod_validation_plus_capability_realization,True,3.384625,valid chain of delegation
+35,capability_verification_without_holder_proof,True,1.87175,valid capability in no-holder-proof ablation mode
+35,capability_verification_with_holder_proof_no_state,True,5.918708,valid holder-bound capability presentation
+35,full_stateful_holder_bound_capability_verification,True,6.924501,valid holder-bound capability presentation
+35,full_cod_mdtwin_holder_bound_flow,True,24.285333,valid holder-bound capability presentation
+36,cod_validation_only,True,1.093458,valid chain of delegation
+36,cod_validation_plus_capability_realization,True,3.249959,valid chain of delegation
+36,capability_verification_without_holder_proof,True,2.052625,valid capability in no-holder-proof ablation mode
+36,capability_verification_with_holder_proof_no_state,True,5.960125,valid holder-bound capability presentation
+36,full_stateful_holder_bound_capability_verification,True,7.073958,valid holder-bound capability presentation
+36,full_cod_mdtwin_holder_bound_flow,True,23.924,valid holder-bound capability presentation
+37,cod_validation_only,True,1.06025,valid chain of delegation
+37,cod_validation_plus_capability_realization,True,4.498334,valid chain of delegation
+37,capability_verification_without_holder_proof,True,1.93825,valid capability in no-holder-proof ablation mode
+37,capability_verification_with_holder_proof_no_state,True,5.924749,valid holder-bound capability presentation
+37,full_stateful_holder_bound_capability_verification,True,6.935666,valid holder-bound capability presentation
+37,full_cod_mdtwin_holder_bound_flow,True,23.567833,valid holder-bound capability presentation
+38,cod_validation_only,True,1.068167,valid chain of delegation
+38,cod_validation_plus_capability_realization,True,3.150791,valid chain of delegation
+38,capability_verification_without_holder_proof,True,2.062,valid capability in no-holder-proof ablation mode
+38,capability_verification_with_holder_proof_no_state,True,6.047541,valid holder-bound capability presentation
+38,full_stateful_holder_bound_capability_verification,True,7.032166,valid holder-bound capability presentation
+38,full_cod_mdtwin_holder_bound_flow,True,24.445625,valid holder-bound capability presentation
+39,cod_validation_only,True,1.067042,valid chain of delegation
+39,cod_validation_plus_capability_realization,True,3.522833,valid chain of delegation
+39,capability_verification_without_holder_proof,True,1.976459,valid capability in no-holder-proof ablation mode
+39,capability_verification_with_holder_proof_no_state,True,5.925333,valid holder-bound capability presentation
+39,full_stateful_holder_bound_capability_verification,True,6.936959,valid holder-bound capability presentation
+39,full_cod_mdtwin_holder_bound_flow,True,23.568584,valid holder-bound capability presentation
+40,cod_validation_only,True,1.097542,valid chain of delegation
+40,cod_validation_plus_capability_realization,True,3.221042,valid chain of delegation
+40,capability_verification_without_holder_proof,True,2.070625,valid capability in no-holder-proof ablation mode
+40,capability_verification_with_holder_proof_no_state,True,5.9295,valid holder-bound capability presentation
+40,full_stateful_holder_bound_capability_verification,True,7.232207,valid holder-bound capability presentation
+40,full_cod_mdtwin_holder_bound_flow,True,23.926375,valid holder-bound capability presentation
+41,cod_validation_only,True,1.045833,valid chain of delegation
+41,cod_validation_plus_capability_realization,True,3.233125,valid chain of delegation
+41,capability_verification_without_holder_proof,True,1.945459,valid capability in no-holder-proof ablation mode
+41,capability_verification_with_holder_proof_no_state,True,5.963625,valid holder-bound capability presentation
+41,full_stateful_holder_bound_capability_verification,True,7.091501,valid holder-bound capability presentation
+41,full_cod_mdtwin_holder_bound_flow,True,25.389958,valid holder-bound capability presentation
+42,cod_validation_only,True,1.123333,valid chain of delegation
+42,cod_validation_plus_capability_realization,True,3.373708,valid chain of delegation
+42,capability_verification_without_holder_proof,True,1.88475,valid capability in no-holder-proof ablation mode
+42,capability_verification_with_holder_proof_no_state,True,6.03625,valid holder-bound capability presentation
+42,full_stateful_holder_bound_capability_verification,True,7.255126,valid holder-bound capability presentation
+42,full_cod_mdtwin_holder_bound_flow,True,32.37375,valid holder-bound capability presentation
+43,cod_validation_only,True,1.141584,valid chain of delegation
+43,cod_validation_plus_capability_realization,True,3.235292,valid chain of delegation
+43,capability_verification_without_holder_proof,True,2.131083,valid capability in no-holder-proof ablation mode
+43,capability_verification_with_holder_proof_no_state,True,6.2285,valid holder-bound capability presentation
+43,full_stateful_holder_bound_capability_verification,True,7.053291,valid holder-bound capability presentation
+43,full_cod_mdtwin_holder_bound_flow,True,24.343208,valid holder-bound capability presentation
+44,cod_validation_only,True,1.083041,valid chain of delegation
+44,cod_validation_plus_capability_realization,True,3.210916,valid chain of delegation
+44,capability_verification_without_holder_proof,True,2.03875,valid capability in no-holder-proof ablation mode
+44,capability_verification_with_holder_proof_no_state,True,5.961249,valid holder-bound capability presentation
+44,full_stateful_holder_bound_capability_verification,True,6.879583,valid holder-bound capability presentation
+44,full_cod_mdtwin_holder_bound_flow,True,24.837458,valid holder-bound capability presentation
+45,cod_validation_only,True,1.071209,valid chain of delegation
+45,cod_validation_plus_capability_realization,True,3.226041,valid chain of delegation
+45,capability_verification_without_holder_proof,True,1.955167,valid capability in no-holder-proof ablation mode
+45,capability_verification_with_holder_proof_no_state,True,6.182416,valid holder-bound capability presentation
+45,full_stateful_holder_bound_capability_verification,True,7.163541,valid holder-bound capability presentation
+45,full_cod_mdtwin_holder_bound_flow,True,24.340333,valid holder-bound capability presentation
+46,cod_validation_only,True,1.08925,valid chain of delegation
+46,cod_validation_plus_capability_realization,True,4.199125,valid chain of delegation
+46,capability_verification_without_holder_proof,True,2.082458,valid capability in no-holder-proof ablation mode
+46,capability_verification_with_holder_proof_no_state,True,6.010666,valid holder-bound capability presentation
+46,full_stateful_holder_bound_capability_verification,True,6.940082,valid holder-bound capability presentation
+46,full_cod_mdtwin_holder_bound_flow,True,23.987,valid holder-bound capability presentation
+47,cod_validation_only,True,1.023625,valid chain of delegation
+47,cod_validation_plus_capability_realization,True,3.265833,valid chain of delegation
+47,capability_verification_without_holder_proof,True,1.973959,valid capability in no-holder-proof ablation mode
+47,capability_verification_with_holder_proof_no_state,True,5.851126,valid holder-bound capability presentation
+47,full_stateful_holder_bound_capability_verification,True,7.039001,valid holder-bound capability presentation
+47,full_cod_mdtwin_holder_bound_flow,True,24.218125,valid holder-bound capability presentation
+48,cod_validation_only,True,1.073416,valid chain of delegation
+48,cod_validation_plus_capability_realization,True,3.270291,valid chain of delegation
+48,capability_verification_without_holder_proof,True,2.039583,valid capability in no-holder-proof ablation mode
+48,capability_verification_with_holder_proof_no_state,True,5.949749,valid holder-bound capability presentation
+48,full_stateful_holder_bound_capability_verification,True,7.210791,valid holder-bound capability presentation
+48,full_cod_mdtwin_holder_bound_flow,True,23.91575,valid holder-bound capability presentation
+49,cod_validation_only,True,1.05025,valid chain of delegation
+49,cod_validation_plus_capability_realization,True,3.145667,valid chain of delegation
+49,capability_verification_without_holder_proof,True,1.992666,valid capability in no-holder-proof ablation mode
+49,capability_verification_with_holder_proof_no_state,True,6.022916,valid holder-bound capability presentation
+49,full_stateful_holder_bound_capability_verification,True,7.133042,valid holder-bound capability presentation
+49,full_cod_mdtwin_holder_bound_flow,True,24.582208,valid holder-bound capability presentation
+50,cod_validation_only,True,1.044834,valid chain of delegation
+50,cod_validation_plus_capability_realization,True,3.324375,valid chain of delegation
+50,capability_verification_without_holder_proof,True,1.980416,valid capability in no-holder-proof ablation mode
+50,capability_verification_with_holder_proof_no_state,True,5.869125,valid holder-bound capability presentation
+50,full_stateful_holder_bound_capability_verification,True,7.115,valid holder-bound capability presentation
+50,full_cod_mdtwin_holder_bound_flow,True,24.414375,valid holder-bound capability presentation
+51,cod_validation_only,True,1.14175,valid chain of delegation
+51,cod_validation_plus_capability_realization,True,3.478125,valid chain of delegation
+51,capability_verification_without_holder_proof,True,1.9385,valid capability in no-holder-proof ablation mode
+51,capability_verification_with_holder_proof_no_state,True,6.131291,valid holder-bound capability presentation
+51,full_stateful_holder_bound_capability_verification,True,7.589625,valid holder-bound capability presentation
+51,full_cod_mdtwin_holder_bound_flow,True,24.812417,valid holder-bound capability presentation
+52,cod_validation_only,True,1.038083,valid chain of delegation
+52,cod_validation_plus_capability_realization,True,3.210417,valid chain of delegation
+52,capability_verification_without_holder_proof,True,1.940375,valid capability in no-holder-proof ablation mode
+52,capability_verification_with_holder_proof_no_state,True,5.718499,valid holder-bound capability presentation
+52,full_stateful_holder_bound_capability_verification,True,6.995501,valid holder-bound capability presentation
+52,full_cod_mdtwin_holder_bound_flow,True,23.85675,valid holder-bound capability presentation
+53,cod_validation_only,True,1.072625,valid chain of delegation
+53,cod_validation_plus_capability_realization,True,3.397833,valid chain of delegation
+53,capability_verification_without_holder_proof,True,1.938542,valid capability in no-holder-proof ablation mode
+53,capability_verification_with_holder_proof_no_state,True,5.878875,valid holder-bound capability presentation
+53,full_stateful_holder_bound_capability_verification,True,7.343542,valid holder-bound capability presentation
+53,full_cod_mdtwin_holder_bound_flow,True,23.263083,valid holder-bound capability presentation
+54,cod_validation_only,True,1.044542,valid chain of delegation
+54,cod_validation_plus_capability_realization,True,3.071958,valid chain of delegation
+54,capability_verification_without_holder_proof,True,2.052792,valid capability in no-holder-proof ablation mode
+54,capability_verification_with_holder_proof_no_state,True,5.883416,valid holder-bound capability presentation
+54,full_stateful_holder_bound_capability_verification,True,7.734667,valid holder-bound capability presentation
+54,full_cod_mdtwin_holder_bound_flow,True,24.142959,valid holder-bound capability presentation
+55,cod_validation_only,True,1.08325,valid chain of delegation
+55,cod_validation_plus_capability_realization,True,4.075959,valid chain of delegation
+55,capability_verification_without_holder_proof,True,2.024375,valid capability in no-holder-proof ablation mode
+55,capability_verification_with_holder_proof_no_state,True,6.018957,valid holder-bound capability presentation
+55,full_stateful_holder_bound_capability_verification,True,7.006499,valid holder-bound capability presentation
+55,full_cod_mdtwin_holder_bound_flow,True,23.963375,valid holder-bound capability presentation
+56,cod_validation_only,True,1.064708,valid chain of delegation
+56,cod_validation_plus_capability_realization,True,3.050583,valid chain of delegation
+56,capability_verification_without_holder_proof,True,2.003541,valid capability in no-holder-proof ablation mode
+56,capability_verification_with_holder_proof_no_state,True,5.944416,valid holder-bound capability presentation
+56,full_stateful_holder_bound_capability_verification,True,6.987333,valid holder-bound capability presentation
+56,full_cod_mdtwin_holder_bound_flow,True,23.937625,valid holder-bound capability presentation
+57,cod_validation_only,True,1.089167,valid chain of delegation
+57,cod_validation_plus_capability_realization,True,3.250833,valid chain of delegation
+57,capability_verification_without_holder_proof,True,1.913084,valid capability in no-holder-proof ablation mode
+57,capability_verification_with_holder_proof_no_state,True,5.963041,valid holder-bound capability presentation
+57,full_stateful_holder_bound_capability_verification,True,6.967875,valid holder-bound capability presentation
+57,full_cod_mdtwin_holder_bound_flow,True,24.295125,valid holder-bound capability presentation
+58,cod_validation_only,True,1.093,valid chain of delegation
+58,cod_validation_plus_capability_realization,True,3.253875,valid chain of delegation
+58,capability_verification_without_holder_proof,True,2.0345,valid capability in no-holder-proof ablation mode
+58,capability_verification_with_holder_proof_no_state,True,6.048042,valid holder-bound capability presentation
+58,full_stateful_holder_bound_capability_verification,True,6.870832,valid holder-bound capability presentation
+58,full_cod_mdtwin_holder_bound_flow,True,23.996875,valid holder-bound capability presentation
+59,cod_validation_only,True,1.097875,valid chain of delegation
+59,cod_validation_plus_capability_realization,True,3.319917,valid chain of delegation
+59,capability_verification_without_holder_proof,True,1.954375,valid capability in no-holder-proof ablation mode
+59,capability_verification_with_holder_proof_no_state,True,5.868458,valid holder-bound capability presentation
+59,full_stateful_holder_bound_capability_verification,True,7.123959,valid holder-bound capability presentation
+59,full_cod_mdtwin_holder_bound_flow,True,24.676375,valid holder-bound capability presentation
+60,cod_validation_only,True,1.0925,valid chain of delegation
+60,cod_validation_plus_capability_realization,True,3.359375,valid chain of delegation
+60,capability_verification_without_holder_proof,True,1.957583,valid capability in no-holder-proof ablation mode
+60,capability_verification_with_holder_proof_no_state,True,5.843542,valid holder-bound capability presentation
+60,full_stateful_holder_bound_capability_verification,True,7.054833,valid holder-bound capability presentation
+60,full_cod_mdtwin_holder_bound_flow,True,24.795209,valid holder-bound capability presentation
+61,cod_validation_only,True,1.0965,valid chain of delegation
+61,cod_validation_plus_capability_realization,True,3.336167,valid chain of delegation
+61,capability_verification_without_holder_proof,True,1.901167,valid capability in no-holder-proof ablation mode
+61,capability_verification_with_holder_proof_no_state,True,6.040958,valid holder-bound capability presentation
+61,full_stateful_holder_bound_capability_verification,True,7.097417,valid holder-bound capability presentation
+61,full_cod_mdtwin_holder_bound_flow,True,24.083292,valid holder-bound capability presentation
+62,cod_validation_only,True,1.056667,valid chain of delegation
+62,cod_validation_plus_capability_realization,True,3.445542,valid chain of delegation
+62,capability_verification_without_holder_proof,True,2.008042,valid capability in no-holder-proof ablation mode
+62,capability_verification_with_holder_proof_no_state,True,5.939043,valid holder-bound capability presentation
+62,full_stateful_holder_bound_capability_verification,True,7.0795,valid holder-bound capability presentation
+62,full_cod_mdtwin_holder_bound_flow,True,24.132333,valid holder-bound capability presentation
+63,cod_validation_only,True,1.094667,valid chain of delegation
+63,cod_validation_plus_capability_realization,True,3.5045,valid chain of delegation
+63,capability_verification_without_holder_proof,True,2.0215,valid capability in no-holder-proof ablation mode
+63,capability_verification_with_holder_proof_no_state,True,6.040001,valid holder-bound capability presentation
+63,full_stateful_holder_bound_capability_verification,True,7.575459,valid holder-bound capability presentation
+63,full_cod_mdtwin_holder_bound_flow,True,24.318833,valid holder-bound capability presentation
+64,cod_validation_only,True,1.063875,valid chain of delegation
+64,cod_validation_plus_capability_realization,True,3.811792,valid chain of delegation
+64,capability_verification_without_holder_proof,True,1.992083,valid capability in no-holder-proof ablation mode
+64,capability_verification_with_holder_proof_no_state,True,5.821875,valid holder-bound capability presentation
+64,full_stateful_holder_bound_capability_verification,True,7.019708,valid holder-bound capability presentation
+64,full_cod_mdtwin_holder_bound_flow,True,24.983042,valid holder-bound capability presentation
+65,cod_validation_only,True,1.09125,valid chain of delegation
+65,cod_validation_plus_capability_realization,True,3.278542,valid chain of delegation
+65,capability_verification_without_holder_proof,True,2.04875,valid capability in no-holder-proof ablation mode
+65,capability_verification_with_holder_proof_no_state,True,6.104916,valid holder-bound capability presentation
+65,full_stateful_holder_bound_capability_verification,True,7.291249,valid holder-bound capability presentation
+65,full_cod_mdtwin_holder_bound_flow,True,24.1325,valid holder-bound capability presentation
+66,cod_validation_only,True,1.066875,valid chain of delegation
+66,cod_validation_plus_capability_realization,True,3.290791,valid chain of delegation
+66,capability_verification_without_holder_proof,True,2.015042,valid capability in no-holder-proof ablation mode
+66,capability_verification_with_holder_proof_no_state,True,5.710167,valid holder-bound capability presentation
+66,full_stateful_holder_bound_capability_verification,True,7.462083,valid holder-bound capability presentation
+66,full_cod_mdtwin_holder_bound_flow,True,24.48275,valid holder-bound capability presentation
+67,cod_validation_only,True,1.106916,valid chain of delegation
+67,cod_validation_plus_capability_realization,True,3.337,valid chain of delegation
+67,capability_verification_without_holder_proof,True,1.973167,valid capability in no-holder-proof ablation mode
+67,capability_verification_with_holder_proof_no_state,True,6.078251,valid holder-bound capability presentation
+67,full_stateful_holder_bound_capability_verification,True,6.920667,valid holder-bound capability presentation
+67,full_cod_mdtwin_holder_bound_flow,True,24.145,valid holder-bound capability presentation
+68,cod_validation_only,True,1.190208,valid chain of delegation
+68,cod_validation_plus_capability_realization,True,3.542459,valid chain of delegation
+68,capability_verification_without_holder_proof,True,2.143292,valid capability in no-holder-proof ablation mode
+68,capability_verification_with_holder_proof_no_state,True,5.874,valid holder-bound capability presentation
+68,full_stateful_holder_bound_capability_verification,True,7.340918,valid holder-bound capability presentation
+68,full_cod_mdtwin_holder_bound_flow,True,25.870458,valid holder-bound capability presentation
+69,cod_validation_only,True,1.047916,valid chain of delegation
+69,cod_validation_plus_capability_realization,True,3.240791,valid chain of delegation
+69,capability_verification_without_holder_proof,True,1.991542,valid capability in no-holder-proof ablation mode
+69,capability_verification_with_holder_proof_no_state,True,6.108541,valid holder-bound capability presentation
+69,full_stateful_holder_bound_capability_verification,True,7.183375,valid holder-bound capability presentation
+69,full_cod_mdtwin_holder_bound_flow,True,24.1385,valid holder-bound capability presentation
+70,cod_validation_only,True,1.036042,valid chain of delegation
+70,cod_validation_plus_capability_realization,True,3.29225,valid chain of delegation
+70,capability_verification_without_holder_proof,True,2.01,valid capability in no-holder-proof ablation mode
+70,capability_verification_with_holder_proof_no_state,True,6.005291,valid holder-bound capability presentation
+70,full_stateful_holder_bound_capability_verification,True,7.141707,valid holder-bound capability presentation
+70,full_cod_mdtwin_holder_bound_flow,True,23.939333,valid holder-bound capability presentation
+71,cod_validation_only,True,1.066792,valid chain of delegation
+71,cod_validation_plus_capability_realization,True,3.162792,valid chain of delegation
+71,capability_verification_without_holder_proof,True,1.984,valid capability in no-holder-proof ablation mode
+71,capability_verification_with_holder_proof_no_state,True,5.855625,valid holder-bound capability presentation
+71,full_stateful_holder_bound_capability_verification,True,7.093042,valid holder-bound capability presentation
+71,full_cod_mdtwin_holder_bound_flow,True,25.756167,valid holder-bound capability presentation
+72,cod_validation_only,True,1.10325,valid chain of delegation
+72,cod_validation_plus_capability_realization,True,3.325875,valid chain of delegation
+72,capability_verification_without_holder_proof,True,1.95925,valid capability in no-holder-proof ablation mode
+72,capability_verification_with_holder_proof_no_state,True,5.9425,valid holder-bound capability presentation
+72,full_stateful_holder_bound_capability_verification,True,7.29225,valid holder-bound capability presentation
+72,full_cod_mdtwin_holder_bound_flow,True,23.779666,valid holder-bound capability presentation
+73,cod_validation_only,True,1.090208,valid chain of delegation
+73,cod_validation_plus_capability_realization,True,3.839084,valid chain of delegation
+73,capability_verification_without_holder_proof,True,1.990541,valid capability in no-holder-proof ablation mode
+73,capability_verification_with_holder_proof_no_state,True,6.138041,valid holder-bound capability presentation
+73,full_stateful_holder_bound_capability_verification,True,7.03275,valid holder-bound capability presentation
+73,full_cod_mdtwin_holder_bound_flow,True,24.273917,valid holder-bound capability presentation
+74,cod_validation_only,True,1.035,valid chain of delegation
+74,cod_validation_plus_capability_realization,True,3.163958,valid chain of delegation
+74,capability_verification_without_holder_proof,True,1.937875,valid capability in no-holder-proof ablation mode
+74,capability_verification_with_holder_proof_no_state,True,5.9265,valid holder-bound capability presentation
+74,full_stateful_holder_bound_capability_verification,True,7.348917,valid holder-bound capability presentation
+74,full_cod_mdtwin_holder_bound_flow,True,24.336791,valid holder-bound capability presentation
+75,cod_validation_only,True,1.105084,valid chain of delegation
+75,cod_validation_plus_capability_realization,True,3.315917,valid chain of delegation
+75,capability_verification_without_holder_proof,True,1.911792,valid capability in no-holder-proof ablation mode
+75,capability_verification_with_holder_proof_no_state,True,6.275125,valid holder-bound capability presentation
+75,full_stateful_holder_bound_capability_verification,True,7.107624,valid holder-bound capability presentation
+75,full_cod_mdtwin_holder_bound_flow,True,24.950209,valid holder-bound capability presentation
+76,cod_validation_only,True,1.037375,valid chain of delegation
+76,cod_validation_plus_capability_realization,True,3.178458,valid chain of delegation
+76,capability_verification_without_holder_proof,True,1.842333,valid capability in no-holder-proof ablation mode
+76,capability_verification_with_holder_proof_no_state,True,6.148666,valid holder-bound capability presentation
+76,full_stateful_holder_bound_capability_verification,True,7.203917,valid holder-bound capability presentation
+76,full_cod_mdtwin_holder_bound_flow,True,24.547291,valid holder-bound capability presentation
+77,cod_validation_only,True,1.316917,valid chain of delegation
+77,cod_validation_plus_capability_realization,True,3.498708,valid chain of delegation
+77,capability_verification_without_holder_proof,True,1.910084,valid capability in no-holder-proof ablation mode
+77,capability_verification_with_holder_proof_no_state,True,5.974084,valid holder-bound capability presentation
+77,full_stateful_holder_bound_capability_verification,True,7.478208,valid holder-bound capability presentation
+77,full_cod_mdtwin_holder_bound_flow,True,25.420583,valid holder-bound capability presentation
+78,cod_validation_only,True,1.015125,valid chain of delegation
+78,cod_validation_plus_capability_realization,True,3.327417,valid chain of delegation
+78,capability_verification_without_holder_proof,True,2.092542,valid capability in no-holder-proof ablation mode
+78,capability_verification_with_holder_proof_no_state,True,5.661625,valid holder-bound capability presentation
+78,full_stateful_holder_bound_capability_verification,True,7.164833,valid holder-bound capability presentation
+78,full_cod_mdtwin_holder_bound_flow,True,24.21625,valid holder-bound capability presentation
+79,cod_validation_only,True,1.072208,valid chain of delegation
+79,cod_validation_plus_capability_realization,True,3.162917,valid chain of delegation
+79,capability_verification_without_holder_proof,True,2.017708,valid capability in no-holder-proof ablation mode
+79,capability_verification_with_holder_proof_no_state,True,6.089208,valid holder-bound capability presentation
+79,full_stateful_holder_bound_capability_verification,True,7.034332,valid holder-bound capability presentation
+79,full_cod_mdtwin_holder_bound_flow,True,24.473583,valid holder-bound capability presentation
+80,cod_validation_only,True,1.123042,valid chain of delegation
+80,cod_validation_plus_capability_realization,True,3.36525,valid chain of delegation
+80,capability_verification_without_holder_proof,True,2.017708,valid capability in no-holder-proof ablation mode
+80,capability_verification_with_holder_proof_no_state,True,5.969417,valid holder-bound capability presentation
+80,full_stateful_holder_bound_capability_verification,True,7.074167,valid holder-bound capability presentation
+80,full_cod_mdtwin_holder_bound_flow,True,23.778791,valid holder-bound capability presentation
+81,cod_validation_only,True,1.085042,valid chain of delegation
+81,cod_validation_plus_capability_realization,True,3.139292,valid chain of delegation
+81,capability_verification_without_holder_proof,True,2.086916,valid capability in no-holder-proof ablation mode
+81,capability_verification_with_holder_proof_no_state,True,5.927625,valid holder-bound capability presentation
+81,full_stateful_holder_bound_capability_verification,True,7.063542,valid holder-bound capability presentation
+81,full_cod_mdtwin_holder_bound_flow,True,24.919834,valid holder-bound capability presentation
+82,cod_validation_only,True,1.08325,valid chain of delegation
+82,cod_validation_plus_capability_realization,True,3.985958,valid chain of delegation
+82,capability_verification_without_holder_proof,True,1.964292,valid capability in no-holder-proof ablation mode
+82,capability_verification_with_holder_proof_no_state,True,5.949624,valid holder-bound capability presentation
+82,full_stateful_holder_bound_capability_verification,True,7.113791,valid holder-bound capability presentation
+82,full_cod_mdtwin_holder_bound_flow,True,24.606292,valid holder-bound capability presentation
+83,cod_validation_only,True,1.07,valid chain of delegation
+83,cod_validation_plus_capability_realization,True,3.278042,valid chain of delegation
+83,capability_verification_without_holder_proof,True,1.986625,valid capability in no-holder-proof ablation mode
+83,capability_verification_with_holder_proof_no_state,True,5.962666,valid holder-bound capability presentation
+83,full_stateful_holder_bound_capability_verification,True,7.323042,valid holder-bound capability presentation
+83,full_cod_mdtwin_holder_bound_flow,True,25.421333,valid holder-bound capability presentation
+84,cod_validation_only,True,1.053333,valid chain of delegation
+84,cod_validation_plus_capability_realization,True,3.383667,valid chain of delegation
+84,capability_verification_without_holder_proof,True,1.979542,valid capability in no-holder-proof ablation mode
+84,capability_verification_with_holder_proof_no_state,True,5.966958,valid holder-bound capability presentation
+84,full_stateful_holder_bound_capability_verification,True,7.120876,valid holder-bound capability presentation
+84,full_cod_mdtwin_holder_bound_flow,True,23.81975,valid holder-bound capability presentation
+85,cod_validation_only,True,1.093292,valid chain of delegation
+85,cod_validation_plus_capability_realization,True,3.355375,valid chain of delegation
+85,capability_verification_without_holder_proof,True,2.02875,valid capability in no-holder-proof ablation mode
+85,capability_verification_with_holder_proof_no_state,True,6.229541,valid holder-bound capability presentation
+85,full_stateful_holder_bound_capability_verification,True,7.191624,valid holder-bound capability presentation
+85,full_cod_mdtwin_holder_bound_flow,True,24.623042,valid holder-bound capability presentation
+86,cod_validation_only,True,1.048,valid chain of delegation
+86,cod_validation_plus_capability_realization,True,3.320834,valid chain of delegation
+86,capability_verification_without_holder_proof,True,1.964875,valid capability in no-holder-proof ablation mode
+86,capability_verification_with_holder_proof_no_state,True,6.382416,valid holder-bound capability presentation
+86,full_stateful_holder_bound_capability_verification,True,7.597542,valid holder-bound capability presentation
+86,full_cod_mdtwin_holder_bound_flow,True,24.279541,valid holder-bound capability presentation
+87,cod_validation_only,True,1.059458,valid chain of delegation
+87,cod_validation_plus_capability_realization,True,3.330958,valid chain of delegation
+87,capability_verification_without_holder_proof,True,1.943084,valid capability in no-holder-proof ablation mode
+87,capability_verification_with_holder_proof_no_state,True,6.162875,valid holder-bound capability presentation
+87,full_stateful_holder_bound_capability_verification,True,7.049584,valid holder-bound capability presentation
+87,full_cod_mdtwin_holder_bound_flow,True,23.994959,valid holder-bound capability presentation
+88,cod_validation_only,True,1.035959,valid chain of delegation
+88,cod_validation_plus_capability_realization,True,3.456959,valid chain of delegation
+88,capability_verification_without_holder_proof,True,2.124875,valid capability in no-holder-proof ablation mode
+88,capability_verification_with_holder_proof_no_state,True,6.031375,valid holder-bound capability presentation
+88,full_stateful_holder_bound_capability_verification,True,7.228626,valid holder-bound capability presentation
+88,full_cod_mdtwin_holder_bound_flow,True,23.521125,valid holder-bound capability presentation
+89,cod_validation_only,True,1.111875,valid chain of delegation
+89,cod_validation_plus_capability_realization,True,3.320375,valid chain of delegation
+89,capability_verification_without_holder_proof,True,1.924542,valid capability in no-holder-proof ablation mode
+89,capability_verification_with_holder_proof_no_state,True,6.290042,valid holder-bound capability presentation
+89,full_stateful_holder_bound_capability_verification,True,6.928375,valid holder-bound capability presentation
+89,full_cod_mdtwin_holder_bound_flow,True,24.338958,valid holder-bound capability presentation
+90,cod_validation_only,True,1.095625,valid chain of delegation
+90,cod_validation_plus_capability_realization,True,3.360333,valid chain of delegation
+90,capability_verification_without_holder_proof,True,2.010167,valid capability in no-holder-proof ablation mode
+90,capability_verification_with_holder_proof_no_state,True,6.149166,valid holder-bound capability presentation
+90,full_stateful_holder_bound_capability_verification,True,7.112251,valid holder-bound capability presentation
+90,full_cod_mdtwin_holder_bound_flow,True,24.026041,valid holder-bound capability presentation
+91,cod_validation_only,True,1.0565,valid chain of delegation
+91,cod_validation_plus_capability_realization,True,4.319292,valid chain of delegation
+91,capability_verification_without_holder_proof,True,2.063584,valid capability in no-holder-proof ablation mode
+91,capability_verification_with_holder_proof_no_state,True,5.937082,valid holder-bound capability presentation
+91,full_stateful_holder_bound_capability_verification,True,7.244834,valid holder-bound capability presentation
+91,full_cod_mdtwin_holder_bound_flow,True,24.651458,valid holder-bound capability presentation
+92,cod_validation_only,True,1.054542,valid chain of delegation
+92,cod_validation_plus_capability_realization,True,3.272,valid chain of delegation
+92,capability_verification_without_holder_proof,True,1.87375,valid capability in no-holder-proof ablation mode
+92,capability_verification_with_holder_proof_no_state,True,7.170459,valid holder-bound capability presentation
+92,full_stateful_holder_bound_capability_verification,True,7.448499,valid holder-bound capability presentation
+92,full_cod_mdtwin_holder_bound_flow,True,25.159666,valid holder-bound capability presentation
+93,cod_validation_only,True,1.117959,valid chain of delegation
+93,cod_validation_plus_capability_realization,True,3.402416,valid chain of delegation
+93,capability_verification_without_holder_proof,True,2.0695,valid capability in no-holder-proof ablation mode
+93,capability_verification_with_holder_proof_no_state,True,6.270291,valid holder-bound capability presentation
+93,full_stateful_holder_bound_capability_verification,True,7.055876,valid holder-bound capability presentation
+93,full_cod_mdtwin_holder_bound_flow,True,23.923209,valid holder-bound capability presentation
+94,cod_validation_only,True,1.116042,valid chain of delegation
+94,cod_validation_plus_capability_realization,True,3.297875,valid chain of delegation
+94,capability_verification_without_holder_proof,True,1.843958,valid capability in no-holder-proof ablation mode
+94,capability_verification_with_holder_proof_no_state,True,5.977416,valid holder-bound capability presentation
+94,full_stateful_holder_bound_capability_verification,True,7.392458,valid holder-bound capability presentation
+94,full_cod_mdtwin_holder_bound_flow,True,24.315666,valid holder-bound capability presentation
+95,cod_validation_only,True,1.075125,valid chain of delegation
+95,cod_validation_plus_capability_realization,True,3.169625,valid chain of delegation
+95,capability_verification_without_holder_proof,True,1.91825,valid capability in no-holder-proof ablation mode
+95,capability_verification_with_holder_proof_no_state,True,5.751584,valid holder-bound capability presentation
+95,full_stateful_holder_bound_capability_verification,True,7.501875,valid holder-bound capability presentation
+95,full_cod_mdtwin_holder_bound_flow,True,25.100917,valid holder-bound capability presentation
+96,cod_validation_only,True,1.086292,valid chain of delegation
+96,cod_validation_plus_capability_realization,True,3.284625,valid chain of delegation
+96,capability_verification_without_holder_proof,True,1.878458,valid capability in no-holder-proof ablation mode
+96,capability_verification_with_holder_proof_no_state,True,6.07175,valid holder-bound capability presentation
+96,full_stateful_holder_bound_capability_verification,True,6.980916,valid holder-bound capability presentation
+96,full_cod_mdtwin_holder_bound_flow,True,24.185167,valid holder-bound capability presentation
+97,cod_validation_only,True,1.0935,valid chain of delegation
+97,cod_validation_plus_capability_realization,True,3.228209,valid chain of delegation
+97,capability_verification_without_holder_proof,True,1.917416,valid capability in no-holder-proof ablation mode
+97,capability_verification_with_holder_proof_no_state,True,7.746707,valid holder-bound capability presentation
+97,full_stateful_holder_bound_capability_verification,True,7.270833,valid holder-bound capability presentation
+97,full_cod_mdtwin_holder_bound_flow,True,24.860917,valid holder-bound capability presentation
+98,cod_validation_only,True,1.101625,valid chain of delegation
+98,cod_validation_plus_capability_realization,True,3.26775,valid chain of delegation
+98,capability_verification_without_holder_proof,True,1.916208,valid capability in no-holder-proof ablation mode
+98,capability_verification_with_holder_proof_no_state,True,5.875917,valid holder-bound capability presentation
+98,full_stateful_holder_bound_capability_verification,True,7.090625,valid holder-bound capability presentation
+98,full_cod_mdtwin_holder_bound_flow,True,24.433292,valid holder-bound capability presentation
+99,cod_validation_only,True,1.071459,valid chain of delegation
+99,cod_validation_plus_capability_realization,True,3.24125,valid chain of delegation
+99,capability_verification_without_holder_proof,True,1.906292,valid capability in no-holder-proof ablation mode
+99,capability_verification_with_holder_proof_no_state,True,5.777668,valid holder-bound capability presentation
+99,full_stateful_holder_bound_capability_verification,True,7.354042,valid holder-bound capability presentation
+99,full_cod_mdtwin_holder_bound_flow,True,24.029792,valid holder-bound capability presentation
+100,cod_validation_only,True,1.096875,valid chain of delegation
+100,cod_validation_plus_capability_realization,True,3.815833,valid chain of delegation
+100,capability_verification_without_holder_proof,True,1.820916,valid capability in no-holder-proof ablation mode
+100,capability_verification_with_holder_proof_no_state,True,5.805542,valid holder-bound capability presentation
+100,full_stateful_holder_bound_capability_verification,True,7.322416,valid holder-bound capability presentation
+100,full_cod_mdtwin_holder_bound_flow,True,27.018459,valid holder-bound capability presentation

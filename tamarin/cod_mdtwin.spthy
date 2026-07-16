@@ -1,0 +1,743 @@
+theory CoD_MDTwin_Phase6_Holder_PoP
+begin
+
+builtins: signing, hashing
+
+restriction Equality:
+  "All x y #i. Eq(x,y)@i ==> x = y"
+
+/*
+ * Long-term issuer and authorized-subject keys remain secret.
+ * Their corresponding public keys are available for verification.
+ */
+rule Setup:
+  [ Fr(~skA), Fr(~skT), Fr(~skB), Fr(~skV) ]
+  --[ SetupDone() ]->
+  [ !Ltk('dam_a', ~skA),
+    !Ltk('twin_agent', ~skT),
+    !Ltk('dam_b', ~skB),
+    !Ltk('vendor_agent', ~skV),
+
+    !Pk('dam_a', pk(~skA)),
+    !Pk('twin_agent', pk(~skT)),
+    !Pk('dam_b', pk(~skB)),
+    !Pk('vendor_agent', pk(~skV)),
+
+    !ReadyDC1() ]
+
+
+/* DC1 is transmitted over the attacker-controlled network. */
+rule Issue_DC1:
+  let body1 =
+        <~dc1,
+         'dam_a',
+         'twin_agent',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '3'>
+
+      sig1 = sign(body1,skA)
+  in
+  [ !ReadyDC1(),
+    !Ltk('dam_a',skA),
+    Fr(~dc1) ]
+  --[ IssuedDC1(~dc1,body1) ]->
+  [ Out(<body1,sig1>) ]
+
+
+/*
+ * TwinAgent accepts DC1 only after checking its exact fields
+ * and DAM_A signature.
+ */
+rule Issue_DC2:
+  let body1 =
+        <dc1,
+         'dam_a',
+         'twin_agent',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '3'>
+
+      body2 =
+        <~dc2,
+         'twin_agent',
+         'dam_b',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '2',
+         dc1>
+
+      sig2 = sign(body2,skT)
+  in
+  [ In(<body1,sig1>),
+    !Pk('dam_a',pkA),
+    !Ltk('twin_agent',skT),
+    Fr(~dc2) ]
+  --[ Eq(verify(sig1,body1,pkA),true),
+      ParentDC1Verified(dc1),
+      IssuedDC2(~dc2,body2,dc1) ]->
+  [ Out(<body2,sig2>) ]
+
+
+/*
+ * DAM_B accepts DC2 only after checking its exact fields
+ * and TwinAgent signature.
+ */
+rule Issue_DC3:
+  let body2 =
+        <dc2,
+         'twin_agent',
+         'dam_b',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '2',
+         dc1>
+
+      body3 =
+        <~dc3,
+         'dam_b',
+         'vendor_agent',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '1',
+         dc2>
+
+      sig3 = sign(body3,skB)
+      cod  = <dc1,dc2,~dc3>
+  in
+  [ In(<body2,sig2>),
+    !Pk('twin_agent',pkT),
+    !Ltk('dam_b',skB),
+    Fr(~dc3) ]
+  --[ Eq(verify(sig2,body2,pkT),true),
+      ParentDC2Verified(dc2,dc1),
+      IssuedDC3(~dc3,body3,dc2),
+      ChainRegistered(cod) ]->
+  [ Out(<body3,sig3>),
+    ChainTicket(cod) ]
+
+
+/*
+ * Any network participant may submit a candidate three-credential
+ * chain. The verifier checks every credential field and signature.
+ *
+ * Each realized capability is additionally bound to the public key
+ * of VendorAgent. The public key symbolically represents the
+ * verification method identified by kid_s in the protocol.
+ */
+rule Validate_CoD_And_Realize:
+  let expected1 =
+        <dc1,
+         'dam_a',
+         'twin_agent',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '3'>
+
+      expected2 =
+        <dc2,
+         'twin_agent',
+         'dam_b',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '2',
+         dc1>
+
+      expected3 =
+        <dc3,
+         'dam_b',
+         'vendor_agent',
+         'diagnostics.read',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         '1',
+         dc2>
+
+      cod = <dc1,dc2,dc3>
+
+      capBodyA =
+        <~capA,
+         'vendor_agent',
+         pkV,
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         'diagnostics.read',
+         h(cod),
+         ~nonceA>
+
+      capSigA = sign(capBodyA,skB)
+
+      capBodyB =
+        <~capB,
+         'vendor_agent',
+         pkV,
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         'diagnostics.read',
+         h(cod),
+         ~nonceB>
+
+      capSigB = sign(capBodyB,skB)
+  in
+  [ In(<body1,sig1,body2,sig2,body3,sig3>),
+
+    ChainTicket(cod),
+
+    !Pk('dam_a',pkA),
+    !Pk('twin_agent',pkT),
+    !Pk('dam_b',pkB),
+    !Pk('vendor_agent',pkV),
+
+    !Ltk('dam_b',skB),
+
+    Fr(~capA),
+    Fr(~nonceA),
+    Fr(~capB),
+    Fr(~nonceB) ]
+  --[ Eq(body1,expected1),
+      Eq(body2,expected2),
+      Eq(body3,expected3),
+
+      Eq(verify(sig1,body1,pkA),true),
+      Eq(verify(sig2,body2,pkT),true),
+      Eq(verify(sig3,body3,pkB),true),
+
+      ChainAccepted(cod,dc1,dc2,dc3),
+
+      ChainFieldsVerified(
+        cod,
+        'dam_a',
+        'twin_agent',
+        'dam_b',
+        'vendor_agent',
+        '3',
+        '2',
+        '1',
+        'diagnostics.read',
+        'asset:compressor-7',
+        'read-status',
+        'vendor-b'),
+
+      CapabilityRealized(~capA,cod,~nonceA),
+      CapabilityRealized(~capB,cod,~nonceB),
+
+      CapabilityKeyBound(~capA,pkV),
+      CapabilityKeyBound(~capB,pkV),
+
+      DependsOnCap(~capA,dc1),
+      DependsOnCap(~capA,dc2),
+      DependsOnCap(~capA,dc3),
+
+      DependsOnCap(~capB,dc1),
+      DependsOnCap(~capB,dc2),
+      DependsOnCap(~capB,dc3) ]->
+  [ Out(<capBodyA,capSigA>),
+    Out(<capBodyB,capSigB>),
+
+    !CapabilityRecord(
+      ~capA,
+      capBodyA,
+      capSigA,
+      cod,
+      dc1,
+      dc2,
+      dc3,
+      ~nonceA),
+
+    !CapabilityRecord(
+      ~capB,
+      capBodyB,
+      capSigB,
+      cod,
+      dc1,
+      dc2,
+      dc3,
+      ~nonceB),
+
+    /*
+     * Private holder-side records. These facts are not exposed
+     * through Out and therefore cannot be constructed directly
+     * by the network adversary.
+     */
+    HolderCapability(
+      ~capA,
+      capBodyA,
+      capSigA,
+      cod,
+      ~nonceA),
+
+    HolderCapability(
+      ~capB,
+      capBodyB,
+      capSigB,
+      cod,
+      ~nonceB),
+
+    Unused(~capA,~nonceA),
+    Unused(~capB,~nonceB),
+
+    ChainState(cod,dc1,dc2,dc3,'active') ]
+
+
+/*
+ * The verifier issues a fresh challenge only for an exact capability
+ * already stored in its trusted capability record.
+ */
+rule Issue_Access_Challenge:
+  [ In(<capBody,capSig>),
+
+    !CapabilityRecord(
+      cap,
+      capBody,
+      capSig,
+      cod,
+      dc1,
+      dc2,
+      dc3,
+      nonce),
+
+    Fr(~challenge) ]
+  --[ ChallengeIssued(cap,~challenge) ]->
+  [ PendingChallenge(cap,~challenge),
+
+    Out(<capBody,capSig,~challenge>) ]
+
+
+/*
+ * VendorAgent generates a proof only for a capability held in its
+ * private capability state. The proof binds the capability hash,
+ * exact request fields, and verifier challenge.
+ */
+rule Create_Holder_Proof:
+  let expectedCap =
+        <cap,
+         'vendor_agent',
+         pk(skV),
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         'diagnostics.read',
+         h(cod),
+         nonce>
+
+      proofBody =
+        <h(expectedCap),
+         'vendor_agent',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         'diagnostics.read',
+         challenge>
+
+      holderSig = sign(proofBody,skV)
+  in
+  [ In(<capBody,capSig,challenge>),
+
+    HolderCapability(
+      cap,
+      storedBody,
+      storedSig,
+      cod,
+      nonce),
+
+    !Ltk('vendor_agent',skV) ]
+  --[ Eq(capBody,storedBody),
+      Eq(capSig,storedSig),
+      Eq(capBody,expectedCap),
+
+      HolderProofGenerated(
+        cap,
+        challenge,
+        proofBody) ]->
+  [ Out(<capBody,capSig,challenge,holderSig>) ]
+
+
+/*
+ * Access requires:
+ * 1. the exact recorded capability;
+ * 2. a valid DAM_B capability signature;
+ * 3. a valid holder signature under the key bound to the capability;
+ * 4. an active parent chain;
+ * 5. an unused capability nonce; and
+ * 6. a fresh, unconsumed verifier challenge.
+ */
+rule Verify_And_Grant_Access:
+  let expectedCap =
+        <cap,
+         'vendor_agent',
+         pkV,
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         'diagnostics.read',
+         h(cod),
+         nonce>
+
+      proofBody =
+        <h(expectedCap),
+         'vendor_agent',
+         'asset:compressor-7',
+         'read-status',
+         'vendor-b',
+         'diagnostics.read',
+         challenge>
+  in
+  [ In(<capBody,capSig,challenge,holderSig>),
+
+    !CapabilityRecord(
+      cap,
+      storedBody,
+      storedSig,
+      cod,
+      dc1,
+      dc2,
+      dc3,
+      nonce),
+
+    !Pk('dam_b',pkB),
+    !Pk('vendor_agent',pkV),
+
+    ChainState(cod,dc1,dc2,dc3,'active'),
+    Unused(cap,nonce),
+    PendingChallenge(cap,challenge) ]
+  --[ Eq(capBody,storedBody),
+      Eq(capSig,storedSig),
+      Eq(capBody,expectedCap),
+
+      Eq(verify(capSig,capBody,pkB),true),
+      Eq(verify(holderSig,proofBody,pkV),true),
+
+      CapabilitySignatureVerified(cap),
+      HolderProofVerified(cap,challenge,proofBody),
+
+      CapabilityAccepted(cap,nonce,cod),
+
+      AccessGranted(
+        cap,
+        nonce,
+        cod,
+        'vendor_agent',
+        'asset:compressor-7',
+        'read-status',
+        'vendor-b',
+        'diagnostics.read') ]->
+  [ ChainState(cod,dc1,dc2,dc3,'active'),
+    Consumed(cap,nonce),
+    ConsumedChallenge(cap,challenge) ]
+
+
+rule Revoke_DC1:
+  [ ChainState(cod,dc1,dc2,dc3,'active') ]
+  --[ RevokedDC(dc1),
+      ChainRevoked(cod,dc1) ]->
+  [ ChainState(cod,dc1,dc2,dc3,'revoked') ]
+
+
+rule Revoke_DC2:
+  [ ChainState(cod,dc1,dc2,dc3,'active') ]
+  --[ RevokedDC(dc2),
+      ChainRevoked(cod,dc2) ]->
+  [ ChainState(cod,dc1,dc2,dc3,'revoked') ]
+
+
+rule Revoke_DC3:
+  [ ChainState(cod,dc1,dc2,dc3,'active') ]
+  --[ RevokedDC(dc3),
+      ChainRevoked(cod,dc3) ]->
+  [ ChainState(cod,dc1,dc2,dc3,'revoked') ]
+
+
+/*
+ * Honest parties can assemble the independently transmitted
+ * credentials into one candidate-chain message. Because all three
+ * credentials are also exposed through Out, the adversary may submit
+ * arbitrary alternative candidate chains.
+ */
+rule Assemble_Honest_Chain:
+  [ In(<body1,sig1>),
+    In(<body2,sig2>),
+    In(<body3,sig3>) ]
+  --[ ChainSubmitted() ]->
+  [ Out(<body1,sig1,body2,sig2,body3,sig3>) ]
+
+
+/* ------------------------------------------------------------------ */
+/* Executability lemmas                                                */
+/* ------------------------------------------------------------------ */
+
+lemma executable_honest_trace:
+  exists-trace
+  "Ex cap nonce cod #i.
+     AccessGranted(
+       cap,
+       nonce,
+       cod,
+       'vendor_agent',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b',
+       'diagnostics.read')@i"
+
+
+lemma executable_two_capability_trace:
+  exists-trace
+  "Ex cap1 cap2 n1 n2 cod #i #j.
+     AccessGranted(
+       cap1,
+       n1,
+       cod,
+       'vendor_agent',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b',
+       'diagnostics.read')@i
+
+   & AccessGranted(
+       cap2,
+       n2,
+       cod,
+       'vendor_agent',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b',
+       'diagnostics.read')@j
+
+   & not (cap1 = cap2)"
+
+
+/* ------------------------------------------------------------------ */
+/* Delegation-chain authenticity and structure                         */
+/* ------------------------------------------------------------------ */
+
+/*
+ * An accepted attacker-supplied chain must originate in genuine
+ * issuer events because no trusted signing key is released.
+ */
+lemma accepted_chain_has_authentic_origins:
+  "All cod dc1 dc2 dc3 #i.
+     ChainAccepted(cod,dc1,dc2,dc3)@i
+     ==>
+     (Ex b1 b2 b3 #j1 #j2 #j3.
+        IssuedDC1(dc1,b1)@j1
+      & IssuedDC2(dc2,b2,dc1)@j2
+      & IssuedDC3(dc3,b3,dc2)@j3
+      & #j1 < #j2
+      & #j2 < #j3
+      & #j3 < #i)"
+
+
+lemma accepted_chain_has_exact_structure:
+  "All cod dc1 dc2 dc3 #i.
+     ChainAccepted(cod,dc1,dc2,dc3)@i
+     ==>
+     ChainFieldsVerified(
+       cod,
+       'dam_a',
+       'twin_agent',
+       'dam_b',
+       'vendor_agent',
+       '3',
+       '2',
+       '1',
+       'diagnostics.read',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b')@i"
+
+
+/* ------------------------------------------------------------------ */
+/* Capability origin, proof of possession, and confinement             */
+/* ------------------------------------------------------------------ */
+
+lemma capability_origin_authenticity:
+  "All cap nonce cod #i.
+     CapabilityAccepted(cap,nonce,cod)@i
+     ==>
+     (Ex #j.
+        CapabilityRealized(cap,cod,nonce)@j
+      & #j < #i)"
+
+
+lemma access_requires_holder_proof:
+  "All cap nonce cod #i.
+     AccessGranted(
+       cap,
+       nonce,
+       cod,
+       'vendor_agent',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b',
+       'diagnostics.read')@i
+     ==>
+     (Ex challenge proofBody #j #k.
+        ChallengeIssued(cap,challenge)@j
+      & HolderProofGenerated(cap,challenge,proofBody)@k
+      & HolderProofVerified(cap,challenge,proofBody)@i
+      & #j < #k
+      & #k < #i)"
+
+
+lemma access_is_exactly_bound:
+  "All cap nonce cod sub res act aud scope #i.
+     AccessGranted(cap,nonce,cod,sub,res,act,aud,scope)@i
+     ==>
+       sub   = 'vendor_agent'
+     & res   = 'asset:compressor-7'
+     & act   = 'read-status'
+     & aud   = 'vendor-b'
+     & scope = 'diagnostics.read'"
+
+
+/* ------------------------------------------------------------------ */
+/* Replay resistance and cascading revocation                          */
+/* ------------------------------------------------------------------ */
+
+lemma replay_resistance_injective:
+  "All cap nonce cod #i #j.
+     AccessGranted(
+       cap,
+       nonce,
+       cod,
+       'vendor_agent',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b',
+       'diagnostics.read')@i
+
+   & AccessGranted(
+       cap,
+       nonce,
+       cod,
+       'vendor_agent',
+       'asset:compressor-7',
+       'read-status',
+       'vendor-b',
+       'diagnostics.read')@j
+
+     ==> #i = #j"
+
+
+lemma no_dependent_access_after_revocation:
+  "All cod dc #r.
+     ChainRevoked(cod,dc)@r
+     ==>
+     not
+       (Ex cap nonce #d #a.
+          CapabilityRealized(cap,cod,nonce)@d
+
+        & AccessGranted(
+            cap,
+            nonce,
+            cod,
+            'vendor_agent',
+            'asset:compressor-7',
+            'read-status',
+            'vendor-b',
+            'diagnostics.read')@a
+
+        & #d < #r
+        & #r < #a)"
+
+
+/* ------------------------------------------------------------------ */
+/* Explicit attacker-tampering exclusions                              */
+/* ------------------------------------------------------------------ */
+
+lemma no_wrong_subject_access:
+  "not
+     (Ex cap nonce cod sub #i.
+        AccessGranted(
+          cap,
+          nonce,
+          cod,
+          sub,
+          'asset:compressor-7',
+          'read-status',
+          'vendor-b',
+          'diagnostics.read')@i
+
+      & not (sub = 'vendor_agent'))"
+
+
+lemma no_wrong_resource_access:
+  "not
+     (Ex cap nonce cod res #i.
+        AccessGranted(
+          cap,
+          nonce,
+          cod,
+          'vendor_agent',
+          res,
+          'read-status',
+          'vendor-b',
+          'diagnostics.read')@i
+
+      & not (res = 'asset:compressor-7'))"
+
+
+lemma no_wrong_action_access:
+  "not
+     (Ex cap nonce cod act #i.
+        AccessGranted(
+          cap,
+          nonce,
+          cod,
+          'vendor_agent',
+          'asset:compressor-7',
+          act,
+          'vendor-b',
+          'diagnostics.read')@i
+
+      & not (act = 'read-status'))"
+
+
+lemma no_wrong_audience_access:
+  "not
+     (Ex cap nonce cod aud #i.
+        AccessGranted(
+          cap,
+          nonce,
+          cod,
+          'vendor_agent',
+          'asset:compressor-7',
+          'read-status',
+          aud,
+          'diagnostics.read')@i
+
+      & not (aud = 'vendor-b'))"
+
+
+lemma no_wrong_scope_access:
+  "not
+     (Ex cap nonce cod scope #i.
+        AccessGranted(
+          cap,
+          nonce,
+          cod,
+          'vendor_agent',
+          'asset:compressor-7',
+          'read-status',
+          'vendor-b',
+          scope)@i
+
+      & not (scope = 'diagnostics.read'))"
+
+end

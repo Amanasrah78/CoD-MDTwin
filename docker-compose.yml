@@ -1,0 +1,74 @@
+services:
+  ledger-service:
+    build: .
+    command: python3 -m uvicorn services.ledger_service.main:app --host 0.0.0.0 --port 9000
+    ports:
+      - "9000:9000"
+    volumes:
+      - ./results:/app/results
+
+  metrics-service:
+    build: .
+    command: python3 -m uvicorn services.metrics_service.main:app --host 0.0.0.0 --port 9100
+    ports:
+      - "9100:9100"
+    volumes:
+      - ./results:/app/results
+
+  verifier:
+    build: .
+    command: python3 -m uvicorn services.verifier.main:app --host 0.0.0.0 --port 8010
+    ports:
+      - "8010:8010"
+    volumes:
+      - ./results:/app/results
+    depends_on:
+      - ledger-service
+      - vendor-agent
+
+  factory-a:
+    build: .
+    command: python3 -m uvicorn services.factory_a.main:app --host 0.0.0.0 --port 8001
+    ports:
+      - "8001:8001"
+    depends_on:
+      - ledger-service
+
+  vendor-b:
+    build: .
+    command: python3 -m uvicorn services.vendor_b.main:app --host 0.0.0.0 --port 8000
+    ports:
+      - "8000:8000"
+    depends_on:
+      - ledger-service
+      - verifier
+
+  twin-agent:
+    build: .
+    command: python3 -m uvicorn services.twin_agent.main:app --host 0.0.0.0 --port 8002
+    ports:
+      - "8002:8002"
+    depends_on:
+      - ledger-service
+
+  vendor-agent:
+    build: .
+    command: python3 -m uvicorn services.vendor_agent.main:app --host 0.0.0.0 --port 8003
+    ports:
+      - "8003:8003"
+
+  client:
+    build: .
+    command: python3 -m uvicorn services.client.main:app --host 0.0.0.0 --port 8020
+    ports:
+      - "8020:8020"
+    volumes:
+      - ./results:/app/results
+    depends_on:
+      - factory-a
+      - vendor-b
+      - twin-agent
+      - vendor-agent
+      - verifier
+      - ledger-service
+      - metrics-service

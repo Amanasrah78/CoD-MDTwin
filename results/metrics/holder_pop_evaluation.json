@@ -1,0 +1,941 @@
+{
+  "mode": "full",
+  "generated_at_unix": 1784093848,
+  "functional_and_security": {
+    "summary": {
+      "total": 28,
+      "passed": 28,
+      "failed": 0
+    },
+    "delegation_token_tests": [
+      {
+        "case": "valid_three_hop_cod",
+        "accepted": true,
+        "expected": true,
+        "passed": true,
+        "reason": "valid chain of delegation",
+        "trace_id": "tr_82c3c239ef5441d7"
+      },
+      {
+        "case": "tampered_dc_payload",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 3",
+        "trace_id": "tr_32d5a1b6378447b6"
+      },
+      {
+        "case": "scope_expansion_without_valid_signature",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 3",
+        "trace_id": "tr_a83dda04b6f94a53"
+      },
+      {
+        "case": "action_expansion_without_valid_signature",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 3",
+        "trace_id": "tr_262acfc5720d4635"
+      },
+      {
+        "case": "resource_expansion_without_valid_signature",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 3",
+        "trace_id": "tr_27d70ccb2bb44e15"
+      },
+      {
+        "case": "reordered_delegation_chain",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "chain constraint failed between DC_1 and DC_2",
+        "trace_id": "tr_aab8fe6c7af24785"
+      },
+      {
+        "case": "missing_middle_dc",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "chain constraint failed between DC_1 and DC_2",
+        "trace_id": "tr_d76b547aa6e64245"
+      },
+      {
+        "case": "duplicate_dc",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 3",
+        "trace_id": "tr_d8055f8be18b4731"
+      },
+      {
+        "case": "wrong_issuer_key",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 3",
+        "trace_id": "tr_633fefdd157445cb"
+      },
+      {
+        "case": "missing_required_dc_claim",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "malformed delegation credential at position 3",
+        "trace_id": "tr_a250c98c48854957"
+      },
+      {
+        "case": "depth_overflow",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "delegation depth exceeded",
+        "trace_id": "tr_d510a5a0f08f4e79"
+      },
+      {
+        "case": "unknown_holder_verification_method",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "capability verification method is not authorized for the subject DID",
+        "trace_id": "tr_80982d1e9bfd4c30"
+      },
+      {
+        "case": "revoked_middle_dc",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid delegation credential at position 2",
+        "trace_id": "tr_296ee1bc65c44058"
+      }
+    ],
+    "capability_token_tests": [
+      {
+        "case": "valid_capability_without_nonce_consumption",
+        "accepted": true,
+        "expected": true,
+        "passed": true,
+        "reason": "valid holder-bound capability presentation",
+        "trace_id": "tr_1df97a8159a84733"
+      },
+      {
+        "case": "valid_first_use_consumes_nonce",
+        "accepted": true,
+        "expected": true,
+        "passed": true,
+        "reason": "valid holder-bound capability presentation",
+        "trace_id": "tr_2d49bca7b99a41ce"
+      },
+      {
+        "case": "replay_same_capability",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "capability replay detected",
+        "trace_id": "tr_82fd1aad790041d6"
+      },
+      {
+        "case": "wrong_action",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "requested action is outside capability",
+        "trace_id": "tr_4f2ac0b3187b4ec0"
+      },
+      {
+        "case": "wrong_resource",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "requested resource is outside capability",
+        "trace_id": "tr_f86e22dfe6984c4e"
+      },
+      {
+        "case": "wrong_subject",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "capability subject does not match requester",
+        "trace_id": "tr_929e02c683d5420c"
+      },
+      {
+        "case": "tampered_capability_payload",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid capability signature",
+        "trace_id": "tr_925566230d314e35"
+      },
+      {
+        "case": "missing_nonce",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "malformed capability",
+        "trace_id": "tr_e21b2deec2f24227"
+      },
+      {
+        "case": "expired_capability",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "capability expired or not yet valid",
+        "trace_id": "tr_fb9fdbcc18084b03"
+      },
+      {
+        "case": "revoked_capability",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "capability is revoked",
+        "trace_id": "tr_3d14ef67b6e34556"
+      },
+      {
+        "case": "missing_holder_proof",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "holder proof is missing"
+      },
+      {
+        "case": "stolen_capability_wrong_holder_key",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid holder proof"
+      },
+      {
+        "case": "request_modified_after_holder_signature",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "invalid holder proof"
+      },
+      {
+        "case": "valid_holder_proof_consumes_challenge",
+        "accepted": true,
+        "expected": true,
+        "passed": true,
+        "reason": "valid holder-bound capability presentation"
+      },
+      {
+        "case": "replayed_holder_proof",
+        "accepted": false,
+        "expected": false,
+        "passed": true,
+        "reason": "verifier challenge replay detected"
+      }
+    ]
+  },
+  "protected_resource": {
+    "step": "holder-bound protected resource enforcement",
+    "valid_protected_access": {
+      "accepted": true,
+      "reason": "protected resource returned",
+      "service": "diagnostics-api",
+      "resource": "asset:compressor-7",
+      "data": {
+        "status": "nominal",
+        "vibration": "normal",
+        "temperature_c": 61.2
+      },
+      "verifier_response": {
+        "accepted": true,
+        "reason": "valid holder-bound capability presentation",
+        "capability_id": "cap_6778a118ee9b",
+        "trace": {
+          "trace_id": "tr_fdee0c44d05b4e5f",
+          "request_id": null,
+          "operation": "verify_capability",
+          "actor": "Verifier",
+          "domain": "VerificationService",
+          "decision": "accepted",
+          "reason": "valid holder-bound capability presentation",
+          "inputs": {
+            "request": {
+              "actor_did": "did:local:vendor-agent",
+              "kid_s": "did:local:vendor-agent#key1",
+              "service": "diagnostics-api",
+              "scope": "diagnostics.read",
+              "action": "read-status",
+              "resource": "asset:compressor-7",
+              "audience": "vendor-b",
+              "timestamp": 1784093848
+            },
+            "capability_id": "cap_6778a118ee9b",
+            "consume_nonce": true,
+            "consume_challenge": true,
+            "require_holder_proof": true
+          },
+          "checks": {
+            "required_claims_present": true,
+            "type_is_capability": true,
+            "signature_valid": true,
+            "time_valid": true,
+            "capability_not_revoked": true,
+            "parent_cod_not_revoked": true,
+            "nonce_present": true,
+            "nonce_not_replayed": true,
+            "subject_matches": true,
+            "holder_key_binding_present": true,
+            "scope_authorized": true,
+            "action_authorized": true,
+            "resource_authorized": true,
+            "operation_authorized": true,
+            "audience_valid": true,
+            "nonce_consumed": false,
+            "request_time_fresh": true,
+            "holder_key_resolved": true,
+            "challenge_fresh_and_bound": true,
+            "holder_proof_valid": true,
+            "nonce_and_challenge_consumed": true
+          },
+          "artifacts": {
+            "capability_hash": "sha256:ade8d3403399e20bfa4d70a5961e6f23aa1775a80e121da8a9ca6edac0d86c45",
+            "holder_kid": "did:local:vendor-agent#key1",
+            "challenge": "x54gYegm2MZ0ftOS8eMi0I-GEAPkBM7V5-u_1UfPmR8",
+            "ledger_tx": "ledger_da113b0581516d06"
+          },
+          "timing_ms": {
+            "capability_base_validation": 0.0797,
+            "holder_key_resolution": 0.678,
+            "challenge_state_check": 0.3213,
+            "holder_proof_verification": 0.0538,
+            "nonce_challenge_state_consumption": 1.0618,
+            "ledger_anchor": 1.1222
+          }
+        }
+      },
+      "trace": {
+        "trace_id": "tr_922c201430e24221",
+        "request_id": null,
+        "operation": "protected_resource_access",
+        "actor": "VendorB",
+        "domain": "VendorB",
+        "decision": "accepted",
+        "reason": "protected resource returned",
+        "inputs": {
+          "request": {
+            "actor_did": "did:local:vendor-agent",
+            "kid_s": "did:local:vendor-agent#key1",
+            "service": "diagnostics-api",
+            "scope": "diagnostics.read",
+            "action": "read-status",
+            "resource": "asset:compressor-7",
+            "audience": "vendor-b",
+            "timestamp": 1784093848
+          },
+          "capability_id": "cap_6778a118ee9b"
+        },
+        "checks": {
+          "local_policy_allowed": true,
+          "local_policy_reason": "operation allowed by local policy",
+          "capability_accepted": true
+        },
+        "artifacts": {},
+        "timing_ms": {}
+      }
+    },
+    "denied_write_access": {
+      "accepted": false,
+      "reason": "operation explicitly denied by local policy",
+      "trace": {
+        "trace_id": "tr_ae29a5700b624705",
+        "request_id": null,
+        "operation": "protected_resource_access",
+        "actor": "VendorB",
+        "domain": "VendorB",
+        "decision": "rejected",
+        "reason": "operation explicitly denied by local policy",
+        "inputs": {
+          "request": {
+            "actor_did": "did:local:vendor-agent",
+            "kid_s": "did:local:vendor-agent#key1",
+            "service": "firmware-update-api",
+            "scope": "firmware.update",
+            "action": "write",
+            "resource": "asset:compressor-7",
+            "audience": "vendor-b",
+            "timestamp": 1784093848
+          },
+          "capability_id": "cap_6778a118ee9b"
+        },
+        "checks": {
+          "local_policy_allowed": false,
+          "local_policy_reason": "operation explicitly denied by local policy"
+        },
+        "artifacts": {},
+        "timing_ms": {}
+      }
+    },
+    "passed": true
+  },
+  "concurrent_replay": {
+    "10": {
+      "test": "concurrent_capability_and_holder_proof_replay",
+      "concurrency": 10,
+      "capability_replay": {
+        "accepted": 1,
+        "rejected": 9,
+        "reasons": {
+          "capability replay detected": 9
+        },
+        "passed": true
+      },
+      "holder_proof_replay": {
+        "accepted": 1,
+        "rejected": 9,
+        "reasons": {
+          "verifier challenge replay detected": 9
+        },
+        "passed": true
+      },
+      "passed": true
+    },
+    "25": {
+      "test": "concurrent_capability_and_holder_proof_replay",
+      "concurrency": 25,
+      "capability_replay": {
+        "accepted": 1,
+        "rejected": 24,
+        "reasons": {
+          "capability replay detected": 24
+        },
+        "passed": true
+      },
+      "holder_proof_replay": {
+        "accepted": 1,
+        "rejected": 24,
+        "reasons": {
+          "verifier challenge replay detected": 24
+        },
+        "passed": true
+      },
+      "passed": true
+    },
+    "50": {
+      "test": "concurrent_capability_and_holder_proof_replay",
+      "concurrency": 50,
+      "capability_replay": {
+        "accepted": 1,
+        "rejected": 49,
+        "reasons": {
+          "capability replay detected": 49
+        },
+        "passed": true
+      },
+      "holder_proof_replay": {
+        "accepted": 1,
+        "rejected": 49,
+        "reasons": {
+          "verifier challenge replay detected": 49
+        },
+        "passed": true
+      },
+      "passed": true
+    },
+    "100": {
+      "test": "concurrent_capability_and_holder_proof_replay",
+      "concurrency": 100,
+      "capability_replay": {
+        "accepted": 1,
+        "rejected": 99,
+        "reasons": {
+          "capability replay detected": 99
+        },
+        "passed": true
+      },
+      "holder_proof_replay": {
+        "accepted": 1,
+        "rejected": 99,
+        "reasons": {
+          "verifier challenge replay detected": 99
+        },
+        "passed": true
+      },
+      "passed": true
+    }
+  },
+  "performance": {
+    "accepted": true,
+    "iterations": 100,
+    "warmup": 5,
+    "success_iterations": 100,
+    "failure_count": 0,
+    "failures": [],
+    "raw_file": "/app/results/metrics/performance_raw.csv",
+    "summary_file": "/app/results/metrics/performance_summary.csv",
+    "summary": [
+      {
+        "operation": "capability_capability_base_validation",
+        "count": 100,
+        "mean_ms": 0.080351,
+        "std_ms": 0.005907,
+        "min_ms": 0.0724,
+        "max_ms": 0.1034,
+        "ci95_ms": 0.001158
+      },
+      {
+        "operation": "capability_challenge_state_check",
+        "count": 100,
+        "mean_ms": 0.348303,
+        "std_ms": 0.217584,
+        "min_ms": 0.2859,
+        "max_ms": 2.4819,
+        "ci95_ms": 0.042646
+      },
+      {
+        "operation": "capability_holder_key_resolution",
+        "count": 100,
+        "mean_ms": 0.669327,
+        "std_ms": 0.043021,
+        "min_ms": 0.5948,
+        "max_ms": 0.8899,
+        "ci95_ms": 0.008432
+      },
+      {
+        "operation": "capability_holder_proof_verification",
+        "count": 100,
+        "mean_ms": 0.065515,
+        "std_ms": 0.031342,
+        "min_ms": 0.0515,
+        "max_ms": 0.3726,
+        "ci95_ms": 0.006143
+      },
+      {
+        "operation": "capability_ledger_anchor",
+        "count": 100,
+        "mean_ms": 1.116967,
+        "std_ms": 0.076237,
+        "min_ms": 1.0162,
+        "max_ms": 1.4369,
+        "ci95_ms": 0.014942
+      },
+      {
+        "operation": "capability_nonce_challenge_state_consumption",
+        "count": 100,
+        "mean_ms": 1.097716,
+        "std_ms": 0.223293,
+        "min_ms": 0.9406,
+        "max_ms": 3.1471,
+        "ci95_ms": 0.043765
+      },
+      {
+        "operation": "capability_verify_http",
+        "count": 100,
+        "mean_ms": 4.197163,
+        "std_ms": 0.453206,
+        "min_ms": 3.886375,
+        "max_ms": 7.724208,
+        "ci95_ms": 0.088828
+      },
+      {
+        "operation": "challenge_issue_http",
+        "count": 100,
+        "mean_ms": 2.020384,
+        "std_ms": 0.089861,
+        "min_ms": 1.900417,
+        "max_ms": 2.390542,
+        "ci95_ms": 0.017613
+      },
+      {
+        "operation": "cod_verify_http",
+        "count": 100,
+        "mean_ms": 3.307238,
+        "std_ms": 0.48071,
+        "min_ms": 2.927417,
+        "max_ms": 5.812,
+        "ci95_ms": 0.094219
+      },
+      {
+        "operation": "dc1_issuance_http",
+        "count": 100,
+        "mean_ms": 2.303666,
+        "std_ms": 0.145274,
+        "min_ms": 2.020583,
+        "max_ms": 3.135208,
+        "ci95_ms": 0.028474
+      },
+      {
+        "operation": "dc2_delegation_http",
+        "count": 100,
+        "mean_ms": 2.080858,
+        "std_ms": 0.158913,
+        "min_ms": 1.9015,
+        "max_ms": 3.395,
+        "ci95_ms": 0.031147
+      },
+      {
+        "operation": "dc3_downstream_delegation_http",
+        "count": 100,
+        "mean_ms": 2.266974,
+        "std_ms": 0.194822,
+        "min_ms": 2.038334,
+        "max_ms": 3.764375,
+        "ci95_ms": 0.038185
+      },
+      {
+        "operation": "holder_bound_access_total_http",
+        "count": 100,
+        "mean_ms": 7.078205,
+        "std_ms": 0.525084,
+        "min_ms": 6.595833,
+        "max_ms": 11.264917,
+        "ci95_ms": 0.102916
+      },
+      {
+        "operation": "holder_sign_http",
+        "count": 100,
+        "mean_ms": 0.860658,
+        "std_ms": 0.049799,
+        "min_ms": 0.789458,
+        "max_ms": 1.150167,
+        "ci95_ms": 0.009761
+      },
+      {
+        "operation": "ledger_anchor_total_ms",
+        "count": 100,
+        "mean_ms": 5.983373,
+        "std_ms": 0.466472,
+        "min_ms": 5.5849,
+        "max_ms": 9.4771,
+        "ci95_ms": 0.091428
+      },
+      {
+        "operation": "total_flow_ms",
+        "count": 100,
+        "mean_ms": 24.144924,
+        "std_ms": 1.488366,
+        "min_ms": 22.948958,
+        "max_ms": 36.390042,
+        "ci95_ms": 0.29172
+      },
+      {
+        "operation": "verifier_capability_realization",
+        "count": 100,
+        "mean_ms": 0.071389,
+        "std_ms": 0.005938,
+        "min_ms": 0.0628,
+        "max_ms": 0.102,
+        "ci95_ms": 0.001164
+      },
+      {
+        "operation": "verifier_cod_validation",
+        "count": 100,
+        "mean_ms": 0.212737,
+        "std_ms": 0.01181,
+        "min_ms": 0.1952,
+        "max_ms": 0.2831,
+        "ci95_ms": 0.002315
+      },
+      {
+        "operation": "verifier_ledger_anchor",
+        "count": 100,
+        "mean_ms": 1.199987,
+        "std_ms": 0.284622,
+        "min_ms": 1.0232,
+        "max_ms": 3.1424,
+        "ci95_ms": 0.055786
+      }
+    ]
+  },
+  "ablation": {
+    "test": "holder_proof_ablation_comparison",
+    "iterations": 100,
+    "warmup": 5,
+    "summary": [
+      {
+        "variant": "capability_verification_with_holder_proof_no_state",
+        "accepted": 100,
+        "rejected": 0,
+        "operation": "capability_verification_with_holder_proof_no_state",
+        "count": 100,
+        "mean_ms": 6.058755,
+        "std_ms": 0.373944,
+        "min_ms": 5.461125,
+        "max_ms": 7.980041,
+        "ci95_ms": 0.073293
+      },
+      {
+        "variant": "capability_verification_without_holder_proof",
+        "accepted": 100,
+        "rejected": 0,
+        "operation": "capability_verification_without_holder_proof",
+        "count": 100,
+        "mean_ms": 1.981294,
+        "std_ms": 0.087063,
+        "min_ms": 1.730125,
+        "max_ms": 2.278375,
+        "ci95_ms": 0.017064
+      },
+      {
+        "variant": "cod_validation_only",
+        "accepted": 100,
+        "rejected": 0,
+        "operation": "cod_validation_only",
+        "count": 100,
+        "mean_ms": 1.102284,
+        "std_ms": 0.077543,
+        "min_ms": 1.015125,
+        "max_ms": 1.453125,
+        "ci95_ms": 0.015198
+      },
+      {
+        "variant": "cod_validation_plus_capability_realization",
+        "accepted": 100,
+        "rejected": 0,
+        "operation": "cod_validation_plus_capability_realization",
+        "count": 100,
+        "mean_ms": 3.390463,
+        "std_ms": 0.306737,
+        "min_ms": 2.86225,
+        "max_ms": 4.498334,
+        "ci95_ms": 0.060121
+      },
+      {
+        "variant": "full_cod_mdtwin_holder_bound_flow",
+        "accepted": 100,
+        "rejected": 0,
+        "operation": "full_cod_mdtwin_holder_bound_flow",
+        "count": 100,
+        "mean_ms": 24.453218,
+        "std_ms": 1.170035,
+        "min_ms": 22.789292,
+        "max_ms": 32.37375,
+        "ci95_ms": 0.229327
+      },
+      {
+        "variant": "full_stateful_holder_bound_capability_verification",
+        "accepted": 100,
+        "rejected": 0,
+        "operation": "full_stateful_holder_bound_capability_verification",
+        "count": 100,
+        "mean_ms": 7.139569,
+        "std_ms": 0.346327,
+        "min_ms": 6.305334,
+        "max_ms": 9.488666,
+        "ci95_ms": 0.06788
+      }
+    ],
+    "security_ablation": {
+      "without_holder_proof": {
+        "first_accepted": true,
+        "second_accepted": true,
+        "shows_bearer_capability_risk": true
+      },
+      "without_nonce_and_challenge_consumption": {
+        "first_accepted": true,
+        "second_accepted": true,
+        "shows_replay_risk": true
+      }
+    },
+    "failure_count": 0,
+    "failures": [],
+    "raw_file": "/app/results/metrics/ablation_comparison.csv"
+  },
+  "cryptographic_and_stateful_cost": {
+    "test": "crypto_cost",
+    "iterations_local_crypto": 5000,
+    "iterations_stateful_http": {
+      "revocation_registry_read_http": 5000,
+      "verifier_challenge_issuance_http": 1000,
+      "nonce_challenge_consume_verify_capability_http": 1000
+    },
+    "summary": [
+      {
+        "operation": "ed25519_key_generation",
+        "count": 5000,
+        "mean_ms": 0.0186794762,
+        "std_ms": 0.0028215984674322186,
+        "min_ms": 0.015,
+        "max_ms": 0.184125,
+        "p95_ms": 0.021542,
+        "ci95_ms": 7.821071927619015e-05
+      },
+      {
+        "operation": "dc_signing",
+        "count": 5000,
+        "mean_ms": 0.0433103248,
+        "std_ms": 0.004987906242406885,
+        "min_ms": 0.032333,
+        "max_ms": 0.288,
+        "p95_ms": 0.048375,
+        "ci95_ms": 0.00013825770725480187
+      },
+      {
+        "operation": "dc_signature_verification",
+        "count": 5000,
+        "mean_ms": 0.0469650514,
+        "std_ms": 0.0037362715678874096,
+        "min_ms": 0.041583,
+        "max_ms": 0.157,
+        "p95_ms": 0.052834,
+        "ci95_ms": 0.0001035641641107011
+      },
+      {
+        "operation": "capability_signing",
+        "count": 5000,
+        "mean_ms": 0.051184075,
+        "std_ms": 0.00434903037165869,
+        "min_ms": 0.040167,
+        "max_ms": 0.1665,
+        "p95_ms": 0.057375,
+        "ci95_ms": 0.00012054897160153555
+      },
+      {
+        "operation": "capability_issuer_signature_verification",
+        "count": 5000,
+        "mean_ms": 0.049055085,
+        "std_ms": 0.0051565748067222365,
+        "min_ms": 0.043375,
+        "max_ms": 0.322167,
+        "p95_ms": 0.05525,
+        "ci95_ms": 0.00014293296133033697
+      },
+      {
+        "operation": "holder_request_signing",
+        "count": 5000,
+        "mean_ms": 0.0314191318,
+        "std_ms": 0.002275738741286547,
+        "min_ms": 0.028375,
+        "max_ms": 0.063209,
+        "p95_ms": 0.03475,
+        "ci95_ms": 6.30802596099681e-05
+      },
+      {
+        "operation": "holder_proof_verification",
+        "count": 5000,
+        "mean_ms": 0.0452555196,
+        "std_ms": 0.014611984054563501,
+        "min_ms": 0.040167,
+        "max_ms": 1.05275,
+        "p95_ms": 0.050958,
+        "ci95_ms": 0.00040502353405360496
+      },
+      {
+        "operation": "cod_hash_computation",
+        "count": 5000,
+        "mean_ms": 0.0053129794,
+        "std_ms": 0.0009220970534443943,
+        "min_ms": 0.004625,
+        "max_ms": 0.050417,
+        "p95_ms": 0.005625,
+        "ci95_ms": 2.5559226312584487e-05
+      },
+      {
+        "operation": "capability_hash_computation",
+        "count": 5000,
+        "mean_ms": 0.0068304264,
+        "std_ms": 0.0007832325021432159,
+        "min_ms": 0.005958,
+        "max_ms": 0.029167,
+        "p95_ms": 0.007292,
+        "ci95_ms": 2.1710097329638063e-05
+      },
+      {
+        "operation": "sd_digest_verification",
+        "count": 5000,
+        "mean_ms": 0.0021613934,
+        "std_ms": 0.00041691845154117024,
+        "min_ms": 0.001541,
+        "max_ms": 0.016375,
+        "p95_ms": 0.002333,
+        "ci95_ms": 1.1556389880033014e-05
+      },
+      {
+        "operation": "revocation_registry_read_http",
+        "count": 5000,
+        "mean_ms": 0.5721750508,
+        "std_ms": 0.06267210322054492,
+        "min_ms": 0.495416,
+        "max_ms": 2.755042,
+        "p95_ms": 0.610083,
+        "ci95_ms": 0.0017371820717960466
+      },
+      {
+        "operation": "verifier_challenge_issuance_http",
+        "count": 1000,
+        "mean_ms": 1.904020002,
+        "std_ms": 0.20119704417350706,
+        "min_ms": 1.609459,
+        "max_ms": 3.394459,
+        "p95_ms": 2.309917,
+        "ci95_ms": 0.012470321994403124
+      },
+      {
+        "operation": "nonce_challenge_consume_verify_capability_http",
+        "count": 1000,
+        "mean_ms": 4.146252774,
+        "std_ms": 0.47917696401434506,
+        "min_ms": 3.507042,
+        "max_ms": 14.226208,
+        "p95_ms": 4.628833,
+        "ci95_ms": 0.029699695927969467
+      }
+    ],
+    "note": "Local crypto operations isolate Ed25519 signing/verification and hashing. HTTP rows include API, state access, and verifier logic overhead."
+  },
+  "load": {
+    "100": {
+      "test": "holder_bound_load",
+      "summary": [
+        {
+          "operation": "holder_bound_total_flow",
+          "count": 100,
+          "mean_ms": 90.031175,
+          "std_ms": 15.952732,
+          "min_ms": 57.454125,
+          "max_ms": 141.515,
+          "ci95_ms": 3.126735
+        }
+      ],
+      "p95_latency_ms": 129.317344,
+      "p99_latency_ms": 141.460219,
+      "success_count": 100,
+      "failure_count": 0,
+      "sample_failures": []
+    },
+    "500": {
+      "test": "holder_bound_load",
+      "summary": [
+        {
+          "operation": "holder_bound_total_flow",
+          "count": 500,
+          "mean_ms": 90.154956,
+          "std_ms": 11.770054,
+          "min_ms": 56.107,
+          "max_ms": 128.078626,
+          "ci95_ms": 1.031691
+        }
+      ],
+      "p95_latency_ms": 111.172881,
+      "p99_latency_ms": 120.199793,
+      "success_count": 500,
+      "failure_count": 0,
+      "sample_failures": []
+    },
+    "1000": {
+      "test": "holder_bound_load",
+      "summary": [
+        {
+          "operation": "holder_bound_total_flow",
+          "count": 1000,
+          "mean_ms": 93.284733,
+          "std_ms": 13.41563,
+          "min_ms": 52.896334,
+          "max_ms": 143.969,
+          "ci95_ms": 0.831509
+        }
+      ],
+      "p95_latency_ms": 116.522452,
+      "p99_latency_ms": 130.677854,
+      "success_count": 1000,
+      "failure_count": 0,
+      "sample_failures": []
+    }
+  }
+}

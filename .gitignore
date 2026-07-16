@@ -1,0 +1,58 @@
+# macOS
+.DS_Store
+
+# Python generated files
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.coverage
+htmlcov/
+*.egg-info/
+build/
+dist/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.p12
+*.pfx
+id_rsa
+id_rsa.pub
+
+# Runtime databases and verifier state
+*.sqlite
+*.sqlite3
+*.db
+results/state/
+
+# Large generated traces
+results/traces/
+
+# Logs and temporary files
+*.log
+*.tmp
+*.swp
+*~
+
+# Generated archive from the original experiment folder
+holder_pop_full_results.zip
+
+# LaTeX temporary files
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.toc

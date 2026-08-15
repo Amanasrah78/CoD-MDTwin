@@ -34,6 +34,9 @@ RESULTS_DIR = Path("/app/results/metrics")
 PERF_RAW = RESULTS_DIR / "performance_raw.csv"
 PERF_SUMMARY = RESULTS_DIR / "performance_summary.csv"
 STRESS_SUMMARY = RESULTS_DIR / "stress_summary.csv"
+SINGLE_USE_RAW = RESULTS_DIR / "single_use_renewal_raw.csv"
+SINGLE_USE_SESSIONS = RESULTS_DIR / "single_use_renewal_sessions.csv"
+SINGLE_USE_SUMMARY = RESULTS_DIR / "single_use_renewal_summary.csv"
 
 
 class FlowRequest(BaseModel):
@@ -358,6 +361,7 @@ def domain_info() -> Dict[str, Any]:
             "POST /run-stress-ledger": "anchor many audit artifacts and measure latency",
             "POST /run-stress-revocation-list": "measure validation with many revoked identifiers",
             "POST /run-revocation-scale": "measure revocation latency and cascading invalidation as dependent capabilities increase",
+            "POST /run-single-use-renewal": "compare on-demand renewal with pre-issued single-use capability pools",
             "POST /run-monotonic-delegation-stress": "stress-test monotonic delegation enforcement under valid and authority-expanding chains",
             "POST /run-crypto-cost": "measure cryptographic and security-mechanism operation costs",
             "POST /run-stress-clock-skew": "test expired-token timing boundaries",
@@ -858,6 +862,14 @@ class ChainDepthSensitivityRequest(BaseModel):
     reset_verifier_state: bool = True
 
 
+class SingleUseRenewalRequest(BaseModel):
+    operation_counts: List[int] = Field(default=[1, 10, 50, 100, 500, 1000])
+    repetitions: int = Field(default=5, ge=1, le=50)
+    warmup_sessions: int = Field(default=1, ge=0, le=10)
+    revocation_operation_count: int = Field(default=100, ge=2, le=5000)
+    reset_verifier_state: bool = True
+
+
 def _percentile(values: List[float], pct: float) -> float:
     if not values:
         return 0.0
@@ -981,6 +993,315 @@ def _build_multiscope_cod(scopes: List[str], actions: List[str] | None = None, r
     dc3 = step3["credential"]
     keys[dc3["payload"]["issuer"]] = step3["issuer_public_key"]
     return {"cod": [dc1, dc2, dc3], "issuer_keys": keys, "vendor_agent": vendor_agent, "resource": resource}
+
+
+def _issue_single_use_capability(built: Dict[str, Any]) -> tuple[Dict[str, Any], float]:
+    return timed_post_json(
+        f"{BASE['verifier']}/verify-cod",
+        {
+            "cod": built["cod"],
+            "issuer_keys": built["issuer_keys"],
+            "request": built["request"],
+            "depth_max": 3,
+            "issue_capability_on_success": True,
+            "capability_valid_seconds": 600,
+        },
+    )
+
+
+def _run_single_use_session(
+    mode: str,
+    operation_count: int,
+    repetition: int,
+    *,
+    collect_rows: bool,
+) -> tuple[Dict[str, Any], List[Dict[str, Any]]]:
+    reset_verifier_state()
+    built = build_cod(
+        FlowRequest(capability_valid_seconds=600),
+        f"single_use_renewal_{mode}",
+    )
+    state_before = get_json(f"{BASE['verifier']}/state")
+    issued: List[tuple[Dict[str, Any], float]] = []
+    issuance_total_ms = 0.0
+    preissue_wall_ms = 0.0
+
+    if mode == "preissued_pool":
+        preissue_start = time.perf_counter()
+        for _ in range(operation_count):
+            response, issuance_ms = _issue_single_use_capability(built)
+            issued.append((response, issuance_ms))
+            issuance_total_ms += issuance_ms
+        preissue_wall_ms = _ms(preissue_start, time.perf_counter())
+
+    rows: List[Dict[str, Any]] = []
+    accepted_count = 0
+    rejected_count = 0
+    session_start = time.perf_counter()
+
+    for operation_index in range(1, operation_count + 1):
+        operation_start = time.perf_counter()
+        if mode == "on_demand":
+            issued_response, issuance_ms = _issue_single_use_capability(built)
+            issuance_total_ms += issuance_ms
+        else:
+            issued_response, issuance_ms = issued[operation_index - 1]
+
+        access_ms = 0.0
+        reason = issued_response.get("reason")
+        accepted = False
+        if issued_response.get("accepted") and issued_response.get("capability"):
+            access_response, access_timings = timed_verify_capability_with_holder(
+                issued_response["capability"],
+                issued_response["verifier_public_key"],
+                built["request"],
+                consume_nonce=True,
+                consume_challenge=True,
+                require_holder_proof=True,
+            )
+            access_ms = float(access_timings.get("holder_bound_access_total_http", 0.0))
+            accepted = bool(access_response.get("accepted"))
+            reason = access_response.get("reason")
+
+        if accepted:
+            accepted_count += 1
+        else:
+            rejected_count += 1
+
+        online_operation_ms = _ms(operation_start, time.perf_counter())
+        if collect_rows:
+            rows.append({
+                "mode": mode,
+                "operation_count": operation_count,
+                "repetition": repetition,
+                "operation_index": operation_index,
+                "accepted": accepted,
+                "reason": reason,
+                "issuance_ms": issuance_ms,
+                "access_ms": access_ms,
+                "online_operation_ms": online_operation_ms,
+                "lifecycle_operation_ms": round(issuance_ms + access_ms, 6),
+            })
+
+    online_session_ms = _ms(session_start, time.perf_counter())
+    state_after = get_json(f"{BASE['verifier']}/state")
+    lifecycle_session_ms = round(preissue_wall_ms + online_session_ms, 6)
+    return {
+        "mode": mode,
+        "operation_count": operation_count,
+        "repetition": repetition,
+        "accepted": accepted_count,
+        "rejected": rejected_count,
+        "capability_issuance_count": operation_count,
+        "issuance_total_ms": round(issuance_total_ms, 6),
+        "preissue_wall_ms": preissue_wall_ms,
+        "online_session_ms": online_session_ms,
+        "lifecycle_session_ms": lifecycle_session_ms,
+        "consumed_nonce_delta": int(state_after["consumed_nonce_count"]) - int(state_before["consumed_nonce_count"]),
+        "challenge_delta": int(state_after["challenge_count"]) - int(state_before["challenge_count"]),
+        "consumed_challenge_delta": int(state_after["consumed_challenge_count"]) - int(state_before["consumed_challenge_count"]),
+    }, rows
+
+
+def _single_use_revocation_check(mode: str, operation_count: int) -> Dict[str, Any]:
+    reset_verifier_state()
+    built = build_cod(FlowRequest(capability_valid_seconds=600), f"single_use_revocation_{mode}")
+    cutoff = operation_count // 2
+    issued: List[tuple[Dict[str, Any], float]] = []
+    if mode == "preissued_pool":
+        issued = [_issue_single_use_capability(built) for _ in range(operation_count)]
+
+    before_accepted = 0
+    after_accepted = 0
+    after_attempted = operation_count - cutoff
+    rejection_reasons: Dict[str, int] = {}
+
+    for operation_index in range(operation_count):
+        if operation_index == cutoff:
+            post_json(
+                f"{BASE['verifier']}/revoke",
+                {
+                    "credential_id": built["cod"][1]["payload"]["id"],
+                    "reason": "single-use renewal mid-session test",
+                },
+            )
+
+        issued_response = (
+            _issue_single_use_capability(built)[0]
+            if mode == "on_demand"
+            else issued[operation_index][0]
+        )
+        accepted = False
+        reason = issued_response.get("reason", "capability issuance rejected")
+        if issued_response.get("accepted") and issued_response.get("capability"):
+            access_response, _ = timed_verify_capability_with_holder(
+                issued_response["capability"],
+                issued_response["verifier_public_key"],
+                built["request"],
+                consume_nonce=True,
+                consume_challenge=True,
+                require_holder_proof=True,
+            )
+            accepted = bool(access_response.get("accepted"))
+            reason = access_response.get("reason", "capability verification rejected")
+
+        if operation_index < cutoff:
+            before_accepted += int(accepted)
+        else:
+            after_accepted += int(accepted)
+            if not accepted:
+                rejection_reasons[str(reason)] = rejection_reasons.get(str(reason), 0) + 1
+
+    return {
+        "mode": mode,
+        "operation_count": operation_count,
+        "revocation_after_operation": cutoff,
+        "pre_revocation_accepted": before_accepted,
+        "pre_revocation_expected": cutoff,
+        "post_revocation_attempted": after_attempted,
+        "post_revocation_accepted": after_accepted,
+        "post_revocation_rejected": after_attempted - after_accepted,
+        "rejection_reasons": rejection_reasons,
+        "passed": before_accepted == cutoff and after_accepted == 0,
+    }
+
+
+@app.post("/run-single-use-renewal")
+def run_single_use_renewal(
+    req: SingleUseRenewalRequest = SingleUseRenewalRequest(),
+) -> Dict[str, Any]:
+    wait_for_services()
+    counts = sorted(set(req.operation_counts))
+    if not counts or any(count < 1 or count > 5000 for count in counts):
+        raise HTTPException(status_code=400, detail="operation_counts must contain values from 1 to 5000")
+
+    raw_rows: List[Dict[str, Any]] = []
+    session_rows: List[Dict[str, Any]] = []
+    failures: List[Dict[str, Any]] = []
+    modes = ["on_demand", "preissued_pool"]
+
+    for mode in modes:
+        for operation_count in counts:
+            for warmup_index in range(req.warmup_sessions):
+                try:
+                    _run_single_use_session(
+                        mode,
+                        operation_count,
+                        -(warmup_index + 1),
+                        collect_rows=False,
+                    )
+                except Exception as exc:
+                    failures.append({
+                        "phase": "warmup",
+                        "mode": mode,
+                        "operation_count": operation_count,
+                        "error": str(exc),
+                    })
+
+            for repetition in range(1, req.repetitions + 1):
+                try:
+                    session, rows = _run_single_use_session(
+                        mode,
+                        operation_count,
+                        repetition,
+                        collect_rows=True,
+                    )
+                    session_rows.append(session)
+                    raw_rows.extend(rows)
+                except Exception as exc:
+                    failures.append({
+                        "phase": "measurement",
+                        "mode": mode,
+                        "operation_count": operation_count,
+                        "repetition": repetition,
+                        "error": str(exc),
+                    })
+
+    raw_fields = [
+        "mode", "operation_count", "repetition", "operation_index", "accepted", "reason",
+        "issuance_ms", "access_ms", "online_operation_ms", "lifecycle_operation_ms",
+    ]
+    _write_csv(SINGLE_USE_RAW, raw_rows, raw_fields)
+    session_fields = [
+        "mode", "operation_count", "repetition", "accepted", "rejected",
+        "capability_issuance_count", "issuance_total_ms", "preissue_wall_ms",
+        "online_session_ms", "lifecycle_session_ms", "consumed_nonce_delta",
+        "challenge_delta", "consumed_challenge_delta",
+    ]
+    _write_csv(SINGLE_USE_SESSIONS, session_rows, session_fields)
+
+    summary_rows: List[Dict[str, Any]] = []
+    for mode in modes:
+        for operation_count in counts:
+            operations = [
+                row for row in raw_rows
+                if row["mode"] == mode and int(row["operation_count"]) == operation_count
+            ]
+            sessions = [
+                row for row in session_rows
+                if row["mode"] == mode and int(row["operation_count"]) == operation_count
+            ]
+            online_stats = _stats([float(row["online_operation_ms"]) for row in operations])
+            lifecycle_stats = _stats([float(row["lifecycle_operation_ms"]) for row in operations])
+            issuance_stats = _stats([float(row["issuance_ms"]) for row in operations])
+            access_stats = _stats([float(row["access_ms"]) for row in operations])
+            session_stats = _stats([float(row["online_session_ms"]) for row in sessions])
+            lifecycle_session_stats = _stats([float(row["lifecycle_session_ms"]) for row in sessions])
+            summary_rows.append({
+                "mode": mode,
+                "operation_count": operation_count,
+                "repetitions_completed": len(sessions),
+                "attempted_operations": len(operations),
+                "accepted_operations": sum(int(bool(row["accepted"])) for row in operations),
+                "rejected_operations": sum(int(not bool(row["accepted"])) for row in operations),
+                "capabilities_issued": sum(int(row["capability_issuance_count"]) for row in sessions),
+                "issuance_mean_ms": issuance_stats["mean_ms"],
+                "access_mean_ms": access_stats["mean_ms"],
+                "online_operation_mean_ms": online_stats["mean_ms"],
+                "online_operation_p95_ms": online_stats["p95_ms"],
+                "online_operation_p99_ms": online_stats["p99_ms"],
+                "online_operation_ci95_ms": online_stats["ci95_ms"],
+                "lifecycle_operation_mean_ms": lifecycle_stats["mean_ms"],
+                "online_session_mean_ms": session_stats["mean_ms"],
+                "online_session_p95_ms": session_stats["p95_ms"],
+                "online_session_ci95_ms": session_stats["ci95_ms"],
+                "lifecycle_session_mean_ms": lifecycle_session_stats["mean_ms"],
+                "lifecycle_session_p95_ms": lifecycle_session_stats["p95_ms"],
+                "lifecycle_session_ci95_ms": lifecycle_session_stats["ci95_ms"],
+                "consumed_nonce_delta_mean": round(statistics.fmean([float(row["consumed_nonce_delta"]) for row in sessions]), 3) if sessions else 0.0,
+                "consumed_challenge_delta_mean": round(statistics.fmean([float(row["consumed_challenge_delta"]) for row in sessions]), 3) if sessions else 0.0,
+            })
+
+    summary_fields = list(summary_rows[0].keys()) if summary_rows else []
+    _write_csv(SINGLE_USE_SUMMARY, summary_rows, summary_fields)
+
+    revocation_checks = [
+        _single_use_revocation_check(mode, req.revocation_operation_count)
+        for mode in modes
+    ]
+    if req.reset_verifier_state:
+        reset_verifier_state()
+
+    return {
+        "test": "single_use_capability_renewal",
+        "interpretation": (
+            "Measures the current prototype's single-use renewal path. "
+            "On-demand online latency includes capability issuance; pre-issued online latency excludes "
+            "pool preparation, which remains included in lifecycle latency."
+        ),
+        "operation_counts": counts,
+        "repetitions": req.repetitions,
+        "warmup_sessions": req.warmup_sessions,
+        "summary": summary_rows,
+        "revocation_checks": revocation_checks,
+        "all_normal_operations_accepted": bool(raw_rows) and all(bool(row["accepted"]) for row in raw_rows),
+        "all_revocation_checks_passed": all(check["passed"] for check in revocation_checks),
+        "failure_count": len(failures),
+        "failures": failures[:20],
+        "raw_file": str(SINGLE_USE_RAW),
+        "sessions_file": str(SINGLE_USE_SESSIONS),
+        "summary_file": str(SINGLE_USE_SUMMARY),
+    }
 
 @app.post("/run-chain-depth-sensitivity")
 def run_chain_depth_sensitivity(req: ChainDepthSensitivityRequest = ChainDepthSensitivityRequest()) -> Dict[str, Any]:
@@ -2381,4 +2702,3 @@ def run_ablation_comparison(req: AblationComparisonRequest = AblationComparisonR
             "warmup": req.warmup, "summary": summary,
             "security_ablation": security_ablation, "failure_count": len(failures),
             "failures": failures[:10], "raw_file": str(output_file)}
-

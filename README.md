@@ -129,6 +129,20 @@ Concurrent workload test:
 python3 experiments/run_http_stress.py load 1000 10
 ```
 
+Single-use capability renewal and pre-issued-pool comparison:
+
+```bash
+python3 experiments/run_single_use_renewal.py quick
+```
+
+Run the publication-scale configuration with 10 independent sessions per workload:
+
+```bash
+python3 experiments/run_single_use_renewal.py full
+```
+
+The experiment writes raw operation measurements, aggregate summaries, and a JSON report under `results/metrics/`. It also revokes a parent delegation midway through each renewal mode and checks that no later operation is accepted.
+
 Performance values depend on the host, container runtime, operating system, and current system load. Security decisions and acceptance or rejection counts should remain consistent under the stated assumptions.
 
 ## Formal verification
@@ -162,6 +176,7 @@ The model represents a bounded instance with three delegation credentials, two d
 | Negative authorization tests | `python3 experiments/run_http_negative_tests.py` | Invalid and expanding chains rejected |
 | Capability tests | `python3 experiments/run_http_capability_tests.py` | Invalid holder proofs and replay rejected |
 | Concurrent replay | `python3 experiments/run_http_stress.py replay 50` | One accepted request; remaining attempts rejected |
+| Single-use renewal | `python3 experiments/run_single_use_renewal.py full` | Both renewal modes accept valid operations and reject all post-revocation operations |
 | Tamarin verification | `tamarin-prover tamarin/cod_mdtwin.spthy` | All 14 lemmas verified |
 | Full evaluation | `python3 experiments/run_holder_pop_evaluation.py full` | Updated result files under `results/metrics/` |
 

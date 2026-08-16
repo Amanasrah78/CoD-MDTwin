@@ -1,11 +1,11 @@
 # CoD-MDTwin
-[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21953262.svg)](https://doi.org/10.5281/zenodo.21953262)
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.21953261.svg)](https://doi.org/10.5281/zenodo.21953261)
 
 CoD-MDTwin is a Chain-of-Delegation authorization framework for cross-domain Industrial Digital Twin agents. It validates the complete delegation path, enforces monotonic authority reduction, realizes accepted authority as a short-lived holder-bound capability, prevents capability and presentation replay, supports cascading revocation, preserves relying-domain policy control, and records authorization-related audit evidence.
 
 This repository contains the research prototype, experiment scripts, processed results, and Tamarin model associated with the CoD-MDTwin paper.
 
-**Latest reproducible release:** [CoD-MDTwin v1.1.0](https://github.com/Amanasrah78/CoD-MDTwin/releases/tag/v1.1.0)
+**Latest reproducible release:** [CoD-MDTwin v1.2.0](https://github.com/Amanasrah78/CoD-MDTwin/releases/tag/v1.2.0)
 
 
 ## Artifact contents
@@ -215,7 +215,7 @@ Do not use the example identities, keys, policies, or deployment configuration i
 
 If you use this artifact, cite the versioned software release:
 
-> Ahmed Manasrah. *CoD-MDTwin* (Version 1.1.0). Zenodo. https://doi.org/10.5281/zenodo.21953262
+> Ahmed Manasrah. *CoD-MDTwin* (Version 1.2.0). Zenodo. https://doi.org/10.5281/zenodo.21953261
 
 Machine-readable citation metadata is provided in `CITATION.cff`.
 

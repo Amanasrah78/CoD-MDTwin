@@ -39,6 +39,28 @@ STATE_DB = STATE_DIR / "verifier_state.sqlite"
 STATE_LOCK = Lock()
 DEFAULT_CHALLENGE_TTL_SECONDS = 30
 MAX_REQUEST_CLOCK_SKEW_SECONDS = 60
+REVOCATION_STATUS_LAST_SYNC_NS = time.monotonic_ns()
+REVOCATION_SOURCE_AVAILABLE = True
+
+
+def _revocation_status_snapshot() -> Dict[str, Any]:
+    with STATE_LOCK:
+        age_ms = max(
+            0.0,
+            (time.monotonic_ns() - REVOCATION_STATUS_LAST_SYNC_NS) / 1_000_000.0,
+        )
+        return {
+            "source_available": REVOCATION_SOURCE_AVAILABLE,
+            "age_ms": round(age_ms, 6),
+        }
+
+
+def _set_revocation_status(*, source_available: bool, mark_synchronized: bool) -> None:
+    global REVOCATION_SOURCE_AVAILABLE, REVOCATION_STATUS_LAST_SYNC_NS
+    with STATE_LOCK:
+        REVOCATION_SOURCE_AVAILABLE = source_available
+        if mark_synchronized:
+            REVOCATION_STATUS_LAST_SYNC_NS = time.monotonic_ns()
 
 
 def _init_state() -> None:
@@ -251,6 +273,13 @@ class CapabilityVerifyRequest(BaseModel):
     consume_nonce: bool = True
     consume_challenge: bool | None = None
     require_holder_proof: bool = True
+    require_fresh_revocation_status: bool = False
+    max_revocation_status_age_ms: float = Field(default=1000.0, ge=0.0, le=60000.0)
+
+
+class RevocationStatusControlRequest(BaseModel):
+    source_available: bool = True
+    mark_synchronized: bool = False
 
 
 class SDIssueRequest(BaseModel):
@@ -360,7 +389,7 @@ def verify(req: VerifyRequest) -> Dict[str, Any]:
         accepted, checks, reason = validate_cod(
             req.cod, req.issuer_keys, req.request, REVOKED, req.depth_max
         )
-    trace.checks = checks
+    trace.checks.update(checks)
     trace.artifacts["cod_hash"] = sha256_json(req.cod)
     trace.artifacts["cod_methodology"] = cod_methodology_view(req.cod)
 
@@ -477,8 +506,31 @@ def verify_cap(req: CapabilityVerifyRequest) -> Dict[str, Any]:
         "consume_nonce": req.consume_nonce,
         "consume_challenge": req.consume_nonce if req.consume_challenge is None else req.consume_challenge,
         "require_holder_proof": req.require_holder_proof,
+        "require_fresh_revocation_status": req.require_fresh_revocation_status,
+        "max_revocation_status_age_ms": req.max_revocation_status_age_ms,
     }
     trace.artifacts["capability_hash"] = capability_hash
+
+    if req.require_fresh_revocation_status:
+        revocation_status = _revocation_status_snapshot()
+        status_fresh = (
+            float(revocation_status["age_ms"])
+            <= req.max_revocation_status_age_ms
+        )
+        trace.checks["revocation_status_fresh"] = status_fresh
+        trace.checks["revocation_source_available"] = bool(
+            revocation_status["source_available"]
+        )
+        trace.artifacts["revocation_status_age_ms"] = revocation_status["age_ms"]
+        if not status_fresh:
+            reason = "revocation status is stale; fail-closed"
+            trace.mark("rejected", reason)
+            return {
+                "accepted": False,
+                "reason": reason,
+                "capability_id": cap_id,
+                "trace": trace.to_dict(),
+            }
 
     public_key = req.verifier_public_key or VERIFIER["public_key"]
     with trace.timer("capability_base_validation"):
@@ -490,7 +542,7 @@ def verify_cap(req: CapabilityVerifyRequest) -> Dict[str, Any]:
             REPLAY_CACHE,
             consume_nonce=False,
         )
-    trace.checks = checks
+    trace.checks.update(checks)
     if not accepted:
         trace.mark("rejected", reason)
         return {"accepted": False, "reason": reason, "capability_id": cap_id, "trace": trace.to_dict()}
@@ -617,6 +669,7 @@ def verify_cap(req: CapabilityVerifyRequest) -> Dict[str, Any]:
 def revoke(req: RevokeRequest) -> Dict[str, Any]:
     REVOKED.add(req.credential_id)
     _persist_revocation(req.credential_id, req.reason)
+    _set_revocation_status(source_available=True, mark_synchronized=True)
     trace = Trace(operation="revoke_delegation", actor="Verifier", domain="VerificationService")
     revoked_at = int(time.time())
     trace.inputs = {
@@ -637,6 +690,20 @@ def revoke(req: RevokeRequest) -> Dict[str, Any]:
     return {"revoked": True, "credential_id": req.credential_id, "reason": req.reason, "trace": trace.to_dict()}
 
 
+@app.post("/revocation-status-control")
+def revocation_status_control(req: RevocationStatusControlRequest) -> Dict[str, Any]:
+    _set_revocation_status(
+        source_available=req.source_available,
+        mark_synchronized=req.mark_synchronized,
+    )
+    return {"accepted": True, **_revocation_status_snapshot()}
+
+
+@app.get("/revocation-status")
+def revocation_status() -> Dict[str, Any]:
+    return _revocation_status_snapshot()
+
+
 @app.post("/reset-state")
 def reset_state() -> Dict[str, Any]:
     REVOKED.clear()
@@ -646,6 +713,7 @@ def reset_state() -> Dict[str, Any]:
         con.execute("DELETE FROM replay_cache")
         con.execute("DELETE FROM challenges")
         con.commit()
+    _set_revocation_status(source_available=True, mark_synchronized=True)
     return {
         "accepted": True,
         "revoked_count": 0,

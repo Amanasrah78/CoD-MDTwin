@@ -3,11 +3,13 @@ from __future__ import annotations
 import copy
 import csv
 import json
+import math
 import random
 import statistics
 import time
 from concurrent.futures import ThreadPoolExecutor, as_completed
 from pathlib import Path
+from threading import Event, Thread
 from typing import Any, Dict, List, Tuple
 
 import requests
@@ -37,6 +39,9 @@ STRESS_SUMMARY = RESULTS_DIR / "stress_summary.csv"
 SINGLE_USE_RAW = RESULTS_DIR / "single_use_renewal_raw.csv"
 SINGLE_USE_SESSIONS = RESULTS_DIR / "single_use_renewal_sessions.csv"
 SINGLE_USE_SUMMARY = RESULTS_DIR / "single_use_renewal_summary.csv"
+REVOCATION_PROPAGATION_RAW = RESULTS_DIR / "revocation_propagation_raw.csv"
+REVOCATION_PROPAGATION_SUMMARY = RESULTS_DIR / "revocation_propagation_summary.csv"
+REVOCATION_OUTAGE_RAW = RESULTS_DIR / "revocation_outage_raw.csv"
 
 
 class FlowRequest(BaseModel):
@@ -136,6 +141,8 @@ def verify_capability_with_holder(
     consume_challenge: bool | None = None,
     require_holder_proof: bool = True,
     prepared: Dict[str, Any] | None = None,
+    require_fresh_revocation_status: bool = False,
+    max_revocation_status_age_ms: float = 1000.0,
 ) -> Dict[str, Any]:
     presentation = prepared
     if require_holder_proof and presentation is None:
@@ -150,6 +157,8 @@ def verify_capability_with_holder(
         "consume_nonce": consume_nonce,
         "consume_challenge": consume_challenge,
         "require_holder_proof": require_holder_proof,
+        "require_fresh_revocation_status": require_fresh_revocation_status,
+        "max_revocation_status_age_ms": max_revocation_status_age_ms,
     }
     return post_json(f"{BASE['verifier']}/verify-capability", payload)
 
@@ -163,6 +172,8 @@ def timed_verify_capability_with_holder(
     consume_challenge: bool | None = None,
     require_holder_proof: bool = True,
     prepared: Dict[str, Any] | None = None,
+    require_fresh_revocation_status: bool = False,
+    max_revocation_status_age_ms: float = 1000.0,
 ) -> tuple[Dict[str, Any], Dict[str, float]]:
     presentation = prepared
     timings: Dict[str, float] = {}
@@ -178,6 +189,8 @@ def timed_verify_capability_with_holder(
         consume_challenge=consume_challenge,
         require_holder_proof=require_holder_proof,
         prepared=presentation,
+        require_fresh_revocation_status=require_fresh_revocation_status,
+        max_revocation_status_age_ms=max_revocation_status_age_ms,
     )
     timings["capability_verify_http"] = _ms(t0, time.perf_counter())
     timings["holder_bound_access_total_http"] = round(sum(timings.values()), 6)
@@ -362,6 +375,7 @@ def domain_info() -> Dict[str, Any]:
             "POST /run-stress-revocation-list": "measure validation with many revoked identifiers",
             "POST /run-revocation-scale": "measure revocation latency and cascading invalidation as dependent capabilities increase",
             "POST /run-single-use-renewal": "compare on-demand renewal with pre-issued single-use capability pools",
+            "POST /run-revocation-propagation": "measure delayed revocation delivery and fail-closed stale-status handling",
             "POST /run-monotonic-delegation-stress": "stress-test monotonic delegation enforcement under valid and authority-expanding chains",
             "POST /run-crypto-cost": "measure cryptographic and security-mechanism operation costs",
             "POST /run-stress-clock-skew": "test expired-token timing boundaries",
@@ -870,6 +884,15 @@ class SingleUseRenewalRequest(BaseModel):
     reset_verifier_state: bool = True
 
 
+class RevocationPropagationRequest(BaseModel):
+    propagation_delays_ms: List[int] = Field(default=[0, 10, 50, 100, 500, 1000])
+    outage_freshness_limits_ms: List[int] = Field(default=[0, 50, 100, 500])
+    repetitions: int = Field(default=10, ge=1, le=50)
+    post_update_attempts: int = Field(default=10, ge=1, le=100)
+    minimum_pool_size: int = Field(default=20, ge=5, le=1000)
+    reset_verifier_state: bool = True
+
+
 def _percentile(values: List[float], pct: float) -> float:
     if not values:
         return 0.0
@@ -1301,6 +1324,318 @@ def run_single_use_renewal(
         "raw_file": str(SINGLE_USE_RAW),
         "sessions_file": str(SINGLE_USE_SESSIONS),
         "summary_file": str(SINGLE_USE_SUMMARY),
+    }
+
+
+def _use_preissued_capability(
+    issued_response: Dict[str, Any],
+    built: Dict[str, Any],
+    *,
+    require_fresh_status: bool = False,
+    max_status_age_ms: float = 1000.0,
+) -> Dict[str, Any]:
+    if not issued_response.get("accepted") or not issued_response.get("capability"):
+        return {
+            "accepted": False,
+            "reason": issued_response.get("reason", "capability issuance rejected"),
+            "latency_ms": 0.0,
+            "status_age_ms": None,
+        }
+    response, timings = timed_verify_capability_with_holder(
+        issued_response["capability"],
+        issued_response["verifier_public_key"],
+        built["request"],
+        consume_nonce=True,
+        consume_challenge=True,
+        require_holder_proof=True,
+        require_fresh_revocation_status=require_fresh_status,
+        max_revocation_status_age_ms=max_status_age_ms,
+    )
+    return {
+        "accepted": bool(response.get("accepted")),
+        "reason": response.get("reason"),
+        "latency_ms": float(timings.get("holder_bound_access_total_http", 0.0)),
+        "status_age_ms": response.get("trace", {}).get("artifacts", {}).get(
+            "revocation_status_age_ms"
+        ),
+    }
+
+
+def _run_propagation_session(
+    delay_ms: int,
+    repetition: int,
+    post_update_attempts: int,
+    minimum_pool_size: int,
+) -> Dict[str, Any]:
+    reset_verifier_state()
+    built = build_cod(
+        FlowRequest(capability_valid_seconds=600),
+        f"revocation_propagation_{delay_ms}ms",
+    )
+    pool_size = max(
+        minimum_pool_size,
+        math.ceil(delay_ms / 2.0) + post_update_attempts + 5,
+    )
+    issued = [_issue_single_use_capability(built)[0] for _ in range(pool_size)]
+    if not all(item.get("accepted") and item.get("capability") for item in issued):
+        raise RuntimeError("failed to prepare the capability pool")
+
+    applied = Event()
+    update: Dict[str, Any] = {}
+    start_ns = time.monotonic_ns()
+
+    def deliver_revocation() -> None:
+        target_ns = start_ns + delay_ms * 1_000_000
+        remaining_ns = target_ns - time.monotonic_ns()
+        if remaining_ns > 0:
+            time.sleep(remaining_ns / 1_000_000_000.0)
+        update_start = time.perf_counter()
+        try:
+            update["response"] = post_json(
+                f"{BASE['verifier']}/revoke",
+                {
+                    "credential_id": built["cod"][1]["payload"]["id"],
+                    "reason": "delayed cross-domain revocation delivery experiment",
+                },
+            )
+            update["error"] = None
+        except Exception as exc:
+            update["error"] = str(exc)
+        update["http_ms"] = _ms(update_start, time.perf_counter())
+        update["applied_elapsed_ms"] = round(
+            (time.monotonic_ns() - start_ns) / 1_000_000.0,
+            6,
+        )
+        applied.set()
+
+    delivery_thread = Thread(target=deliver_revocation, daemon=True)
+    delivery_thread.start()
+
+    pre_update_attempts = 0
+    pre_update_accepted = 0
+    pre_update_rejected = 0
+    index = 0
+    while not applied.is_set() and index < pool_size - post_update_attempts:
+        result = _use_preissued_capability(issued[index], built)
+        pre_update_attempts += 1
+        pre_update_accepted += int(result["accepted"])
+        pre_update_rejected += int(not result["accepted"])
+        index += 1
+
+    delivery_thread.join(timeout=max(5.0, delay_ms / 1000.0 + 5.0))
+    if not applied.is_set():
+        raise RuntimeError("revocation delivery thread did not complete")
+    if update.get("error"):
+        raise RuntimeError(f"revocation delivery failed: {update['error']}")
+    if index + post_update_attempts > pool_size:
+        raise RuntimeError("capability pool exhausted before post-update checks")
+
+    post_update_rejected = 0
+    post_update_accepted = 0
+    first_post_result_elapsed_ms: float | None = None
+    first_post_latency_ms: float | None = None
+    post_reasons: Dict[str, int] = {}
+    for offset in range(post_update_attempts):
+        result = _use_preissued_capability(issued[index + offset], built)
+        if offset == 0:
+            first_post_result_elapsed_ms = round(
+                (time.monotonic_ns() - start_ns) / 1_000_000.0,
+                6,
+            )
+            first_post_latency_ms = float(result["latency_ms"])
+        post_update_accepted += int(result["accepted"])
+        post_update_rejected += int(not result["accepted"])
+        reason = str(result.get("reason"))
+        post_reasons[reason] = post_reasons.get(reason, 0) + 1
+
+    applied_elapsed_ms = float(update["applied_elapsed_ms"])
+    return {
+        "delay_ms": delay_ms,
+        "repetition": repetition,
+        "pool_size": pool_size,
+        "pre_update_attempts": pre_update_attempts,
+        "pre_update_accepted": pre_update_accepted,
+        "pre_update_rejected": pre_update_rejected,
+        "post_update_attempts": post_update_attempts,
+        "post_update_accepted": post_update_accepted,
+        "post_update_rejected": post_update_rejected,
+        "revocation_update_http_ms": update["http_ms"],
+        "revocation_applied_elapsed_ms": applied_elapsed_ms,
+        "first_post_result_elapsed_ms": first_post_result_elapsed_ms,
+        "local_enforcement_observation_ms": round(
+            float(first_post_result_elapsed_ms or applied_elapsed_ms) - applied_elapsed_ms,
+            6,
+        ),
+        "first_post_attempt_latency_ms": first_post_latency_ms,
+        "post_update_reasons": json.dumps(post_reasons, sort_keys=True),
+        # A request may begin before delivery and be rejected after the concurrent
+        # update. Such an in-flight rejection is safe and is reported separately.
+        "passed": post_update_accepted == 0,
+    }
+
+
+def _run_outage_session(freshness_limit_ms: int, repetition: int) -> Dict[str, Any]:
+    reset_verifier_state()
+    built = build_cod(
+        FlowRequest(capability_valid_seconds=600),
+        f"revocation_outage_{freshness_limit_ms}ms",
+    )
+    issued = [_issue_single_use_capability(built)[0] for _ in range(2)]
+    if not all(item.get("accepted") and item.get("capability") for item in issued):
+        raise RuntimeError("failed to prepare outage-test capabilities")
+
+    post_json(
+        f"{BASE['verifier']}/revocation-status-control",
+        {"source_available": False, "mark_synchronized": True},
+    )
+    outage_start_ns = time.monotonic_ns()
+    immediate = _use_preissued_capability(
+        issued[0],
+        built,
+        require_fresh_status=True,
+        max_status_age_ms=float(freshness_limit_ms),
+    )
+
+    target_age_ms = freshness_limit_ms + 25
+    remaining_ms = target_age_ms - (
+        (time.monotonic_ns() - outage_start_ns) / 1_000_000.0
+    )
+    if remaining_ms > 0:
+        time.sleep(remaining_ms / 1000.0)
+    stale = _use_preissued_capability(
+        issued[1],
+        built,
+        require_fresh_status=True,
+        max_status_age_ms=float(freshness_limit_ms),
+    )
+    immediate_expected = freshness_limit_ms > 0
+    return {
+        "freshness_limit_ms": freshness_limit_ms,
+        "repetition": repetition,
+        "immediate_expected_accepted": immediate_expected,
+        "immediate_accepted": immediate["accepted"],
+        "immediate_status_age_ms": immediate["status_age_ms"],
+        "immediate_reason": immediate["reason"],
+        "stale_expected_accepted": False,
+        "stale_accepted": stale["accepted"],
+        "stale_status_age_ms": stale["status_age_ms"],
+        "stale_reason": stale["reason"],
+        "passed": (
+            immediate["accepted"] is immediate_expected
+            and stale["accepted"] is False
+        ),
+    }
+
+
+@app.post("/run-revocation-propagation")
+def run_revocation_propagation(
+    req: RevocationPropagationRequest = RevocationPropagationRequest(),
+) -> Dict[str, Any]:
+    wait_for_services()
+    delays = sorted(set(req.propagation_delays_ms))
+    freshness_limits = sorted(set(req.outage_freshness_limits_ms))
+    if not delays or any(delay < 0 or delay > 10000 for delay in delays):
+        raise HTTPException(
+            status_code=400,
+            detail="propagation_delays_ms must contain values from 0 to 10000",
+        )
+    if not freshness_limits or any(limit < 0 or limit > 10000 for limit in freshness_limits):
+        raise HTTPException(
+            status_code=400,
+            detail="outage_freshness_limits_ms must contain values from 0 to 10000",
+        )
+
+    propagation_rows: List[Dict[str, Any]] = []
+    outage_rows: List[Dict[str, Any]] = []
+    failures: List[Dict[str, Any]] = []
+    for delay_ms in delays:
+        for repetition in range(1, req.repetitions + 1):
+            try:
+                propagation_rows.append(
+                    _run_propagation_session(
+                        delay_ms,
+                        repetition,
+                        req.post_update_attempts,
+                        req.minimum_pool_size,
+                    )
+                )
+            except Exception as exc:
+                failures.append({
+                    "phase": "propagation",
+                    "delay_ms": delay_ms,
+                    "repetition": repetition,
+                    "error": str(exc),
+                })
+
+    for freshness_limit_ms in freshness_limits:
+        for repetition in range(1, req.repetitions + 1):
+            try:
+                outage_rows.append(
+                    _run_outage_session(freshness_limit_ms, repetition)
+                )
+            except Exception as exc:
+                failures.append({
+                    "phase": "outage",
+                    "freshness_limit_ms": freshness_limit_ms,
+                    "repetition": repetition,
+                    "error": str(exc),
+                })
+
+    propagation_fields = list(propagation_rows[0].keys()) if propagation_rows else []
+    outage_fields = list(outage_rows[0].keys()) if outage_rows else []
+    _write_csv(REVOCATION_PROPAGATION_RAW, propagation_rows, propagation_fields)
+    _write_csv(REVOCATION_OUTAGE_RAW, outage_rows, outage_fields)
+
+    summary_rows: List[Dict[str, Any]] = []
+    for delay_ms in delays:
+        rows = [row for row in propagation_rows if row["delay_ms"] == delay_ms]
+        applied_stats = _stats([
+            float(row["revocation_applied_elapsed_ms"]) for row in rows
+        ])
+        enforcement_stats = _stats([
+            float(row["local_enforcement_observation_ms"]) for row in rows
+        ])
+        exposure_counts = [float(row["pre_update_accepted"]) for row in rows]
+        summary_rows.append({
+            "delay_ms": delay_ms,
+            "repetitions_completed": len(rows),
+            "pre_update_accepted_total": int(sum(exposure_counts)),
+            "pre_update_accepted_mean": round(statistics.fmean(exposure_counts), 3) if exposure_counts else 0.0,
+            "pre_update_accepted_max": int(max(exposure_counts)) if exposure_counts else 0,
+            "post_update_attempted_total": sum(int(row["post_update_attempts"]) for row in rows),
+            "post_update_accepted_total": sum(int(row["post_update_accepted"]) for row in rows),
+            "post_update_rejected_total": sum(int(row["post_update_rejected"]) for row in rows),
+            "revocation_applied_mean_ms": applied_stats["mean_ms"],
+            "revocation_applied_p95_ms": applied_stats["p95_ms"],
+            "local_enforcement_observation_mean_ms": enforcement_stats["mean_ms"],
+            "local_enforcement_observation_p95_ms": enforcement_stats["p95_ms"],
+            "all_sessions_passed": bool(rows) and all(bool(row["passed"]) for row in rows),
+        })
+    summary_fields = list(summary_rows[0].keys()) if summary_rows else []
+    _write_csv(REVOCATION_PROPAGATION_SUMMARY, summary_rows, summary_fields)
+
+    if req.reset_verifier_state:
+        reset_verifier_state()
+    return {
+        "test": "revocation_propagation_and_outage",
+        "interpretation": (
+            "Propagation sessions model an authoritative revocation at time zero and delayed delivery "
+            "to the relying verifier under continuous use of previously issued capabilities. Outage "
+            "sessions test cached-status use only within a configured freshness interval and fail-closed "
+            "rejection after that interval. Network transport is emulated by controlled delay."
+        ),
+        "propagation_delays_ms": delays,
+        "outage_freshness_limits_ms": freshness_limits,
+        "repetitions": req.repetitions,
+        "propagation_summary": summary_rows,
+        "outage_results": outage_rows,
+        "all_propagation_sessions_passed": bool(propagation_rows) and all(bool(row["passed"]) for row in propagation_rows),
+        "all_outage_sessions_passed": bool(outage_rows) and all(bool(row["passed"]) for row in outage_rows),
+        "failure_count": len(failures),
+        "failures": failures[:20],
+        "raw_file": str(REVOCATION_PROPAGATION_RAW),
+        "summary_file": str(REVOCATION_PROPAGATION_SUMMARY),
+        "outage_file": str(REVOCATION_OUTAGE_RAW),
     }
 
 @app.post("/run-chain-depth-sensitivity")

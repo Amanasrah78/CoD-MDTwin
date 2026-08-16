@@ -144,6 +144,13 @@ python3 experiments/run_single_use_renewal.py full
 
 The experiment writes raw operation measurements, aggregate summaries, and a JSON report under `results/metrics/`. It also revokes a parent delegation midway through each renewal mode and checks that no later operation is accepted.
 
+### Revocation propagation and outage experiment
+
+Run the short validation configuration:
+
+```bash
+python3 experiments/run_revocation_propagation.py quick
+
 Performance values depend on the host, container runtime, operating system, and current system load. Security decisions and acceptance or rejection counts should remain consistent under the stated assumptions.
 
 ## Formal verification

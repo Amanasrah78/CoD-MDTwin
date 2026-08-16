@@ -1,0 +1,41 @@
+freshness_limit_ms,repetition,immediate_expected_accepted,immediate_accepted,immediate_status_age_ms,immediate_reason,stale_expected_accepted,stale_accepted,stale_status_age_ms,stale_reason,passed
+0,1,False,False,5.238583,revocation status is stale; fail-closed,False,False,32.069583,revocation status is stale; fail-closed,True
+0,2,False,False,5.137917,revocation status is stale; fail-closed,False,False,31.568625,revocation status is stale; fail-closed,True
+0,3,False,False,4.815458,revocation status is stale; fail-closed,False,False,32.969583,revocation status is stale; fail-closed,True
+0,4,False,False,5.499542,revocation status is stale; fail-closed,False,False,32.805375,revocation status is stale; fail-closed,True
+0,5,False,False,5.385791,revocation status is stale; fail-closed,False,False,32.813125,revocation status is stale; fail-closed,True
+0,6,False,False,5.480792,revocation status is stale; fail-closed,False,False,33.889625,revocation status is stale; fail-closed,True
+0,7,False,False,5.883417,revocation status is stale; fail-closed,False,False,33.498542,revocation status is stale; fail-closed,True
+0,8,False,False,5.295625,revocation status is stale; fail-closed,False,False,31.99175,revocation status is stale; fail-closed,True
+0,9,False,False,6.086583,revocation status is stale; fail-closed,False,False,32.361208,revocation status is stale; fail-closed,True
+0,10,False,False,5.347542,revocation status is stale; fail-closed,False,False,34.306292,revocation status is stale; fail-closed,True
+50,1,True,True,6.652375,valid holder-bound capability presentation,False,False,90.402125,revocation status is stale; fail-closed,True
+50,2,True,True,6.253834,valid holder-bound capability presentation,False,False,84.468917,revocation status is stale; fail-closed,True
+50,3,True,True,5.560167,valid holder-bound capability presentation,False,False,84.406,revocation status is stale; fail-closed,True
+50,4,True,True,6.83325,valid holder-bound capability presentation,False,False,86.389791,revocation status is stale; fail-closed,True
+50,5,True,True,7.012209,valid holder-bound capability presentation,False,False,85.315376,revocation status is stale; fail-closed,True
+50,6,True,True,6.122542,valid holder-bound capability presentation,False,False,87.907459,revocation status is stale; fail-closed,True
+50,7,True,True,5.658708,valid holder-bound capability presentation,False,False,90.172333,revocation status is stale; fail-closed,True
+50,8,True,True,5.858,valid holder-bound capability presentation,False,False,87.327584,revocation status is stale; fail-closed,True
+50,9,True,True,5.90325,valid holder-bound capability presentation,False,False,87.430541,revocation status is stale; fail-closed,True
+50,10,True,True,5.940834,valid holder-bound capability presentation,False,False,90.356209,revocation status is stale; fail-closed,True
+100,1,True,True,5.9355,valid holder-bound capability presentation,False,False,139.307583,revocation status is stale; fail-closed,True
+100,2,True,True,6.82425,valid holder-bound capability presentation,False,False,144.462375,revocation status is stale; fail-closed,True
+100,3,True,True,6.963,valid holder-bound capability presentation,False,False,140.338958,revocation status is stale; fail-closed,True
+100,4,True,True,6.747916,valid holder-bound capability presentation,False,False,144.518208,revocation status is stale; fail-closed,True
+100,5,True,True,6.12775,valid holder-bound capability presentation,False,False,139.199667,revocation status is stale; fail-closed,True
+100,6,True,True,7.008541,valid holder-bound capability presentation,False,False,139.770583,revocation status is stale; fail-closed,True
+100,7,True,True,6.53175,valid holder-bound capability presentation,False,False,139.278166,revocation status is stale; fail-closed,True
+100,8,True,True,13.497833,valid holder-bound capability presentation,False,False,134.053958,revocation status is stale; fail-closed,True
+100,9,True,True,5.781459,valid holder-bound capability presentation,False,False,136.665375,revocation status is stale; fail-closed,True
+100,10,True,True,5.549958,valid holder-bound capability presentation,False,False,143.2575,revocation status is stale; fail-closed,True
+500,1,True,True,6.118959,valid holder-bound capability presentation,False,False,538.519126,revocation status is stale; fail-closed,True
+500,2,True,True,6.140833,valid holder-bound capability presentation,False,False,551.261333,revocation status is stale; fail-closed,True
+500,3,True,True,6.138,valid holder-bound capability presentation,False,False,534.758833,revocation status is stale; fail-closed,True
+500,4,True,True,7.011667,valid holder-bound capability presentation,False,False,548.381209,revocation status is stale; fail-closed,True
+500,5,True,True,6.395334,valid holder-bound capability presentation,False,False,554.624126,revocation status is stale; fail-closed,True
+500,6,True,True,6.580542,valid holder-bound capability presentation,False,False,550.931959,revocation status is stale; fail-closed,True
+500,7,True,True,6.216333,valid holder-bound capability presentation,False,False,538.810167,revocation status is stale; fail-closed,True
+500,8,True,True,6.565958,valid holder-bound capability presentation,False,False,555.641208,revocation status is stale; fail-closed,True
+500,9,True,True,6.252166,valid holder-bound capability presentation,False,False,551.828458,revocation status is stale; fail-closed,True
+500,10,True,True,6.427208,valid holder-bound capability presentation,False,False,551.480792,revocation status is stale; fail-closed,True

@@ -153,6 +153,13 @@ python3 experiments/run_revocation_propagation.py quick
 
 Performance values depend on the host, container runtime, operating system, and current system load. Security decisions and acceptance or rejection counts should remain consistent under the stated assumptions.
 
+### Stratified chain-security experiment
+
+Run the short validation configuration:
+
+```bash
+python3 experiments/run_stratified_chain_security.py quick
+
 ## Formal verification
 
 Run the Tamarin model with:

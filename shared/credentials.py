@@ -20,8 +20,12 @@ def issue_delegation(
     depth: int,
     valid_seconds: int = 600,
     parent_id: str | None = None,
+    not_after: int | None = None,
 ) -> Dict[str, Any]:
     now = int(time.time())
+    valid_until = now + valid_seconds
+    if not_after is not None:
+        valid_until = min(valid_until, int(not_after))
     payload = {
         "type": "DelegationCredential",
         "id": "dc_" + uuid.uuid4().hex[:12],
@@ -33,7 +37,7 @@ def issue_delegation(
         "resource": resource,
         "depth": depth,
         "valid_from": now,
-        "valid_until": now + valid_seconds,
+        "valid_until": valid_until,
         "status": "active",
     }
     payload["methodology"] = delegation_methodology_view({"payload": payload})["DC_i"]

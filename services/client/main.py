@@ -42,6 +42,8 @@ SINGLE_USE_SUMMARY = RESULTS_DIR / "single_use_renewal_summary.csv"
 REVOCATION_PROPAGATION_RAW = RESULTS_DIR / "revocation_propagation_raw.csv"
 REVOCATION_PROPAGATION_SUMMARY = RESULTS_DIR / "revocation_propagation_summary.csv"
 REVOCATION_OUTAGE_RAW = RESULTS_DIR / "revocation_outage_raw.csv"
+STRATIFIED_SECURITY_RAW = RESULTS_DIR / "stratified_chain_security_raw.csv"
+STRATIFIED_SECURITY_SUMMARY = RESULTS_DIR / "stratified_chain_security_summary.csv"
 
 
 class FlowRequest(BaseModel):
@@ -377,6 +379,7 @@ def domain_info() -> Dict[str, Any]:
             "POST /run-single-use-renewal": "compare on-demand renewal with pre-issued single-use capability pools",
             "POST /run-revocation-propagation": "measure delayed revocation delivery and fail-closed stale-status handling",
             "POST /run-monotonic-delegation-stress": "stress-test monotonic delegation enforcement under valid and authority-expanding chains",
+            "POST /run-stratified-chain-security": "separate valid, signature-tampered, malformed, and correctly signed authority-expanding chains",
             "POST /run-crypto-cost": "measure cryptographic and security-mechanism operation costs",
             "POST /run-stress-clock-skew": "test expired-token timing boundaries",
             "POST /run-stress-failure-injection": "simulate fail-closed behavior for unavailable verifier/invalid endpoint",
@@ -2035,6 +2038,11 @@ class MonotonicStressRequest(BaseModel):
     reset_verifier_state: bool = True
 
 
+class StratifiedChainSecurityRequest(BaseModel):
+    trials_per_category: int = Field(default=300, ge=5, le=5000)
+    reset_verifier_state: bool = True
+
+
 def _verify_cod_for_monotonic_test(
     cod: List[Dict[str, Any]],
     issuer_keys: Dict[str, str],
@@ -2282,6 +2290,295 @@ def run_monotonic_delegation_stress(req: MonotonicStressRequest = MonotonicStres
         "timing_summary_ms": timing_summary,
         "case_summaries": case_summaries,
         "note": "Mutated token variants are intentionally not re-signed; rejection may occur at signature verification or monotonicity checks. The result demonstrates that authority-expanding delegation tokens are not accepted for capability realization.",
+    }
+
+
+def _build_stratified_security_chain(case_id: int) -> Dict[str, Any]:
+    identities: List[Dict[str, str]] = []
+    for position in range(4):
+        private_key, public_key = generate_keypair()
+        identities.append({
+            "did": f"did:local:stratified-{case_id}-{position}",
+            "private_key": private_key,
+            "public_key": public_key,
+        })
+
+    dc1 = issue_delegation(
+        identities[0]["did"], identities[0]["private_key"], identities[1]["did"],
+        ["diagnostics.read"], ["read-status"], "asset:compressor-7",
+        depth=3, valid_seconds=900,
+    )
+    dc2 = issue_delegation(
+        identities[1]["did"], identities[1]["private_key"], identities[2]["did"],
+        ["diagnostics.read"], ["read-status"], "asset:compressor-7",
+        depth=2, valid_seconds=600, parent_id=dc1["payload"]["id"],
+    )
+    dc3 = issue_delegation(
+        identities[2]["did"], identities[2]["private_key"], identities[3]["did"],
+        ["diagnostics.read"], ["read-status"], "asset:compressor-7",
+        depth=1, valid_seconds=300, parent_id=dc2["payload"]["id"],
+    )
+    return {
+        "cod": [dc1, dc2, dc3],
+        "identities": identities,
+        "issuer_keys": {
+            identities[0]["did"]: identities[0]["public_key"],
+            identities[1]["did"]: identities[1]["public_key"],
+            identities[2]["did"]: identities[2]["public_key"],
+        },
+        "request": {
+            "actor_did": identities[3]["did"],
+            "scope": "diagnostics.read",
+            "action": "read-status",
+            "resource": "asset:compressor-7",
+        },
+    }
+
+
+def _signed_leaf_variant(
+    built: Dict[str, Any],
+    *,
+    scope: List[str] | None = None,
+    actions: List[str] | None = None,
+    resource: str = "asset:compressor-7",
+    depth: int = 1,
+    valid_seconds: int = 300,
+    parent_id: str | None = None,
+) -> Dict[str, Any]:
+    identities = built["identities"]
+    dc2 = built["cod"][1]
+    return issue_delegation(
+        identities[2]["did"],
+        identities[2]["private_key"],
+        identities[3]["did"],
+        scope or ["diagnostics.read"],
+        actions or ["read-status"],
+        resource,
+        depth=depth,
+        valid_seconds=valid_seconds,
+        parent_id=dc2["payload"]["id"] if parent_id is None else parent_id,
+    )
+
+
+def _stratified_variant(
+    category: str,
+    case: str,
+    case_id: int,
+) -> Dict[str, Any]:
+    built = _build_stratified_security_chain(case_id)
+    cod = copy.deepcopy(built["cod"])
+    expected_failed_check: str | None = None
+
+    if category == "valid_control":
+        pass
+
+    elif category == "signature_tampering":
+        if case == "scope_field":
+            cod[2]["payload"]["scope"].append("maintenance.write")
+        elif case == "action_field":
+            cod[2]["payload"]["actions"].append("write")
+        elif case == "resource_field":
+            cod[2]["payload"]["resource"] = "asset:turbine-9"
+        elif case == "validity_field":
+            cod[2]["payload"]["valid_until"] += 3600
+        elif case == "depth_field":
+            cod[2]["payload"]["depth"] = 2
+        else:
+            raise ValueError(f"unknown signature-tampering case: {case}")
+        expected_failed_check = "dc_3_signature_valid"
+
+    elif category == "malformed_chain":
+        if case == "missing_middle":
+            cod = [cod[0], cod[2]]
+            expected_failed_check = "continuity_1_2"
+        elif case == "reordered_chain":
+            cod = [cod[1], cod[0], cod[2]]
+            expected_failed_check = "continuity_1_2"
+        elif case == "duplicate_leaf":
+            cod = [cod[0], cod[1], copy.deepcopy(cod[1])]
+            expected_failed_check = "dc_3_id_unique"
+        elif case == "wrong_parent_link":
+            cod[2] = _signed_leaf_variant(built, parent_id="dc_nonexistent_parent")
+            expected_failed_check = "parent_link_2_3"
+        elif case == "missing_required_claim":
+            del cod[2]["payload"]["status"]
+            expected_failed_check = "dc_3_required_claims_present"
+        else:
+            raise ValueError(f"unknown malformed-chain case: {case}")
+
+    elif category == "signed_authority_expansion":
+        if case == "scope_expansion":
+            cod[2] = _signed_leaf_variant(
+                built, scope=["diagnostics.read", "maintenance.write"]
+            )
+            expected_failed_check = "scope_monotonic_2_3"
+        elif case == "action_expansion":
+            cod[2] = _signed_leaf_variant(
+                built, actions=["read-status", "write"]
+            )
+            expected_failed_check = "actions_monotonic_2_3"
+        elif case == "resource_expansion":
+            cod[2] = _signed_leaf_variant(built, resource="asset:*")
+            expected_failed_check = "resource_monotonic_2_3"
+        elif case == "validity_expansion":
+            cod[2] = _signed_leaf_variant(built, valid_seconds=1200)
+            expected_failed_check = "validity_monotonic_2_3"
+        elif case == "depth_expansion":
+            cod[2] = _signed_leaf_variant(built, depth=2)
+            expected_failed_check = "depth_decreases_2_3"
+        else:
+            raise ValueError(f"unknown signed-expansion case: {case}")
+    else:
+        raise ValueError(f"unknown stratified category: {category}")
+
+    return {
+        "cod": cod,
+        "issuer_keys": built["issuer_keys"],
+        "request": built["request"],
+        "expected_accepted": category == "valid_control",
+        "expected_failed_check": expected_failed_check,
+    }
+
+
+def _verify_stratified_variant(variant: Dict[str, Any]) -> Dict[str, Any]:
+    response, latency_ms = timed_post_json(
+        f"{BASE['verifier']}/verify-cod",
+        {
+            "cod": variant["cod"],
+            "issuer_keys": variant["issuer_keys"],
+            "request": variant["request"],
+            "depth_max": 3,
+            "issue_capability_on_success": False,
+        },
+    )
+    checks = response.get("trace", {}).get("checks", {})
+    failed_checks = [name for name, value in checks.items() if value is False]
+    return {
+        "accepted": bool(response.get("accepted")),
+        "reason": response.get("reason"),
+        "latency_ms": latency_ms,
+        "failed_check": failed_checks[0] if failed_checks else None,
+        "expected_check_value": checks.get(variant["expected_failed_check"])
+        if variant["expected_failed_check"] else None,
+        "leaf_signature_valid": checks.get("dc_3_signature_valid"),
+    }
+
+
+@app.post("/run-stratified-chain-security")
+def run_stratified_chain_security(
+    req: StratifiedChainSecurityRequest = StratifiedChainSecurityRequest(),
+) -> Dict[str, Any]:
+    if req.reset_verifier_state:
+        reset_verifier_state()
+
+    cases = {
+        "valid_control": ["valid_monotone"],
+        "signature_tampering": [
+            "scope_field", "action_field", "resource_field", "validity_field", "depth_field",
+        ],
+        "malformed_chain": [
+            "missing_middle", "reordered_chain", "duplicate_leaf",
+            "wrong_parent_link", "missing_required_claim",
+        ],
+        "signed_authority_expansion": [
+            "scope_expansion", "action_expansion", "resource_expansion",
+            "validity_expansion", "depth_expansion",
+        ],
+    }
+
+    rows: List[Dict[str, Any]] = []
+    failures: List[Dict[str, Any]] = []
+    global_case_id = 0
+    for category, category_cases in cases.items():
+        for trial in range(1, req.trials_per_category + 1):
+            global_case_id += 1
+            case = category_cases[(trial - 1) % len(category_cases)]
+            try:
+                variant = _stratified_variant(category, case, global_case_id)
+                result = _verify_stratified_variant(variant)
+                decision_correct = result["accepted"] is variant["expected_accepted"]
+                check_correct = (
+                    variant["expected_failed_check"] is None
+                    or result["expected_check_value"] is False
+                )
+                semantic_signature_valid = (
+                    category != "signed_authority_expansion"
+                    or result["leaf_signature_valid"] is True
+                )
+                passed = decision_correct and check_correct and semantic_signature_valid
+                rows.append({
+                    "category": category,
+                    "case": case,
+                    "trial": trial,
+                    "expected_accepted": variant["expected_accepted"],
+                    "accepted": result["accepted"],
+                    "reason": result["reason"],
+                    "expected_failed_check": variant["expected_failed_check"],
+                    "observed_failed_check": result["failed_check"],
+                    "leaf_signature_valid": result["leaf_signature_valid"],
+                    "latency_ms": result["latency_ms"],
+                    "passed": passed,
+                })
+            except Exception as exc:
+                failures.append({
+                    "category": category,
+                    "case": case,
+                    "trial": trial,
+                    "error": str(exc),
+                })
+
+    raw_fields = [
+        "category", "case", "trial", "expected_accepted", "accepted", "reason",
+        "expected_failed_check", "observed_failed_check", "leaf_signature_valid",
+        "latency_ms", "passed",
+    ]
+    _write_csv(STRATIFIED_SECURITY_RAW, rows, raw_fields)
+
+    summary_rows: List[Dict[str, Any]] = []
+    for category, category_cases in cases.items():
+        for case in ["ALL"] + category_cases:
+            selected = [
+                row for row in rows
+                if row["category"] == category and (case == "ALL" or row["case"] == case)
+            ]
+            stats = _stats([float(row["latency_ms"]) for row in selected])
+            summary_rows.append({
+                "category": category,
+                "case": case,
+                "generated": len(selected),
+                "accepted": sum(int(bool(row["accepted"])) for row in selected),
+                "rejected": sum(int(not bool(row["accepted"])) for row in selected),
+                "passed": sum(int(bool(row["passed"])) for row in selected),
+                "failed": sum(int(not bool(row["passed"])) for row in selected),
+                "mean_ms": stats["mean_ms"],
+                "p95_ms": stats["p95_ms"],
+                "ci95_ms": stats["ci95_ms"],
+            })
+    summary_fields = list(summary_rows[0].keys()) if summary_rows else []
+    _write_csv(STRATIFIED_SECURITY_SUMMARY, summary_rows, summary_fields)
+
+    signed_rows = [row for row in rows if row["category"] == "signed_authority_expansion"]
+    all_rows_passed = bool(rows) and all(bool(row["passed"]) for row in rows)
+    all_signed_expansions_had_valid_signatures = bool(signed_rows) and all(
+        row["leaf_signature_valid"] is True for row in signed_rows
+    )
+    return {
+        "test": "stratified_chain_security",
+        "trials_per_category": req.trials_per_category,
+        "total_trials": len(rows),
+        "summary": [row for row in summary_rows if row["case"] == "ALL"],
+        "case_summary": [row for row in summary_rows if row["case"] != "ALL"],
+        "all_rows_passed": all_rows_passed,
+        "all_signed_expansions_had_valid_signatures": all_signed_expansions_had_valid_signatures,
+        "failure_count": len(failures),
+        "failures": failures[:20],
+        "raw_file": str(STRATIFIED_SECURITY_RAW),
+        "summary_file": str(STRATIFIED_SECURITY_SUMMARY),
+        "note": (
+            "Categories are disjoint. Signature-tampering cases alter a credential after signing; "
+            "malformed-chain cases test structure or required claims; signed-authority-expansion "
+            "cases are reissued with the legitimate child issuer key and must reach a monotonicity check."
+        ),
     }
 
 

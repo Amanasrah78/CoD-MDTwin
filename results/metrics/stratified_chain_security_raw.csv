@@ -1,0 +1,1201 @@
+category,case,trial,expected_accepted,accepted,reason,expected_failed_check,observed_failed_check,leaf_signature_valid,latency_ms,passed
+valid_control,valid_monotone,1,True,True,valid chain of delegation,,,True,2.01975,True
+valid_control,valid_monotone,2,True,True,valid chain of delegation,,,True,1.351792,True
+valid_control,valid_monotone,3,True,True,valid chain of delegation,,,True,1.680041,True
+valid_control,valid_monotone,4,True,True,valid chain of delegation,,,True,2.043208,True
+valid_control,valid_monotone,5,True,True,valid chain of delegation,,,True,1.632042,True
+valid_control,valid_monotone,6,True,True,valid chain of delegation,,,True,1.485542,True
+valid_control,valid_monotone,7,True,True,valid chain of delegation,,,True,2.154417,True
+valid_control,valid_monotone,8,True,True,valid chain of delegation,,,True,2.304333,True
+valid_control,valid_monotone,9,True,True,valid chain of delegation,,,True,2.555958,True
+valid_control,valid_monotone,10,True,True,valid chain of delegation,,,True,2.710541,True
+valid_control,valid_monotone,11,True,True,valid chain of delegation,,,True,1.757208,True
+valid_control,valid_monotone,12,True,True,valid chain of delegation,,,True,1.949292,True
+valid_control,valid_monotone,13,True,True,valid chain of delegation,,,True,1.578584,True
+valid_control,valid_monotone,14,True,True,valid chain of delegation,,,True,1.369042,True
+valid_control,valid_monotone,15,True,True,valid chain of delegation,,,True,1.355084,True
+valid_control,valid_monotone,16,True,True,valid chain of delegation,,,True,1.25325,True
+valid_control,valid_monotone,17,True,True,valid chain of delegation,,,True,1.234583,True
+valid_control,valid_monotone,18,True,True,valid chain of delegation,,,True,1.224125,True
+valid_control,valid_monotone,19,True,True,valid chain of delegation,,,True,1.286125,True
+valid_control,valid_monotone,20,True,True,valid chain of delegation,,,True,1.352084,True
+valid_control,valid_monotone,21,True,True,valid chain of delegation,,,True,1.243084,True
+valid_control,valid_monotone,22,True,True,valid chain of delegation,,,True,1.175875,True
+valid_control,valid_monotone,23,True,True,valid chain of delegation,,,True,1.128917,True
+valid_control,valid_monotone,24,True,True,valid chain of delegation,,,True,1.165375,True
+valid_control,valid_monotone,25,True,True,valid chain of delegation,,,True,1.154625,True
+valid_control,valid_monotone,26,True,True,valid chain of delegation,,,True,1.210875,True
+valid_control,valid_monotone,27,True,True,valid chain of delegation,,,True,1.05425,True
+valid_control,valid_monotone,28,True,True,valid chain of delegation,,,True,1.012416,True
+valid_control,valid_monotone,29,True,True,valid chain of delegation,,,True,0.974833,True
+valid_control,valid_monotone,30,True,True,valid chain of delegation,,,True,0.963959,True
+valid_control,valid_monotone,31,True,True,valid chain of delegation,,,True,1.029834,True
+valid_control,valid_monotone,32,True,True,valid chain of delegation,,,True,1.10075,True
+valid_control,valid_monotone,33,True,True,valid chain of delegation,,,True,0.971041,True
+valid_control,valid_monotone,34,True,True,valid chain of delegation,,,True,1.0315,True
+valid_control,valid_monotone,35,True,True,valid chain of delegation,,,True,1.0445,True
+valid_control,valid_monotone,36,True,True,valid chain of delegation,,,True,1.002667,True
+valid_control,valid_monotone,37,True,True,valid chain of delegation,,,True,0.968458,True
+valid_control,valid_monotone,38,True,True,valid chain of delegation,,,True,1.428125,True
+valid_control,valid_monotone,39,True,True,valid chain of delegation,,,True,1.139125,True
+valid_control,valid_monotone,40,True,True,valid chain of delegation,,,True,0.9815,True
+valid_control,valid_monotone,41,True,True,valid chain of delegation,,,True,0.935125,True
+valid_control,valid_monotone,42,True,True,valid chain of delegation,,,True,1.018292,True
+valid_control,valid_monotone,43,True,True,valid chain of delegation,,,True,1.004167,True
+valid_control,valid_monotone,44,True,True,valid chain of delegation,,,True,0.962959,True
+valid_control,valid_monotone,45,True,True,valid chain of delegation,,,True,1.058042,True
+valid_control,valid_monotone,46,True,True,valid chain of delegation,,,True,0.921,True
+valid_control,valid_monotone,47,True,True,valid chain of delegation,,,True,0.91375,True
+valid_control,valid_monotone,48,True,True,valid chain of delegation,,,True,0.991125,True
+valid_control,valid_monotone,49,True,True,valid chain of delegation,,,True,0.900875,True
+valid_control,valid_monotone,50,True,True,valid chain of delegation,,,True,0.9935,True
+valid_control,valid_monotone,51,True,True,valid chain of delegation,,,True,1.130542,True
+valid_control,valid_monotone,52,True,True,valid chain of delegation,,,True,1.212292,True
+valid_control,valid_monotone,53,True,True,valid chain of delegation,,,True,1.000125,True
+valid_control,valid_monotone,54,True,True,valid chain of delegation,,,True,1.11275,True
+valid_control,valid_monotone,55,True,True,valid chain of delegation,,,True,0.96075,True
+valid_control,valid_monotone,56,True,True,valid chain of delegation,,,True,0.902042,True
+valid_control,valid_monotone,57,True,True,valid chain of delegation,,,True,0.895041,True
+valid_control,valid_monotone,58,True,True,valid chain of delegation,,,True,1.122625,True
+valid_control,valid_monotone,59,True,True,valid chain of delegation,,,True,0.942333,True
+valid_control,valid_monotone,60,True,True,valid chain of delegation,,,True,0.819583,True
+valid_control,valid_monotone,61,True,True,valid chain of delegation,,,True,0.857792,True
+valid_control,valid_monotone,62,True,True,valid chain of delegation,,,True,0.830667,True
+valid_control,valid_monotone,63,True,True,valid chain of delegation,,,True,0.862125,True
+valid_control,valid_monotone,64,True,True,valid chain of delegation,,,True,0.905792,True
+valid_control,valid_monotone,65,True,True,valid chain of delegation,,,True,1.017583,True
+valid_control,valid_monotone,66,True,True,valid chain of delegation,,,True,1.005416,True
+valid_control,valid_monotone,67,True,True,valid chain of delegation,,,True,0.875875,True
+valid_control,valid_monotone,68,True,True,valid chain of delegation,,,True,0.9095,True
+valid_control,valid_monotone,69,True,True,valid chain of delegation,,,True,0.849791,True
+valid_control,valid_monotone,70,True,True,valid chain of delegation,,,True,0.900125,True
+valid_control,valid_monotone,71,True,True,valid chain of delegation,,,True,0.911458,True
+valid_control,valid_monotone,72,True,True,valid chain of delegation,,,True,1.097542,True
+valid_control,valid_monotone,73,True,True,valid chain of delegation,,,True,1.030958,True
+valid_control,valid_monotone,74,True,True,valid chain of delegation,,,True,0.866917,True
+valid_control,valid_monotone,75,True,True,valid chain of delegation,,,True,0.853709,True
+valid_control,valid_monotone,76,True,True,valid chain of delegation,,,True,0.877791,True
+valid_control,valid_monotone,77,True,True,valid chain of delegation,,,True,0.837959,True
+valid_control,valid_monotone,78,True,True,valid chain of delegation,,,True,0.894875,True
+valid_control,valid_monotone,79,True,True,valid chain of delegation,,,True,1.023208,True
+valid_control,valid_monotone,80,True,True,valid chain of delegation,,,True,1.095542,True
+valid_control,valid_monotone,81,True,True,valid chain of delegation,,,True,0.934167,True
+valid_control,valid_monotone,82,True,True,valid chain of delegation,,,True,0.883708,True
+valid_control,valid_monotone,83,True,True,valid chain of delegation,,,True,0.8555,True
+valid_control,valid_monotone,84,True,True,valid chain of delegation,,,True,0.835042,True
+valid_control,valid_monotone,85,True,True,valid chain of delegation,,,True,0.882959,True
+valid_control,valid_monotone,86,True,True,valid chain of delegation,,,True,0.870959,True
+valid_control,valid_monotone,87,True,True,valid chain of delegation,,,True,1.102042,True
+valid_control,valid_monotone,88,True,True,valid chain of delegation,,,True,0.976041,True
+valid_control,valid_monotone,89,True,True,valid chain of delegation,,,True,0.877792,True
+valid_control,valid_monotone,90,True,True,valid chain of delegation,,,True,0.920209,True
+valid_control,valid_monotone,91,True,True,valid chain of delegation,,,True,0.863417,True
+valid_control,valid_monotone,92,True,True,valid chain of delegation,,,True,0.897292,True
+valid_control,valid_monotone,93,True,True,valid chain of delegation,,,True,0.900917,True
+valid_control,valid_monotone,94,True,True,valid chain of delegation,,,True,1.013584,True
+valid_control,valid_monotone,95,True,True,valid chain of delegation,,,True,1.010625,True
+valid_control,valid_monotone,96,True,True,valid chain of delegation,,,True,0.904416,True
+valid_control,valid_monotone,97,True,True,valid chain of delegation,,,True,0.929666,True
+valid_control,valid_monotone,98,True,True,valid chain of delegation,,,True,0.819,True
+valid_control,valid_monotone,99,True,True,valid chain of delegation,,,True,0.959667,True
+valid_control,valid_monotone,100,True,True,valid chain of delegation,,,True,0.9415,True
+valid_control,valid_monotone,101,True,True,valid chain of delegation,,,True,1.099875,True
+valid_control,valid_monotone,102,True,True,valid chain of delegation,,,True,0.889542,True
+valid_control,valid_monotone,103,True,True,valid chain of delegation,,,True,0.945292,True
+valid_control,valid_monotone,104,True,True,valid chain of delegation,,,True,0.821833,True
+valid_control,valid_monotone,105,True,True,valid chain of delegation,,,True,0.859333,True
+valid_control,valid_monotone,106,True,True,valid chain of delegation,,,True,0.869708,True
+valid_control,valid_monotone,107,True,True,valid chain of delegation,,,True,0.857083,True
+valid_control,valid_monotone,108,True,True,valid chain of delegation,,,True,0.852958,True
+valid_control,valid_monotone,109,True,True,valid chain of delegation,,,True,0.9935,True
+valid_control,valid_monotone,110,True,True,valid chain of delegation,,,True,0.911459,True
+valid_control,valid_monotone,111,True,True,valid chain of delegation,,,True,0.832458,True
+valid_control,valid_monotone,112,True,True,valid chain of delegation,,,True,0.8355,True
+valid_control,valid_monotone,113,True,True,valid chain of delegation,,,True,0.81575,True
+valid_control,valid_monotone,114,True,True,valid chain of delegation,,,True,0.824333,True
+valid_control,valid_monotone,115,True,True,valid chain of delegation,,,True,0.833084,True
+valid_control,valid_monotone,116,True,True,valid chain of delegation,,,True,1.041333,True
+valid_control,valid_monotone,117,True,True,valid chain of delegation,,,True,0.928292,True
+valid_control,valid_monotone,118,True,True,valid chain of delegation,,,True,0.837792,True
+valid_control,valid_monotone,119,True,True,valid chain of delegation,,,True,0.839,True
+valid_control,valid_monotone,120,True,True,valid chain of delegation,,,True,0.829208,True
+valid_control,valid_monotone,121,True,True,valid chain of delegation,,,True,0.813417,True
+valid_control,valid_monotone,122,True,True,valid chain of delegation,,,True,0.801875,True
+valid_control,valid_monotone,123,True,True,valid chain of delegation,,,True,0.924083,True
+valid_control,valid_monotone,124,True,True,valid chain of delegation,,,True,1.0285,True
+valid_control,valid_monotone,125,True,True,valid chain of delegation,,,True,0.930167,True
+valid_control,valid_monotone,126,True,True,valid chain of delegation,,,True,0.860334,True
+valid_control,valid_monotone,127,True,True,valid chain of delegation,,,True,0.853333,True
+valid_control,valid_monotone,128,True,True,valid chain of delegation,,,True,0.86,True
+valid_control,valid_monotone,129,True,True,valid chain of delegation,,,True,0.854709,True
+valid_control,valid_monotone,130,True,True,valid chain of delegation,,,True,0.872542,True
+valid_control,valid_monotone,131,True,True,valid chain of delegation,,,True,0.95425,True
+valid_control,valid_monotone,132,True,True,valid chain of delegation,,,True,0.9425,True
+valid_control,valid_monotone,133,True,True,valid chain of delegation,,,True,0.923625,True
+valid_control,valid_monotone,134,True,True,valid chain of delegation,,,True,0.827542,True
+valid_control,valid_monotone,135,True,True,valid chain of delegation,,,True,0.86125,True
+valid_control,valid_monotone,136,True,True,valid chain of delegation,,,True,0.82975,True
+valid_control,valid_monotone,137,True,True,valid chain of delegation,,,True,0.864208,True
+valid_control,valid_monotone,138,True,True,valid chain of delegation,,,True,0.824583,True
+valid_control,valid_monotone,139,True,True,valid chain of delegation,,,True,0.951834,True
+valid_control,valid_monotone,140,True,True,valid chain of delegation,,,True,0.8525,True
+valid_control,valid_monotone,141,True,True,valid chain of delegation,,,True,0.829792,True
+valid_control,valid_monotone,142,True,True,valid chain of delegation,,,True,0.891125,True
+valid_control,valid_monotone,143,True,True,valid chain of delegation,,,True,0.851333,True
+valid_control,valid_monotone,144,True,True,valid chain of delegation,,,True,0.857833,True
+valid_control,valid_monotone,145,True,True,valid chain of delegation,,,True,0.807959,True
+valid_control,valid_monotone,146,True,True,valid chain of delegation,,,True,1.022667,True
+valid_control,valid_monotone,147,True,True,valid chain of delegation,,,True,0.88425,True
+valid_control,valid_monotone,148,True,True,valid chain of delegation,,,True,0.853834,True
+valid_control,valid_monotone,149,True,True,valid chain of delegation,,,True,0.846834,True
+valid_control,valid_monotone,150,True,True,valid chain of delegation,,,True,0.861791,True
+valid_control,valid_monotone,151,True,True,valid chain of delegation,,,True,0.858792,True
+valid_control,valid_monotone,152,True,True,valid chain of delegation,,,True,0.888208,True
+valid_control,valid_monotone,153,True,True,valid chain of delegation,,,True,0.823708,True
+valid_control,valid_monotone,154,True,True,valid chain of delegation,,,True,0.831834,True
+valid_control,valid_monotone,155,True,True,valid chain of delegation,,,True,0.822209,True
+valid_control,valid_monotone,156,True,True,valid chain of delegation,,,True,0.842708,True
+valid_control,valid_monotone,157,True,True,valid chain of delegation,,,True,0.886125,True
+valid_control,valid_monotone,158,True,True,valid chain of delegation,,,True,0.80925,True
+valid_control,valid_monotone,159,True,True,valid chain of delegation,,,True,0.796792,True
+valid_control,valid_monotone,160,True,True,valid chain of delegation,,,True,0.8415,True
+valid_control,valid_monotone,161,True,True,valid chain of delegation,,,True,0.882042,True
+valid_control,valid_monotone,162,True,True,valid chain of delegation,,,True,0.846209,True
+valid_control,valid_monotone,163,True,True,valid chain of delegation,,,True,0.834416,True
+valid_control,valid_monotone,164,True,True,valid chain of delegation,,,True,0.874833,True
+valid_control,valid_monotone,165,True,True,valid chain of delegation,,,True,0.878041,True
+valid_control,valid_monotone,166,True,True,valid chain of delegation,,,True,0.847041,True
+valid_control,valid_monotone,167,True,True,valid chain of delegation,,,True,0.868084,True
+valid_control,valid_monotone,168,True,True,valid chain of delegation,,,True,0.850625,True
+valid_control,valid_monotone,169,True,True,valid chain of delegation,,,True,0.897333,True
+valid_control,valid_monotone,170,True,True,valid chain of delegation,,,True,0.909041,True
+valid_control,valid_monotone,171,True,True,valid chain of delegation,,,True,0.847417,True
+valid_control,valid_monotone,172,True,True,valid chain of delegation,,,True,0.862709,True
+valid_control,valid_monotone,173,True,True,valid chain of delegation,,,True,0.875542,True
+valid_control,valid_monotone,174,True,True,valid chain of delegation,,,True,0.787125,True
+valid_control,valid_monotone,175,True,True,valid chain of delegation,,,True,0.84925,True
+valid_control,valid_monotone,176,True,True,valid chain of delegation,,,True,0.852,True
+valid_control,valid_monotone,177,True,True,valid chain of delegation,,,True,0.805625,True
+valid_control,valid_monotone,178,True,True,valid chain of delegation,,,True,0.895583,True
+valid_control,valid_monotone,179,True,True,valid chain of delegation,,,True,0.8445,True
+valid_control,valid_monotone,180,True,True,valid chain of delegation,,,True,0.847209,True
+valid_control,valid_monotone,181,True,True,valid chain of delegation,,,True,0.860916,True
+valid_control,valid_monotone,182,True,True,valid chain of delegation,,,True,0.834834,True
+valid_control,valid_monotone,183,True,True,valid chain of delegation,,,True,0.825875,True
+valid_control,valid_monotone,184,True,True,valid chain of delegation,,,True,0.864542,True
+valid_control,valid_monotone,185,True,True,valid chain of delegation,,,True,0.79725,True
+valid_control,valid_monotone,186,True,True,valid chain of delegation,,,True,0.803125,True
+valid_control,valid_monotone,187,True,True,valid chain of delegation,,,True,0.826958,True
+valid_control,valid_monotone,188,True,True,valid chain of delegation,,,True,0.866375,True
+valid_control,valid_monotone,189,True,True,valid chain of delegation,,,True,0.8195,True
+valid_control,valid_monotone,190,True,True,valid chain of delegation,,,True,0.825625,True
+valid_control,valid_monotone,191,True,True,valid chain of delegation,,,True,0.926417,True
+valid_control,valid_monotone,192,True,True,valid chain of delegation,,,True,0.84975,True
+valid_control,valid_monotone,193,True,True,valid chain of delegation,,,True,0.854917,True
+valid_control,valid_monotone,194,True,True,valid chain of delegation,,,True,0.837417,True
+valid_control,valid_monotone,195,True,True,valid chain of delegation,,,True,0.823916,True
+valid_control,valid_monotone,196,True,True,valid chain of delegation,,,True,0.822334,True
+valid_control,valid_monotone,197,True,True,valid chain of delegation,,,True,0.789541,True
+valid_control,valid_monotone,198,True,True,valid chain of delegation,,,True,0.822292,True
+valid_control,valid_monotone,199,True,True,valid chain of delegation,,,True,0.825834,True
+valid_control,valid_monotone,200,True,True,valid chain of delegation,,,True,0.822625,True
+valid_control,valid_monotone,201,True,True,valid chain of delegation,,,True,0.845208,True
+valid_control,valid_monotone,202,True,True,valid chain of delegation,,,True,0.812584,True
+valid_control,valid_monotone,203,True,True,valid chain of delegation,,,True,0.802333,True
+valid_control,valid_monotone,204,True,True,valid chain of delegation,,,True,0.799834,True
+valid_control,valid_monotone,205,True,True,valid chain of delegation,,,True,0.863333,True
+valid_control,valid_monotone,206,True,True,valid chain of delegation,,,True,0.849667,True
+valid_control,valid_monotone,207,True,True,valid chain of delegation,,,True,0.86525,True
+valid_control,valid_monotone,208,True,True,valid chain of delegation,,,True,0.821792,True
+valid_control,valid_monotone,209,True,True,valid chain of delegation,,,True,0.838458,True
+valid_control,valid_monotone,210,True,True,valid chain of delegation,,,True,0.819958,True
+valid_control,valid_monotone,211,True,True,valid chain of delegation,,,True,0.817041,True
+valid_control,valid_monotone,212,True,True,valid chain of delegation,,,True,0.888583,True
+valid_control,valid_monotone,213,True,True,valid chain of delegation,,,True,0.814208,True
+valid_control,valid_monotone,214,True,True,valid chain of delegation,,,True,0.812459,True
+valid_control,valid_monotone,215,True,True,valid chain of delegation,,,True,0.834875,True
+valid_control,valid_monotone,216,True,True,valid chain of delegation,,,True,0.852625,True
+valid_control,valid_monotone,217,True,True,valid chain of delegation,,,True,0.828167,True
+valid_control,valid_monotone,218,True,True,valid chain of delegation,,,True,0.828125,True
+valid_control,valid_monotone,219,True,True,valid chain of delegation,,,True,0.805625,True
+valid_control,valid_monotone,220,True,True,valid chain of delegation,,,True,0.829417,True
+valid_control,valid_monotone,221,True,True,valid chain of delegation,,,True,0.779833,True
+valid_control,valid_monotone,222,True,True,valid chain of delegation,,,True,0.768833,True
+valid_control,valid_monotone,223,True,True,valid chain of delegation,,,True,0.834208,True
+valid_control,valid_monotone,224,True,True,valid chain of delegation,,,True,0.832833,True
+valid_control,valid_monotone,225,True,True,valid chain of delegation,,,True,1.183542,True
+valid_control,valid_monotone,226,True,True,valid chain of delegation,,,True,1.076875,True
+valid_control,valid_monotone,227,True,True,valid chain of delegation,,,True,0.93325,True
+valid_control,valid_monotone,228,True,True,valid chain of delegation,,,True,0.868,True
+valid_control,valid_monotone,229,True,True,valid chain of delegation,,,True,0.875584,True
+valid_control,valid_monotone,230,True,True,valid chain of delegation,,,True,0.845042,True
+valid_control,valid_monotone,231,True,True,valid chain of delegation,,,True,0.841334,True
+valid_control,valid_monotone,232,True,True,valid chain of delegation,,,True,1.399625,True
+valid_control,valid_monotone,233,True,True,valid chain of delegation,,,True,1.012583,True
+valid_control,valid_monotone,234,True,True,valid chain of delegation,,,True,0.791417,True
+valid_control,valid_monotone,235,True,True,valid chain of delegation,,,True,0.777458,True
+valid_control,valid_monotone,236,True,True,valid chain of delegation,,,True,0.777458,True
+valid_control,valid_monotone,237,True,True,valid chain of delegation,,,True,0.804125,True
+valid_control,valid_monotone,238,True,True,valid chain of delegation,,,True,0.762666,True
+valid_control,valid_monotone,239,True,True,valid chain of delegation,,,True,0.846625,True
+valid_control,valid_monotone,240,True,True,valid chain of delegation,,,True,1.066125,True
+valid_control,valid_monotone,241,True,True,valid chain of delegation,,,True,0.918041,True
+valid_control,valid_monotone,242,True,True,valid chain of delegation,,,True,0.90725,True
+valid_control,valid_monotone,243,True,True,valid chain of delegation,,,True,0.805,True
+valid_control,valid_monotone,244,True,True,valid chain of delegation,,,True,0.769042,True
+valid_control,valid_monotone,245,True,True,valid chain of delegation,,,True,0.814333,True
+valid_control,valid_monotone,246,True,True,valid chain of delegation,,,True,0.902667,True
+valid_control,valid_monotone,247,True,True,valid chain of delegation,,,True,1.022709,True
+valid_control,valid_monotone,248,True,True,valid chain of delegation,,,True,0.891208,True
+valid_control,valid_monotone,249,True,True,valid chain of delegation,,,True,1.181125,True
+valid_control,valid_monotone,250,True,True,valid chain of delegation,,,True,1.063667,True
+valid_control,valid_monotone,251,True,True,valid chain of delegation,,,True,0.858417,True
+valid_control,valid_monotone,252,True,True,valid chain of delegation,,,True,0.804625,True
+valid_control,valid_monotone,253,True,True,valid chain of delegation,,,True,0.827417,True
+valid_control,valid_monotone,254,True,True,valid chain of delegation,,,True,1.165375,True
+valid_control,valid_monotone,255,True,True,valid chain of delegation,,,True,0.961,True
+valid_control,valid_monotone,256,True,True,valid chain of delegation,,,True,0.842916,True
+valid_control,valid_monotone,257,True,True,valid chain of delegation,,,True,0.831708,True
+valid_control,valid_monotone,258,True,True,valid chain of delegation,,,True,0.906208,True
+valid_control,valid_monotone,259,True,True,valid chain of delegation,,,True,0.832167,True
+valid_control,valid_monotone,260,True,True,valid chain of delegation,,,True,0.923958,True
+valid_control,valid_monotone,261,True,True,valid chain of delegation,,,True,1.065334,True
+valid_control,valid_monotone,262,True,True,valid chain of delegation,,,True,1.041209,True
+valid_control,valid_monotone,263,True,True,valid chain of delegation,,,True,0.854042,True
+valid_control,valid_monotone,264,True,True,valid chain of delegation,,,True,0.846042,True
+valid_control,valid_monotone,265,True,True,valid chain of delegation,,,True,0.815667,True
+valid_control,valid_monotone,266,True,True,valid chain of delegation,,,True,0.868292,True
+valid_control,valid_monotone,267,True,True,valid chain of delegation,,,True,0.851209,True
+valid_control,valid_monotone,268,True,True,valid chain of delegation,,,True,0.906417,True
+valid_control,valid_monotone,269,True,True,valid chain of delegation,,,True,1.048459,True
+valid_control,valid_monotone,270,True,True,valid chain of delegation,,,True,0.872292,True
+valid_control,valid_monotone,271,True,True,valid chain of delegation,,,True,0.854667,True
+valid_control,valid_monotone,272,True,True,valid chain of delegation,,,True,0.831083,True
+valid_control,valid_monotone,273,True,True,valid chain of delegation,,,True,0.830375,True
+valid_control,valid_monotone,274,True,True,valid chain of delegation,,,True,0.859334,True
+valid_control,valid_monotone,275,True,True,valid chain of delegation,,,True,1.123209,True
+valid_control,valid_monotone,276,True,True,valid chain of delegation,,,True,1.116833,True
+valid_control,valid_monotone,277,True,True,valid chain of delegation,,,True,0.836333,True
+valid_control,valid_monotone,278,True,True,valid chain of delegation,,,True,0.848292,True
+valid_control,valid_monotone,279,True,True,valid chain of delegation,,,True,0.83775,True
+valid_control,valid_monotone,280,True,True,valid chain of delegation,,,True,0.816417,True
+valid_control,valid_monotone,281,True,True,valid chain of delegation,,,True,0.837291,True
+valid_control,valid_monotone,282,True,True,valid chain of delegation,,,True,0.848667,True
+valid_control,valid_monotone,283,True,True,valid chain of delegation,,,True,0.863417,True
+valid_control,valid_monotone,284,True,True,valid chain of delegation,,,True,0.814208,True
+valid_control,valid_monotone,285,True,True,valid chain of delegation,,,True,0.826458,True
+valid_control,valid_monotone,286,True,True,valid chain of delegation,,,True,0.852584,True
+valid_control,valid_monotone,287,True,True,valid chain of delegation,,,True,0.829584,True
+valid_control,valid_monotone,288,True,True,valid chain of delegation,,,True,0.807167,True
+valid_control,valid_monotone,289,True,True,valid chain of delegation,,,True,0.88475,True
+valid_control,valid_monotone,290,True,True,valid chain of delegation,,,True,0.846416,True
+valid_control,valid_monotone,291,True,True,valid chain of delegation,,,True,0.814667,True
+valid_control,valid_monotone,292,True,True,valid chain of delegation,,,True,0.803333,True
+valid_control,valid_monotone,293,True,True,valid chain of delegation,,,True,0.92375,True
+valid_control,valid_monotone,294,True,True,valid chain of delegation,,,True,0.859667,True
+valid_control,valid_monotone,295,True,True,valid chain of delegation,,,True,0.863042,True
+valid_control,valid_monotone,296,True,True,valid chain of delegation,,,True,0.826708,True
+valid_control,valid_monotone,297,True,True,valid chain of delegation,,,True,0.857333,True
+valid_control,valid_monotone,298,True,True,valid chain of delegation,,,True,0.861333,True
+valid_control,valid_monotone,299,True,True,valid chain of delegation,,,True,0.80975,True
+valid_control,valid_monotone,300,True,True,valid chain of delegation,,,True,0.827792,True
+signature_tampering,scope_field,1,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.976958,True
+signature_tampering,action_field,2,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.878041,True
+signature_tampering,resource_field,3,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.136917,True
+signature_tampering,validity_field,4,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.039583,True
+signature_tampering,depth_field,5,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.933375,True
+signature_tampering,scope_field,6,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.877417,True
+signature_tampering,action_field,7,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.813333,True
+signature_tampering,resource_field,8,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819334,True
+signature_tampering,validity_field,9,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.907958,True
+signature_tampering,depth_field,10,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.83675,True
+signature_tampering,scope_field,11,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814541,True
+signature_tampering,action_field,12,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.813791,True
+signature_tampering,resource_field,13,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.86725,True
+signature_tampering,validity_field,14,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.037334,True
+signature_tampering,depth_field,15,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.862541,True
+signature_tampering,scope_field,16,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.876208,True
+signature_tampering,action_field,17,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824125,True
+signature_tampering,resource_field,18,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835042,True
+signature_tampering,validity_field,19,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.846625,True
+signature_tampering,depth_field,20,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.904958,True
+signature_tampering,scope_field,21,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8025,True
+signature_tampering,action_field,22,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812333,True
+signature_tampering,resource_field,23,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.889708,True
+signature_tampering,validity_field,24,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.856708,True
+signature_tampering,depth_field,25,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.816875,True
+signature_tampering,scope_field,26,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.829542,True
+signature_tampering,action_field,27,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.833375,True
+signature_tampering,resource_field,28,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.856917,True
+signature_tampering,validity_field,29,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.829375,True
+signature_tampering,depth_field,30,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814166,True
+signature_tampering,scope_field,31,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.803916,True
+signature_tampering,action_field,32,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.801917,True
+signature_tampering,resource_field,33,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.790917,True
+signature_tampering,validity_field,34,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.793959,True
+signature_tampering,depth_field,35,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.865,True
+signature_tampering,scope_field,36,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.802541,True
+signature_tampering,action_field,37,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.809208,True
+signature_tampering,resource_field,38,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.845875,True
+signature_tampering,validity_field,39,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.81575,True
+signature_tampering,depth_field,40,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.789167,True
+signature_tampering,scope_field,41,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.78125,True
+signature_tampering,action_field,42,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819541,True
+signature_tampering,resource_field,43,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.777334,True
+signature_tampering,validity_field,44,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.839333,True
+signature_tampering,depth_field,45,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.11975,True
+signature_tampering,scope_field,46,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.115291,True
+signature_tampering,action_field,47,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.858458,True
+signature_tampering,resource_field,48,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.83025,True
+signature_tampering,validity_field,49,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.832167,True
+signature_tampering,depth_field,50,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.845084,True
+signature_tampering,scope_field,51,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.84975,True
+signature_tampering,action_field,52,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814791,True
+signature_tampering,resource_field,53,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.867875,True
+signature_tampering,validity_field,54,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.865833,True
+signature_tampering,depth_field,55,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.942542,True
+signature_tampering,scope_field,56,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.85475,True
+signature_tampering,action_field,57,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.858416,True
+signature_tampering,resource_field,58,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.839,True
+signature_tampering,validity_field,59,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.827208,True
+signature_tampering,depth_field,60,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.843625,True
+signature_tampering,scope_field,61,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.821,True
+signature_tampering,action_field,62,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.138709,True
+signature_tampering,resource_field,63,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.056959,True
+signature_tampering,validity_field,64,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.883375,True
+signature_tampering,depth_field,65,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.822584,True
+signature_tampering,scope_field,66,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.829959,True
+signature_tampering,action_field,67,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8345,True
+signature_tampering,resource_field,68,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.803416,True
+signature_tampering,validity_field,69,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.804125,True
+signature_tampering,depth_field,70,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.791208,True
+signature_tampering,scope_field,71,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.821167,True
+signature_tampering,action_field,72,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.763458,True
+signature_tampering,resource_field,73,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.794625,True
+signature_tampering,validity_field,74,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.7975,True
+signature_tampering,depth_field,75,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.789334,True
+signature_tampering,scope_field,76,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.770916,True
+signature_tampering,action_field,77,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.810167,True
+signature_tampering,resource_field,78,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814583,True
+signature_tampering,validity_field,79,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.796959,True
+signature_tampering,depth_field,80,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.788792,True
+signature_tampering,scope_field,81,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835167,True
+signature_tampering,action_field,82,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.852667,True
+signature_tampering,resource_field,83,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.833791,True
+signature_tampering,validity_field,84,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835292,True
+signature_tampering,depth_field,85,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.877875,True
+signature_tampering,scope_field,86,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.803,True
+signature_tampering,action_field,87,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.821666,True
+signature_tampering,resource_field,88,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.820584,True
+signature_tampering,validity_field,89,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.822834,True
+signature_tampering,depth_field,90,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.794625,True
+signature_tampering,scope_field,91,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.849667,True
+signature_tampering,action_field,92,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.818,True
+signature_tampering,resource_field,93,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.830209,True
+signature_tampering,validity_field,94,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824834,True
+signature_tampering,depth_field,95,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.826833,True
+signature_tampering,scope_field,96,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.839125,True
+signature_tampering,action_field,97,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.82975,True
+signature_tampering,resource_field,98,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.866,True
+signature_tampering,validity_field,99,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.849,True
+signature_tampering,depth_field,100,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.831875,True
+signature_tampering,scope_field,101,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819208,True
+signature_tampering,action_field,102,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812625,True
+signature_tampering,resource_field,103,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.83925,True
+signature_tampering,validity_field,104,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.766708,True
+signature_tampering,depth_field,105,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.790708,True
+signature_tampering,scope_field,106,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.785959,True
+signature_tampering,action_field,107,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.818625,True
+signature_tampering,resource_field,108,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.781,True
+signature_tampering,validity_field,109,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.791459,True
+signature_tampering,depth_field,110,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.806375,True
+signature_tampering,scope_field,111,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.801459,True
+signature_tampering,action_field,112,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.799459,True
+signature_tampering,resource_field,113,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.766833,True
+signature_tampering,validity_field,114,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824875,True
+signature_tampering,depth_field,115,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.867042,True
+signature_tampering,scope_field,116,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.816125,True
+signature_tampering,action_field,117,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.838667,True
+signature_tampering,resource_field,118,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8275,True
+signature_tampering,validity_field,119,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.81925,True
+signature_tampering,depth_field,120,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.796417,True
+signature_tampering,scope_field,121,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.848,True
+signature_tampering,action_field,122,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.836625,True
+signature_tampering,resource_field,123,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.837458,True
+signature_tampering,validity_field,124,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812833,True
+signature_tampering,depth_field,125,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.839792,True
+signature_tampering,scope_field,126,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.808792,True
+signature_tampering,action_field,127,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.815459,True
+signature_tampering,resource_field,128,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.813667,True
+signature_tampering,validity_field,129,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.823709,True
+signature_tampering,depth_field,130,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.828708,True
+signature_tampering,scope_field,131,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.887708,True
+signature_tampering,action_field,132,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.806083,True
+signature_tampering,resource_field,133,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.851125,True
+signature_tampering,validity_field,134,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.829541,True
+signature_tampering,depth_field,135,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.81125,True
+signature_tampering,scope_field,136,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812125,True
+signature_tampering,action_field,137,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.798625,True
+signature_tampering,resource_field,138,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.820625,True
+signature_tampering,validity_field,139,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.805166,True
+signature_tampering,depth_field,140,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.792542,True
+signature_tampering,scope_field,141,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.815709,True
+signature_tampering,action_field,142,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824959,True
+signature_tampering,resource_field,143,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.830625,True
+signature_tampering,validity_field,144,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819042,True
+signature_tampering,depth_field,145,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.792041,True
+signature_tampering,scope_field,146,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.796625,True
+signature_tampering,action_field,147,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.852708,True
+signature_tampering,resource_field,148,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.809084,True
+signature_tampering,validity_field,149,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824375,True
+signature_tampering,depth_field,150,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.816166,True
+signature_tampering,scope_field,151,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.89925,True
+signature_tampering,action_field,152,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812917,True
+signature_tampering,resource_field,153,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.84375,True
+signature_tampering,validity_field,154,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.828084,True
+signature_tampering,depth_field,155,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.885209,True
+signature_tampering,scope_field,156,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.851708,True
+signature_tampering,action_field,157,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.808084,True
+signature_tampering,resource_field,158,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.832458,True
+signature_tampering,validity_field,159,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.848416,True
+signature_tampering,depth_field,160,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.829334,True
+signature_tampering,scope_field,161,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.81225,True
+signature_tampering,action_field,162,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.784792,True
+signature_tampering,resource_field,163,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.828875,True
+signature_tampering,validity_field,164,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.791083,True
+signature_tampering,depth_field,165,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.800583,True
+signature_tampering,scope_field,166,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.771083,True
+signature_tampering,action_field,167,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.792042,True
+signature_tampering,resource_field,168,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.805166,True
+signature_tampering,validity_field,169,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.76875,True
+signature_tampering,depth_field,170,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.782166,True
+signature_tampering,scope_field,171,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.815083,True
+signature_tampering,action_field,172,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819334,True
+signature_tampering,resource_field,173,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.811625,True
+signature_tampering,validity_field,174,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812,True
+signature_tampering,depth_field,175,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.83575,True
+signature_tampering,scope_field,176,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.852,True
+signature_tampering,action_field,177,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.791917,True
+signature_tampering,resource_field,178,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835041,True
+signature_tampering,validity_field,179,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835708,True
+signature_tampering,depth_field,180,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812666,True
+signature_tampering,scope_field,181,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.854125,True
+signature_tampering,action_field,182,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.804083,True
+signature_tampering,resource_field,183,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8065,True
+signature_tampering,validity_field,184,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.813042,True
+signature_tampering,depth_field,185,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.771791,True
+signature_tampering,scope_field,186,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.808709,True
+signature_tampering,action_field,187,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8325,True
+signature_tampering,resource_field,188,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.845208,True
+signature_tampering,validity_field,189,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824333,True
+signature_tampering,depth_field,190,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.827292,True
+signature_tampering,scope_field,191,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.836333,True
+signature_tampering,action_field,192,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.858,True
+signature_tampering,resource_field,193,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814833,True
+signature_tampering,validity_field,194,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.828041,True
+signature_tampering,depth_field,195,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.83,True
+signature_tampering,scope_field,196,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.821584,True
+signature_tampering,action_field,197,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.818042,True
+signature_tampering,resource_field,198,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814583,True
+signature_tampering,validity_field,199,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.81525,True
+signature_tampering,depth_field,200,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.812791,True
+signature_tampering,scope_field,201,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.779708,True
+signature_tampering,action_field,202,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.784417,True
+signature_tampering,resource_field,203,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.828709,True
+signature_tampering,validity_field,204,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.866334,True
+signature_tampering,depth_field,205,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.796542,True
+signature_tampering,scope_field,206,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814666,True
+signature_tampering,action_field,207,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.822875,True
+signature_tampering,resource_field,208,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.840459,True
+signature_tampering,validity_field,209,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.816042,True
+signature_tampering,depth_field,210,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.78225,True
+signature_tampering,scope_field,211,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.808625,True
+signature_tampering,action_field,212,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.834834,True
+signature_tampering,resource_field,213,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.811958,True
+signature_tampering,validity_field,214,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819709,True
+signature_tampering,depth_field,215,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.838667,True
+signature_tampering,scope_field,216,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.834959,True
+signature_tampering,action_field,217,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.80625,True
+signature_tampering,resource_field,218,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.785125,True
+signature_tampering,validity_field,219,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.820959,True
+signature_tampering,depth_field,220,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.85425,True
+signature_tampering,scope_field,221,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.827417,True
+signature_tampering,action_field,222,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819125,True
+signature_tampering,resource_field,223,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8205,True
+signature_tampering,validity_field,224,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.791334,True
+signature_tampering,depth_field,225,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.836917,True
+signature_tampering,scope_field,226,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.823625,True
+signature_tampering,action_field,227,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.817667,True
+signature_tampering,resource_field,228,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.838167,True
+signature_tampering,validity_field,229,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.82475,True
+signature_tampering,depth_field,230,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.801167,True
+signature_tampering,scope_field,231,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.783042,True
+signature_tampering,action_field,232,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.808208,True
+signature_tampering,resource_field,233,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.793292,True
+signature_tampering,validity_field,234,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.776958,True
+signature_tampering,depth_field,235,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.803375,True
+signature_tampering,scope_field,236,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.801917,True
+signature_tampering,action_field,237,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.830959,True
+signature_tampering,resource_field,238,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8185,True
+signature_tampering,validity_field,239,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.836959,True
+signature_tampering,depth_field,240,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.796125,True
+signature_tampering,scope_field,241,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.830667,True
+signature_tampering,action_field,242,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.809541,True
+signature_tampering,resource_field,243,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.816958,True
+signature_tampering,validity_field,244,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.853125,True
+signature_tampering,depth_field,245,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.77425,True
+signature_tampering,scope_field,246,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.809416,True
+signature_tampering,action_field,247,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.836875,True
+signature_tampering,resource_field,248,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8725,True
+signature_tampering,validity_field,249,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.811166,True
+signature_tampering,depth_field,250,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.798958,True
+signature_tampering,scope_field,251,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.783209,True
+signature_tampering,action_field,252,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.851333,True
+signature_tampering,resource_field,253,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.040709,True
+signature_tampering,validity_field,254,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.837708,True
+signature_tampering,depth_field,255,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.815375,True
+signature_tampering,scope_field,256,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.892083,True
+signature_tampering,action_field,257,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824167,True
+signature_tampering,resource_field,258,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.809917,True
+signature_tampering,validity_field,259,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.8095,True
+signature_tampering,depth_field,260,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.869083,True
+signature_tampering,scope_field,261,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.844208,True
+signature_tampering,action_field,262,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.817542,True
+signature_tampering,resource_field,263,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.807959,True
+signature_tampering,validity_field,264,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.806791,True
+signature_tampering,depth_field,265,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.794084,True
+signature_tampering,scope_field,266,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.768375,True
+signature_tampering,action_field,267,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.798,True
+signature_tampering,resource_field,268,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.867792,True
+signature_tampering,validity_field,269,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814333,True
+signature_tampering,depth_field,270,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.81275,True
+signature_tampering,scope_field,271,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.853542,True
+signature_tampering,action_field,272,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.785333,True
+signature_tampering,resource_field,273,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.808167,True
+signature_tampering,validity_field,274,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.813834,True
+signature_tampering,depth_field,275,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.814542,True
+signature_tampering,scope_field,276,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.871292,True
+signature_tampering,action_field,277,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835917,True
+signature_tampering,resource_field,278,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.823,True
+signature_tampering,validity_field,279,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.85325,True
+signature_tampering,depth_field,280,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.843417,True
+signature_tampering,scope_field,281,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.815083,True
+signature_tampering,action_field,282,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.801042,True
+signature_tampering,resource_field,283,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.790583,True
+signature_tampering,validity_field,284,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.80475,True
+signature_tampering,depth_field,285,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.819625,True
+signature_tampering,scope_field,286,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.782875,True
+signature_tampering,action_field,287,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.793584,True
+signature_tampering,resource_field,288,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.800708,True
+signature_tampering,validity_field,289,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.047083,True
+signature_tampering,depth_field,290,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.109,True
+signature_tampering,scope_field,291,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.874125,True
+signature_tampering,action_field,292,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.857791,True
+signature_tampering,resource_field,293,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.1655,True
+signature_tampering,validity_field,294,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,1.401167,True
+signature_tampering,depth_field,295,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.907334,True
+signature_tampering,scope_field,296,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.896708,True
+signature_tampering,action_field,297,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.835791,True
+signature_tampering,resource_field,298,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.845416,True
+signature_tampering,validity_field,299,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.938042,True
+signature_tampering,depth_field,300,False,False,invalid delegation credential at position 3,dc_3_signature_valid,dc_3_signature_valid,False,0.824125,True
+malformed_chain,missing_middle,1,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.775041,True
+malformed_chain,reordered_chain,2,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.993083,True
+malformed_chain,duplicate_leaf,3,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.883916,True
+malformed_chain,wrong_parent_link,4,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.825541,True
+malformed_chain,missing_required_claim,5,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.777792,True
+malformed_chain,missing_middle,6,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.799917,True
+malformed_chain,reordered_chain,7,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.848958,True
+malformed_chain,duplicate_leaf,8,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.8215,True
+malformed_chain,wrong_parent_link,9,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.850542,True
+malformed_chain,missing_required_claim,10,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.815666,True
+malformed_chain,missing_middle,11,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.793375,True
+malformed_chain,reordered_chain,12,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.839791,True
+malformed_chain,duplicate_leaf,13,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.835959,True
+malformed_chain,wrong_parent_link,14,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.854125,True
+malformed_chain,missing_required_claim,15,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,1.110625,True
+malformed_chain,missing_middle,16,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.884208,True
+malformed_chain,reordered_chain,17,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.813959,True
+malformed_chain,duplicate_leaf,18,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.822,True
+malformed_chain,wrong_parent_link,19,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,1.095417,True
+malformed_chain,missing_required_claim,20,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,1.006917,True
+malformed_chain,missing_middle,21,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.889666,True
+malformed_chain,reordered_chain,22,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.826167,True
+malformed_chain,duplicate_leaf,23,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.866208,True
+malformed_chain,wrong_parent_link,24,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.831875,True
+malformed_chain,missing_required_claim,25,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.804542,True
+malformed_chain,missing_middle,26,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.752125,True
+malformed_chain,reordered_chain,27,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.80275,True
+malformed_chain,duplicate_leaf,28,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.850125,True
+malformed_chain,wrong_parent_link,29,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.899875,True
+malformed_chain,missing_required_claim,30,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.75925,True
+malformed_chain,missing_middle,31,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.776667,True
+malformed_chain,reordered_chain,32,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.816708,True
+malformed_chain,duplicate_leaf,33,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.814417,True
+malformed_chain,wrong_parent_link,34,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.827709,True
+malformed_chain,missing_required_claim,35,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.76775,True
+malformed_chain,missing_middle,36,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.778417,True
+malformed_chain,reordered_chain,37,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.868541,True
+malformed_chain,duplicate_leaf,38,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.806375,True
+malformed_chain,wrong_parent_link,39,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.847833,True
+malformed_chain,missing_required_claim,40,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.755,True
+malformed_chain,missing_middle,41,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.780417,True
+malformed_chain,reordered_chain,42,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.993333,True
+malformed_chain,duplicate_leaf,43,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.848333,True
+malformed_chain,wrong_parent_link,44,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.862,True
+malformed_chain,missing_required_claim,45,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.764375,True
+malformed_chain,missing_middle,46,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.777333,True
+malformed_chain,reordered_chain,47,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.859916,True
+malformed_chain,duplicate_leaf,48,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.800417,True
+malformed_chain,wrong_parent_link,49,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.828042,True
+malformed_chain,missing_required_claim,50,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.759625,True
+malformed_chain,missing_middle,51,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.757083,True
+malformed_chain,reordered_chain,52,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.785375,True
+malformed_chain,duplicate_leaf,53,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.8215,True
+malformed_chain,wrong_parent_link,54,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.8355,True
+malformed_chain,missing_required_claim,55,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.782458,True
+malformed_chain,missing_middle,56,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.793416,True
+malformed_chain,reordered_chain,57,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.835333,True
+malformed_chain,duplicate_leaf,58,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.788625,True
+malformed_chain,wrong_parent_link,59,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.793291,True
+malformed_chain,missing_required_claim,60,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.754875,True
+malformed_chain,missing_middle,61,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.808459,True
+malformed_chain,reordered_chain,62,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.823917,True
+malformed_chain,duplicate_leaf,63,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.837542,True
+malformed_chain,wrong_parent_link,64,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.803042,True
+malformed_chain,missing_required_claim,65,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.780084,True
+malformed_chain,missing_middle,66,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.762791,True
+malformed_chain,reordered_chain,67,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.823042,True
+malformed_chain,duplicate_leaf,68,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.813541,True
+malformed_chain,wrong_parent_link,69,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.844709,True
+malformed_chain,missing_required_claim,70,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.754333,True
+malformed_chain,missing_middle,71,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.767459,True
+malformed_chain,reordered_chain,72,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.812083,True
+malformed_chain,duplicate_leaf,73,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.835,True
+malformed_chain,wrong_parent_link,74,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.848958,True
+malformed_chain,missing_required_claim,75,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.780333,True
+malformed_chain,missing_middle,76,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.797,True
+malformed_chain,reordered_chain,77,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.858375,True
+malformed_chain,duplicate_leaf,78,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.862667,True
+malformed_chain,wrong_parent_link,79,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.837625,True
+malformed_chain,missing_required_claim,80,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.789,True
+malformed_chain,missing_middle,81,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.791917,True
+malformed_chain,reordered_chain,82,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.802292,True
+malformed_chain,duplicate_leaf,83,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.80675,True
+malformed_chain,wrong_parent_link,84,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.841167,True
+malformed_chain,missing_required_claim,85,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.816333,True
+malformed_chain,missing_middle,86,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.794166,True
+malformed_chain,reordered_chain,87,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.830042,True
+malformed_chain,duplicate_leaf,88,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.818917,True
+malformed_chain,wrong_parent_link,89,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.846542,True
+malformed_chain,missing_required_claim,90,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.763333,True
+malformed_chain,missing_middle,91,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.742917,True
+malformed_chain,reordered_chain,92,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.844417,True
+malformed_chain,duplicate_leaf,93,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.842417,True
+malformed_chain,wrong_parent_link,94,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.830708,True
+malformed_chain,missing_required_claim,95,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.7575,True
+malformed_chain,missing_middle,96,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.759,True
+malformed_chain,reordered_chain,97,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.818709,True
+malformed_chain,duplicate_leaf,98,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.812625,True
+malformed_chain,wrong_parent_link,99,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.815541,True
+malformed_chain,missing_required_claim,100,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.78,True
+malformed_chain,missing_middle,101,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.7855,True
+malformed_chain,reordered_chain,102,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.872458,True
+malformed_chain,duplicate_leaf,103,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.837083,True
+malformed_chain,wrong_parent_link,104,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.875083,True
+malformed_chain,missing_required_claim,105,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.851833,True
+malformed_chain,missing_middle,106,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.880417,True
+malformed_chain,reordered_chain,107,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.852917,True
+malformed_chain,duplicate_leaf,108,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.829334,True
+malformed_chain,wrong_parent_link,109,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.8105,True
+malformed_chain,missing_required_claim,110,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.775917,True
+malformed_chain,missing_middle,111,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.760959,True
+malformed_chain,reordered_chain,112,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.802875,True
+malformed_chain,duplicate_leaf,113,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.795125,True
+malformed_chain,wrong_parent_link,114,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.8215,True
+malformed_chain,missing_required_claim,115,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.773958,True
+malformed_chain,missing_middle,116,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.811125,True
+malformed_chain,reordered_chain,117,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.86025,True
+malformed_chain,duplicate_leaf,118,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.815,True
+malformed_chain,wrong_parent_link,119,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.831625,True
+malformed_chain,missing_required_claim,120,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.761625,True
+malformed_chain,missing_middle,121,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.752,True
+malformed_chain,reordered_chain,122,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.819542,True
+malformed_chain,duplicate_leaf,123,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.814417,True
+malformed_chain,wrong_parent_link,124,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.817625,True
+malformed_chain,missing_required_claim,125,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.764834,True
+malformed_chain,missing_middle,126,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.759583,True
+malformed_chain,reordered_chain,127,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.840083,True
+malformed_chain,duplicate_leaf,128,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.818208,True
+malformed_chain,wrong_parent_link,129,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.814542,True
+malformed_chain,missing_required_claim,130,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.757125,True
+malformed_chain,missing_middle,131,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.7655,True
+malformed_chain,reordered_chain,132,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.806333,True
+malformed_chain,duplicate_leaf,133,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.861584,True
+malformed_chain,wrong_parent_link,134,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.831583,True
+malformed_chain,missing_required_claim,135,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.779041,True
+malformed_chain,missing_middle,136,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.7745,True
+malformed_chain,reordered_chain,137,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.827166,True
+malformed_chain,duplicate_leaf,138,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.824083,True
+malformed_chain,wrong_parent_link,139,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.843083,True
+malformed_chain,missing_required_claim,140,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.910833,True
+malformed_chain,missing_middle,141,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.785084,True
+malformed_chain,reordered_chain,142,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.826833,True
+malformed_chain,duplicate_leaf,143,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.803667,True
+malformed_chain,wrong_parent_link,144,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.824166,True
+malformed_chain,missing_required_claim,145,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.740875,True
+malformed_chain,missing_middle,146,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.789375,True
+malformed_chain,reordered_chain,147,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.810959,True
+malformed_chain,duplicate_leaf,148,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.775167,True
+malformed_chain,wrong_parent_link,149,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.812459,True
+malformed_chain,missing_required_claim,150,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.7555,True
+malformed_chain,missing_middle,151,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.757,True
+malformed_chain,reordered_chain,152,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.847958,True
+malformed_chain,duplicate_leaf,153,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.82625,True
+malformed_chain,wrong_parent_link,154,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.837833,True
+malformed_chain,missing_required_claim,155,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.760542,True
+malformed_chain,missing_middle,156,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.758834,True
+malformed_chain,reordered_chain,157,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.824792,True
+malformed_chain,duplicate_leaf,158,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.846625,True
+malformed_chain,wrong_parent_link,159,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.844125,True
+malformed_chain,missing_required_claim,160,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.778542,True
+malformed_chain,missing_middle,161,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.782042,True
+malformed_chain,reordered_chain,162,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.797375,True
+malformed_chain,duplicate_leaf,163,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.807792,True
+malformed_chain,wrong_parent_link,164,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.833417,True
+malformed_chain,missing_required_claim,165,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.781125,True
+malformed_chain,missing_middle,166,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.795416,True
+malformed_chain,reordered_chain,167,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.839292,True
+malformed_chain,duplicate_leaf,168,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.823459,True
+malformed_chain,wrong_parent_link,169,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.810417,True
+malformed_chain,missing_required_claim,170,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.768583,True
+malformed_chain,missing_middle,171,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.754459,True
+malformed_chain,reordered_chain,172,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.819875,True
+malformed_chain,duplicate_leaf,173,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.780125,True
+malformed_chain,wrong_parent_link,174,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.834917,True
+malformed_chain,missing_required_claim,175,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.733542,True
+malformed_chain,missing_middle,176,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.738042,True
+malformed_chain,reordered_chain,177,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.810416,True
+malformed_chain,duplicate_leaf,178,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.824,True
+malformed_chain,wrong_parent_link,179,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.841208,True
+malformed_chain,missing_required_claim,180,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.752333,True
+malformed_chain,missing_middle,181,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.743625,True
+malformed_chain,reordered_chain,182,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.813667,True
+malformed_chain,duplicate_leaf,183,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.811792,True
+malformed_chain,wrong_parent_link,184,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.786625,True
+malformed_chain,missing_required_claim,185,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.76925,True
+malformed_chain,missing_middle,186,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.720625,True
+malformed_chain,reordered_chain,187,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.86825,True
+malformed_chain,duplicate_leaf,188,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.796417,True
+malformed_chain,wrong_parent_link,189,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.807042,True
+malformed_chain,missing_required_claim,190,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.75125,True
+malformed_chain,missing_middle,191,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.734375,True
+malformed_chain,reordered_chain,192,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.813375,True
+malformed_chain,duplicate_leaf,193,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.791542,True
+malformed_chain,wrong_parent_link,194,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.798625,True
+malformed_chain,missing_required_claim,195,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.773167,True
+malformed_chain,missing_middle,196,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.748084,True
+malformed_chain,reordered_chain,197,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.808125,True
+malformed_chain,duplicate_leaf,198,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.7925,True
+malformed_chain,wrong_parent_link,199,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.79125,True
+malformed_chain,missing_required_claim,200,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.727667,True
+malformed_chain,missing_middle,201,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.743917,True
+malformed_chain,reordered_chain,202,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.826666,True
+malformed_chain,duplicate_leaf,203,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.805958,True
+malformed_chain,wrong_parent_link,204,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.801291,True
+malformed_chain,missing_required_claim,205,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.765,True
+malformed_chain,missing_middle,206,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.741625,True
+malformed_chain,reordered_chain,207,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.842208,True
+malformed_chain,duplicate_leaf,208,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.819042,True
+malformed_chain,wrong_parent_link,209,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.833291,True
+malformed_chain,missing_required_claim,210,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.800458,True
+malformed_chain,missing_middle,211,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.787416,True
+malformed_chain,reordered_chain,212,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.845958,True
+malformed_chain,duplicate_leaf,213,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.826833,True
+malformed_chain,wrong_parent_link,214,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.801834,True
+malformed_chain,missing_required_claim,215,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.792209,True
+malformed_chain,missing_middle,216,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.750542,True
+malformed_chain,reordered_chain,217,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.820083,True
+malformed_chain,duplicate_leaf,218,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,1.248375,True
+malformed_chain,wrong_parent_link,219,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.858208,True
+malformed_chain,missing_required_claim,220,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.744083,True
+malformed_chain,missing_middle,221,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.771458,True
+malformed_chain,reordered_chain,222,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.84075,True
+malformed_chain,duplicate_leaf,223,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.839125,True
+malformed_chain,wrong_parent_link,224,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.848209,True
+malformed_chain,missing_required_claim,225,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.757166,True
+malformed_chain,missing_middle,226,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.7375,True
+malformed_chain,reordered_chain,227,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.806791,True
+malformed_chain,duplicate_leaf,228,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.825083,True
+malformed_chain,wrong_parent_link,229,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,2.194125,True
+malformed_chain,missing_required_claim,230,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,1.307292,True
+malformed_chain,missing_middle,231,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.907917,True
+malformed_chain,reordered_chain,232,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.890917,True
+malformed_chain,duplicate_leaf,233,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.868084,True
+malformed_chain,wrong_parent_link,234,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.875333,True
+malformed_chain,missing_required_claim,235,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.825209,True
+malformed_chain,missing_middle,236,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.927416,True
+malformed_chain,reordered_chain,237,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.886708,True
+malformed_chain,duplicate_leaf,238,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.888208,True
+malformed_chain,wrong_parent_link,239,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.894916,True
+malformed_chain,missing_required_claim,240,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.767667,True
+malformed_chain,missing_middle,241,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.807834,True
+malformed_chain,reordered_chain,242,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.864084,True
+malformed_chain,duplicate_leaf,243,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.872708,True
+malformed_chain,wrong_parent_link,244,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.8895,True
+malformed_chain,missing_required_claim,245,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.837375,True
+malformed_chain,missing_middle,246,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.825292,True
+malformed_chain,reordered_chain,247,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.809917,True
+malformed_chain,duplicate_leaf,248,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.826792,True
+malformed_chain,wrong_parent_link,249,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.908,True
+malformed_chain,missing_required_claim,250,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.799166,True
+malformed_chain,missing_middle,251,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.768291,True
+malformed_chain,reordered_chain,252,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.849,True
+malformed_chain,duplicate_leaf,253,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.827875,True
+malformed_chain,wrong_parent_link,254,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.832291,True
+malformed_chain,missing_required_claim,255,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.751,True
+malformed_chain,missing_middle,256,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.727292,True
+malformed_chain,reordered_chain,257,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.83,True
+malformed_chain,duplicate_leaf,258,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.852834,True
+malformed_chain,wrong_parent_link,259,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.820208,True
+malformed_chain,missing_required_claim,260,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.780458,True
+malformed_chain,missing_middle,261,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.798292,True
+malformed_chain,reordered_chain,262,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.82475,True
+malformed_chain,duplicate_leaf,263,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.820209,True
+malformed_chain,wrong_parent_link,264,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.819875,True
+malformed_chain,missing_required_claim,265,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.779625,True
+malformed_chain,missing_middle,266,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.773291,True
+malformed_chain,reordered_chain,267,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.784208,True
+malformed_chain,duplicate_leaf,268,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.789542,True
+malformed_chain,wrong_parent_link,269,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.865875,True
+malformed_chain,missing_required_claim,270,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.787542,True
+malformed_chain,missing_middle,271,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.767416,True
+malformed_chain,reordered_chain,272,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.826375,True
+malformed_chain,duplicate_leaf,273,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.852417,True
+malformed_chain,wrong_parent_link,274,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.822042,True
+malformed_chain,missing_required_claim,275,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.732208,True
+malformed_chain,missing_middle,276,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.731083,True
+malformed_chain,reordered_chain,277,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.824417,True
+malformed_chain,duplicate_leaf,278,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.806917,True
+malformed_chain,wrong_parent_link,279,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.803583,True
+malformed_chain,missing_required_claim,280,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.763416,True
+malformed_chain,missing_middle,281,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.783042,True
+malformed_chain,reordered_chain,282,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.798208,True
+malformed_chain,duplicate_leaf,283,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.809667,True
+malformed_chain,wrong_parent_link,284,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.811792,True
+malformed_chain,missing_required_claim,285,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.798375,True
+malformed_chain,missing_middle,286,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.762375,True
+malformed_chain,reordered_chain,287,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.790625,True
+malformed_chain,duplicate_leaf,288,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.825709,True
+malformed_chain,wrong_parent_link,289,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.84975,True
+malformed_chain,missing_required_claim,290,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.799709,True
+malformed_chain,missing_middle,291,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.756417,True
+malformed_chain,reordered_chain,292,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.816417,True
+malformed_chain,duplicate_leaf,293,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.884958,True
+malformed_chain,wrong_parent_link,294,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.839208,True
+malformed_chain,missing_required_claim,295,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.760125,True
+malformed_chain,missing_middle,296,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,,0.753792,True
+malformed_chain,reordered_chain,297,False,False,chain constraint failed between DC_1 and DC_2,continuity_1_2,continuity_1_2,True,0.814208,True
+malformed_chain,duplicate_leaf,298,False,False,invalid delegation credential at position 3,dc_3_id_unique,dc_3_id_unique,True,0.775542,True
+malformed_chain,wrong_parent_link,299,False,False,chain constraint failed between DC_2 and DC_3,parent_link_2_3,parent_link_2_3,True,0.808458,True
+malformed_chain,missing_required_claim,300,False,False,malformed delegation credential at position 3,dc_3_required_claims_present,dc_3_required_claims_present,,0.747916,True
+signed_authority_expansion,scope_expansion,1,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.849208,True
+signed_authority_expansion,action_expansion,2,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.829834,True
+signed_authority_expansion,resource_expansion,3,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.829,True
+signed_authority_expansion,validity_expansion,4,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.793542,True
+signed_authority_expansion,depth_expansion,5,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.792875,True
+signed_authority_expansion,scope_expansion,6,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.852375,True
+signed_authority_expansion,action_expansion,7,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.837041,True
+signed_authority_expansion,resource_expansion,8,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.864375,True
+signed_authority_expansion,validity_expansion,9,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.887875,True
+signed_authority_expansion,depth_expansion,10,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.826125,True
+signed_authority_expansion,scope_expansion,11,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.803875,True
+signed_authority_expansion,action_expansion,12,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.777458,True
+signed_authority_expansion,resource_expansion,13,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.007208,True
+signed_authority_expansion,validity_expansion,14,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.835125,True
+signed_authority_expansion,depth_expansion,15,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.774583,True
+signed_authority_expansion,scope_expansion,16,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.810459,True
+signed_authority_expansion,action_expansion,17,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.812958,True
+signed_authority_expansion,resource_expansion,18,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.813417,True
+signed_authority_expansion,validity_expansion,19,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.809125,True
+signed_authority_expansion,depth_expansion,20,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.82675,True
+signed_authority_expansion,scope_expansion,21,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.851292,True
+signed_authority_expansion,action_expansion,22,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.804792,True
+signed_authority_expansion,resource_expansion,23,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.840833,True
+signed_authority_expansion,validity_expansion,24,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.861709,True
+signed_authority_expansion,depth_expansion,25,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.855416,True
+signed_authority_expansion,scope_expansion,26,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.810167,True
+signed_authority_expansion,action_expansion,27,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.829541,True
+signed_authority_expansion,resource_expansion,28,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.814666,True
+signed_authority_expansion,validity_expansion,29,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.8405,True
+signed_authority_expansion,depth_expansion,30,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.818917,True
+signed_authority_expansion,scope_expansion,31,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.81925,True
+signed_authority_expansion,action_expansion,32,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.977167,True
+signed_authority_expansion,resource_expansion,33,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.846083,True
+signed_authority_expansion,validity_expansion,34,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.839125,True
+signed_authority_expansion,depth_expansion,35,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.799416,True
+signed_authority_expansion,scope_expansion,36,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.848333,True
+signed_authority_expansion,action_expansion,37,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.832959,True
+signed_authority_expansion,resource_expansion,38,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.826625,True
+signed_authority_expansion,validity_expansion,39,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.833834,True
+signed_authority_expansion,depth_expansion,40,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.804125,True
+signed_authority_expansion,scope_expansion,41,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.786375,True
+signed_authority_expansion,action_expansion,42,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.736292,True
+signed_authority_expansion,resource_expansion,43,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.1095,True
+signed_authority_expansion,validity_expansion,44,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.199958,True
+signed_authority_expansion,depth_expansion,45,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.097125,True
+signed_authority_expansion,scope_expansion,46,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.047291,True
+signed_authority_expansion,action_expansion,47,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.241167,True
+signed_authority_expansion,resource_expansion,48,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.059583,True
+signed_authority_expansion,validity_expansion,49,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.970167,True
+signed_authority_expansion,depth_expansion,50,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.902375,True
+signed_authority_expansion,scope_expansion,51,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.986208,True
+signed_authority_expansion,action_expansion,52,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.940583,True
+signed_authority_expansion,resource_expansion,53,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.235042,True
+signed_authority_expansion,validity_expansion,54,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.986083,True
+signed_authority_expansion,depth_expansion,55,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.028125,True
+signed_authority_expansion,scope_expansion,56,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.990042,True
+signed_authority_expansion,action_expansion,57,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.025166,True
+signed_authority_expansion,resource_expansion,58,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.009916,True
+signed_authority_expansion,validity_expansion,59,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.365625,True
+signed_authority_expansion,depth_expansion,60,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.236209,True
+signed_authority_expansion,scope_expansion,61,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.038125,True
+signed_authority_expansion,action_expansion,62,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.975833,True
+signed_authority_expansion,resource_expansion,63,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.915458,True
+signed_authority_expansion,validity_expansion,64,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.918542,True
+signed_authority_expansion,depth_expansion,65,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.467333,True
+signed_authority_expansion,scope_expansion,66,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.152875,True
+signed_authority_expansion,action_expansion,67,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.958542,True
+signed_authority_expansion,resource_expansion,68,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.939542,True
+signed_authority_expansion,validity_expansion,69,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.886584,True
+signed_authority_expansion,depth_expansion,70,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.939417,True
+signed_authority_expansion,scope_expansion,71,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.95025,True
+signed_authority_expansion,action_expansion,72,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.217125,True
+signed_authority_expansion,resource_expansion,73,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.937292,True
+signed_authority_expansion,validity_expansion,74,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.907166,True
+signed_authority_expansion,depth_expansion,75,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.887875,True
+signed_authority_expansion,scope_expansion,76,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.853667,True
+signed_authority_expansion,action_expansion,77,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.887541,True
+signed_authority_expansion,resource_expansion,78,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.912167,True
+signed_authority_expansion,validity_expansion,79,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.099166,True
+signed_authority_expansion,depth_expansion,80,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.920333,True
+signed_authority_expansion,scope_expansion,81,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.855916,True
+signed_authority_expansion,action_expansion,82,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.846542,True
+signed_authority_expansion,resource_expansion,83,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.815584,True
+signed_authority_expansion,validity_expansion,84,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.84825,True
+signed_authority_expansion,depth_expansion,85,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.904042,True
+signed_authority_expansion,scope_expansion,86,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.165417,True
+signed_authority_expansion,action_expansion,87,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.883833,True
+signed_authority_expansion,resource_expansion,88,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.917416,True
+signed_authority_expansion,validity_expansion,89,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.931958,True
+signed_authority_expansion,depth_expansion,90,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.954875,True
+signed_authority_expansion,scope_expansion,91,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.879042,True
+signed_authority_expansion,action_expansion,92,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.886625,True
+signed_authority_expansion,resource_expansion,93,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.087542,True
+signed_authority_expansion,validity_expansion,94,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.926708,True
+signed_authority_expansion,depth_expansion,95,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.885834,True
+signed_authority_expansion,scope_expansion,96,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.812125,True
+signed_authority_expansion,action_expansion,97,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.836958,True
+signed_authority_expansion,resource_expansion,98,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.843292,True
+signed_authority_expansion,validity_expansion,99,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.868916,True
+signed_authority_expansion,depth_expansion,100,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.994375,True
+signed_authority_expansion,scope_expansion,101,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.860916,True
+signed_authority_expansion,action_expansion,102,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.830792,True
+signed_authority_expansion,resource_expansion,103,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.885958,True
+signed_authority_expansion,validity_expansion,104,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.848584,True
+signed_authority_expansion,depth_expansion,105,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.831917,True
+signed_authority_expansion,scope_expansion,106,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.895541,True
+signed_authority_expansion,action_expansion,107,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.008625,True
+signed_authority_expansion,resource_expansion,108,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.869958,True
+signed_authority_expansion,validity_expansion,109,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.834,True
+signed_authority_expansion,depth_expansion,110,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.884792,True
+signed_authority_expansion,scope_expansion,111,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.83175,True
+signed_authority_expansion,action_expansion,112,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.804,True
+signed_authority_expansion,resource_expansion,113,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.814958,True
+signed_authority_expansion,validity_expansion,114,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.8655,True
+signed_authority_expansion,depth_expansion,115,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.250791,True
+signed_authority_expansion,scope_expansion,116,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.879458,True
+signed_authority_expansion,action_expansion,117,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.827083,True
+signed_authority_expansion,resource_expansion,118,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.860458,True
+signed_authority_expansion,validity_expansion,119,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.852792,True
+signed_authority_expansion,depth_expansion,120,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.855167,True
+signed_authority_expansion,scope_expansion,121,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.844917,True
+signed_authority_expansion,action_expansion,122,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.001334,True
+signed_authority_expansion,resource_expansion,123,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.843542,True
+signed_authority_expansion,validity_expansion,124,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.896791,True
+signed_authority_expansion,depth_expansion,125,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.836334,True
+signed_authority_expansion,scope_expansion,126,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.8365,True
+signed_authority_expansion,action_expansion,127,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.827333,True
+signed_authority_expansion,resource_expansion,128,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.84975,True
+signed_authority_expansion,validity_expansion,129,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.912084,True
+signed_authority_expansion,depth_expansion,130,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.824416,True
+signed_authority_expansion,scope_expansion,131,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.870125,True
+signed_authority_expansion,action_expansion,132,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.841209,True
+signed_authority_expansion,resource_expansion,133,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.785459,True
+signed_authority_expansion,validity_expansion,134,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.950125,True
+signed_authority_expansion,depth_expansion,135,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.88975,True
+signed_authority_expansion,scope_expansion,136,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.419541,True
+signed_authority_expansion,action_expansion,137,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.210041,True
+signed_authority_expansion,resource_expansion,138,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.217208,True
+signed_authority_expansion,validity_expansion,139,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.131792,True
+signed_authority_expansion,depth_expansion,140,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.1085,True
+signed_authority_expansion,scope_expansion,141,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.384541,True
+signed_authority_expansion,action_expansion,142,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.384,True
+signed_authority_expansion,resource_expansion,143,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.240209,True
+signed_authority_expansion,validity_expansion,144,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.093708,True
+signed_authority_expansion,depth_expansion,145,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.223791,True
+signed_authority_expansion,scope_expansion,146,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.186958,True
+signed_authority_expansion,action_expansion,147,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.393209,True
+signed_authority_expansion,resource_expansion,148,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.327791,True
+signed_authority_expansion,validity_expansion,149,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.190666,True
+signed_authority_expansion,depth_expansion,150,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.231541,True
+signed_authority_expansion,scope_expansion,151,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.418625,True
+signed_authority_expansion,action_expansion,152,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.269625,True
+signed_authority_expansion,resource_expansion,153,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.222416,True
+signed_authority_expansion,validity_expansion,154,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.283125,True
+signed_authority_expansion,depth_expansion,155,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.269334,True
+signed_authority_expansion,scope_expansion,156,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.048416,True
+signed_authority_expansion,action_expansion,157,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.033292,True
+signed_authority_expansion,resource_expansion,158,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.961916,True
+signed_authority_expansion,validity_expansion,159,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.994375,True
+signed_authority_expansion,depth_expansion,160,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.969166,True
+signed_authority_expansion,scope_expansion,161,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.95425,True
+signed_authority_expansion,action_expansion,162,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.895917,True
+signed_authority_expansion,resource_expansion,163,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.872,True
+signed_authority_expansion,validity_expansion,164,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.841583,True
+signed_authority_expansion,depth_expansion,165,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.872083,True
+signed_authority_expansion,scope_expansion,166,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.883792,True
+signed_authority_expansion,action_expansion,167,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.873333,True
+signed_authority_expansion,resource_expansion,168,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.882584,True
+signed_authority_expansion,validity_expansion,169,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.882709,True
+signed_authority_expansion,depth_expansion,170,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.879625,True
+signed_authority_expansion,scope_expansion,171,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.898584,True
+signed_authority_expansion,action_expansion,172,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.828917,True
+signed_authority_expansion,resource_expansion,173,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.841208,True
+signed_authority_expansion,validity_expansion,174,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.841667,True
+signed_authority_expansion,depth_expansion,175,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.867208,True
+signed_authority_expansion,scope_expansion,176,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.856583,True
+signed_authority_expansion,action_expansion,177,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.85075,True
+signed_authority_expansion,resource_expansion,178,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.864667,True
+signed_authority_expansion,validity_expansion,179,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.815833,True
+signed_authority_expansion,depth_expansion,180,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.874542,True
+signed_authority_expansion,scope_expansion,181,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.84325,True
+signed_authority_expansion,action_expansion,182,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.809458,True
+signed_authority_expansion,resource_expansion,183,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.820959,True
+signed_authority_expansion,validity_expansion,184,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.833458,True
+signed_authority_expansion,depth_expansion,185,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.845625,True
+signed_authority_expansion,scope_expansion,186,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.8305,True
+signed_authority_expansion,action_expansion,187,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.844666,True
+signed_authority_expansion,resource_expansion,188,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.846333,True
+signed_authority_expansion,validity_expansion,189,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.829042,True
+signed_authority_expansion,depth_expansion,190,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.826958,True
+signed_authority_expansion,scope_expansion,191,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.86075,True
+signed_authority_expansion,action_expansion,192,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.830125,True
+signed_authority_expansion,resource_expansion,193,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.852875,True
+signed_authority_expansion,validity_expansion,194,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.834625,True
+signed_authority_expansion,depth_expansion,195,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.883375,True
+signed_authority_expansion,scope_expansion,196,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.873833,True
+signed_authority_expansion,action_expansion,197,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.861417,True
+signed_authority_expansion,resource_expansion,198,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.847708,True
+signed_authority_expansion,validity_expansion,199,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.906959,True
+signed_authority_expansion,depth_expansion,200,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.946291,True
+signed_authority_expansion,scope_expansion,201,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.857292,True
+signed_authority_expansion,action_expansion,202,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.218583,True
+signed_authority_expansion,resource_expansion,203,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,3.213875,True
+signed_authority_expansion,validity_expansion,204,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.882375,True
+signed_authority_expansion,depth_expansion,205,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.373917,True
+signed_authority_expansion,scope_expansion,206,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.151042,True
+signed_authority_expansion,action_expansion,207,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.002792,True
+signed_authority_expansion,resource_expansion,208,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.971875,True
+signed_authority_expansion,validity_expansion,209,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.915417,True
+signed_authority_expansion,depth_expansion,210,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,4.208,True
+signed_authority_expansion,scope_expansion,211,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,2.015375,True
+signed_authority_expansion,action_expansion,212,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.280208,True
+signed_authority_expansion,resource_expansion,213,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,2.619916,True
+signed_authority_expansion,validity_expansion,214,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,2.116208,True
+signed_authority_expansion,depth_expansion,215,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.072167,True
+signed_authority_expansion,scope_expansion,216,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.151417,True
+signed_authority_expansion,action_expansion,217,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.202708,True
+signed_authority_expansion,resource_expansion,218,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.00475,True
+signed_authority_expansion,validity_expansion,219,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,2.557167,True
+signed_authority_expansion,depth_expansion,220,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.074333,True
+signed_authority_expansion,scope_expansion,221,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.917042,True
+signed_authority_expansion,action_expansion,222,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.881458,True
+signed_authority_expansion,resource_expansion,223,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.903625,True
+signed_authority_expansion,validity_expansion,224,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,2.701875,True
+signed_authority_expansion,depth_expansion,225,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.9355,True
+signed_authority_expansion,scope_expansion,226,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.848458,True
+signed_authority_expansion,action_expansion,227,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.889833,True
+signed_authority_expansion,resource_expansion,228,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.8545,True
+signed_authority_expansion,validity_expansion,229,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.871,True
+signed_authority_expansion,depth_expansion,230,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.901209,True
+signed_authority_expansion,scope_expansion,231,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.935,True
+signed_authority_expansion,action_expansion,232,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.884833,True
+signed_authority_expansion,resource_expansion,233,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.92725,True
+signed_authority_expansion,validity_expansion,234,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,2.749625,True
+signed_authority_expansion,depth_expansion,235,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,2.045667,True
+signed_authority_expansion,scope_expansion,236,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,4.652208,True
+signed_authority_expansion,action_expansion,237,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.683667,True
+signed_authority_expansion,resource_expansion,238,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,2.543167,True
+signed_authority_expansion,validity_expansion,239,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,5.004458,True
+signed_authority_expansion,depth_expansion,240,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,2.468458,True
+signed_authority_expansion,scope_expansion,241,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,3.799875,True
+signed_authority_expansion,action_expansion,242,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,4.492958,True
+signed_authority_expansion,resource_expansion,243,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.166541,True
+signed_authority_expansion,validity_expansion,244,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,4.383333,True
+signed_authority_expansion,depth_expansion,245,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,5.296084,True
+signed_authority_expansion,scope_expansion,246,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,3.613083,True
+signed_authority_expansion,action_expansion,247,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,2.704542,True
+signed_authority_expansion,resource_expansion,248,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,3.684,True
+signed_authority_expansion,validity_expansion,249,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.074916,True
+signed_authority_expansion,depth_expansion,250,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,3.207625,True
+signed_authority_expansion,scope_expansion,251,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.052209,True
+signed_authority_expansion,action_expansion,252,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,2.771875,True
+signed_authority_expansion,resource_expansion,253,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,4.315958,True
+signed_authority_expansion,validity_expansion,254,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.006584,True
+signed_authority_expansion,depth_expansion,255,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.925458,True
+signed_authority_expansion,scope_expansion,256,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.984375,True
+signed_authority_expansion,action_expansion,257,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,2.187,True
+signed_authority_expansion,resource_expansion,258,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,3.220042,True
+signed_authority_expansion,validity_expansion,259,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,2.174416,True
+signed_authority_expansion,depth_expansion,260,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.002959,True
+signed_authority_expansion,scope_expansion,261,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,2.299041,True
+signed_authority_expansion,action_expansion,262,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.547666,True
+signed_authority_expansion,resource_expansion,263,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,3.011625,True
+signed_authority_expansion,validity_expansion,264,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,3.286,True
+signed_authority_expansion,depth_expansion,265,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,2.401875,True
+signed_authority_expansion,scope_expansion,266,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.080792,True
+signed_authority_expansion,action_expansion,267,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,3.001375,True
+signed_authority_expansion,resource_expansion,268,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.083625,True
+signed_authority_expansion,validity_expansion,269,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.056125,True
+signed_authority_expansion,depth_expansion,270,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.029916,True
+signed_authority_expansion,scope_expansion,271,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,3.795209,True
+signed_authority_expansion,action_expansion,272,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,1.60525,True
+signed_authority_expansion,resource_expansion,273,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,1.221292,True
+signed_authority_expansion,validity_expansion,274,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,1.639125,True
+signed_authority_expansion,depth_expansion,275,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,1.154417,True
+signed_authority_expansion,scope_expansion,276,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,1.012625,True
+signed_authority_expansion,action_expansion,277,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.952167,True
+signed_authority_expansion,resource_expansion,278,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.905958,True
+signed_authority_expansion,validity_expansion,279,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.874,True
+signed_authority_expansion,depth_expansion,280,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.964292,True
+signed_authority_expansion,scope_expansion,281,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.907459,True
+signed_authority_expansion,action_expansion,282,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.951708,True
+signed_authority_expansion,resource_expansion,283,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.859708,True
+signed_authority_expansion,validity_expansion,284,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.962625,True
+signed_authority_expansion,depth_expansion,285,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.910833,True
+signed_authority_expansion,scope_expansion,286,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.947291,True
+signed_authority_expansion,action_expansion,287,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.893917,True
+signed_authority_expansion,resource_expansion,288,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.899542,True
+signed_authority_expansion,validity_expansion,289,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.879209,True
+signed_authority_expansion,depth_expansion,290,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.838375,True
+signed_authority_expansion,scope_expansion,291,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.948334,True
+signed_authority_expansion,action_expansion,292,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.907333,True
+signed_authority_expansion,resource_expansion,293,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.838459,True
+signed_authority_expansion,validity_expansion,294,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.91825,True
+signed_authority_expansion,depth_expansion,295,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.861666,True
+signed_authority_expansion,scope_expansion,296,False,False,chain constraint failed between DC_2 and DC_3,scope_monotonic_2_3,scope_monotonic_2_3,True,0.8835,True
+signed_authority_expansion,action_expansion,297,False,False,chain constraint failed between DC_2 and DC_3,actions_monotonic_2_3,actions_monotonic_2_3,True,0.922417,True
+signed_authority_expansion,resource_expansion,298,False,False,chain constraint failed between DC_2 and DC_3,resource_monotonic_2_3,resource_monotonic_2_3,True,0.89125,True
+signed_authority_expansion,validity_expansion,299,False,False,chain constraint failed between DC_2 and DC_3,validity_monotonic_2_3,validity_monotonic_2_3,True,0.917042,True
+signed_authority_expansion,depth_expansion,300,False,False,chain constraint failed between DC_2 and DC_3,depth_decreases_2_3,depth_decreases_2_3,True,0.854042,True

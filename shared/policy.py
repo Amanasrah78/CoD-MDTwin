@@ -67,10 +67,14 @@ def validate_cod(
         p = cod[i]["payload"]
         q = cod[i + 1]["payload"]
         checks[f"continuity_{i+1}_{i+2}"] = p["subject"] == q["issuer"]
-        checks[f"parent_link_{i+1}_{i+2}"] = q.get("parent_id") in (None, p["id"])
+        checks[f"parent_link_{i+1}_{i+2}"] = q.get("parent_id") == p["id"]
         checks[f"scope_monotonic_{i+1}_{i+2}"] = is_subset(q["scope"], p["scope"])
         checks[f"actions_monotonic_{i+1}_{i+2}"] = is_subset(q["actions"], p["actions"])
         checks[f"resource_monotonic_{i+1}_{i+2}"] = q["resource"] == p["resource"]
+        checks[f"validity_monotonic_{i+1}_{i+2}"] = (
+            q["valid_from"] >= p["valid_from"]
+            and q["valid_until"] <= p["valid_until"]
+        )
         checks[f"depth_decreases_{i+1}_{i+2}"] = q["depth"] == p["depth"] - 1
         if not (
             checks[f"continuity_{i+1}_{i+2}"]
@@ -78,6 +82,7 @@ def validate_cod(
             and checks[f"scope_monotonic_{i+1}_{i+2}"]
             and checks[f"actions_monotonic_{i+1}_{i+2}"]
             and checks[f"resource_monotonic_{i+1}_{i+2}"]
+            and checks[f"validity_monotonic_{i+1}_{i+2}"]
             and checks[f"depth_decreases_{i+1}_{i+2}"]
         ):
             return False, checks, f"chain constraint failed between DC_{i+1} and DC_{i+2}"

@@ -106,7 +106,8 @@ def issue_downstream(req: DownstreamDelegationRequest) -> Dict[str, Any]:
         dc = issue_delegation(
             DAM_B["did"], DAM_B["private_key"], req.delegatee_did,
             req.scope, req.actions, req.resource, new_depth,
-            req.valid_seconds, parent_id=parent["id"]
+            req.valid_seconds, parent_id=parent["id"],
+            not_after=parent["valid_until"],
         )
     trace.artifacts["delegation_id"] = dc["payload"]["id"]
     trace.artifacts["credential_hash"] = credential_hash(dc)

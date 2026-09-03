@@ -964,6 +964,7 @@ def _build_synthetic_cod(depth: int) -> Dict[str, Any]:
             depth=depth - i,
             valid_seconds=600,
             parent_id=parent_id,
+            not_after=cod[-1]["payload"]["valid_until"] if cod else None,
         )
 
         cod.append(dc)

@@ -102,11 +102,32 @@ Sequential authorization performance:
 python3 experiments/run_http_performance.py 100
 ```
 
-Chain-depth sensitivity:
+Chain-depth sensitivity, single session:
 
 ```bash
 python3 experiments/run_http_chain_depth_sensitivity.py 100
 ```
+
+To reproduce the publication-scale chain-depth experiment, run ten independent
+sessions. Each session evaluates depths 1, 2, 3, 5, and 10 using five warm-up
+operations followed by 100 measured validations per depth:
+
+```bash
+mkdir -p results/metrics/chain_depth_sessions
+for i in {1..10}; do
+  n=$(printf "%02d" "$i")
+  python3 experiments/run_http_chain_depth_sensitivity.py 100 \
+    > "results/metrics/chain_depth_sessions/run_${n}_results.json"
+  cp results/metrics/chain_depth_sensitivity.csv \
+    "results/metrics/chain_depth_sessions/run_${n}_raw.csv"
+done
+python3 experiments/summarize_chain_depth_sessions.py
+```
+
+The summarizer validates the session and observation counts, then writes the
+combined raw measurements, aggregate summary, and JSON report to
+`results/metrics/chain_depth_sensitivity_multisession_*`. The archived run
+contains 5,000 accepted validations and no rejected valid chain.
 
 Cryptographic and stateful operation costs:
 

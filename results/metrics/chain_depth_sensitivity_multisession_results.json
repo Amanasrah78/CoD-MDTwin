@@ -1,0 +1,456 @@
+{
+  "test": "chain_depth_sensitivity_multisession",
+  "methodology": {
+    "sessions": 10,
+    "depths": [
+      1,
+      2,
+      3,
+      5,
+      10
+    ],
+    "warmups_per_depth_per_session": 5,
+    "measured_iterations_per_depth_per_session": 100,
+    "total_measured_operations": 5000,
+    "mean_and_percentiles": "pooled accepted-operation latencies",
+    "ci95": "normal-approximation confidence interval across ten session means"
+  },
+  "summary": [
+    {
+      "depth": 1,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 0.799508,
+      "p95_ms": 0.997042,
+      "p99_ms": 1.394125,
+      "min_ms": 0.615959,
+      "max_ms": 3.707083,
+      "session_mean_std_ms": 0.039376,
+      "ci95_across_session_means_ms": 0.024405,
+      "chain_size_bytes_mean": 826.0
+    },
+    {
+      "depth": 2,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 0.822819,
+      "p95_ms": 0.884834,
+      "p99_ms": 1.973125,
+      "min_ms": 0.718958,
+      "max_ms": 3.395542,
+      "session_mean_std_ms": 0.107364,
+      "ci95_across_session_means_ms": 0.066545,
+      "chain_size_bytes_mean": 1678.0
+    },
+    {
+      "depth": 3,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 0.878339,
+      "p95_ms": 0.986375,
+      "p99_ms": 1.275875,
+      "min_ms": 0.79075,
+      "max_ms": 4.552375,
+      "session_mean_std_ms": 0.039679,
+      "ci95_across_session_means_ms": 0.024593,
+      "chain_size_bytes_mean": 2530.0
+    },
+    {
+      "depth": 5,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 1.001547,
+      "p95_ms": 1.117875,
+      "p99_ms": 1.424208,
+      "min_ms": 0.90375,
+      "max_ms": 2.197958,
+      "session_mean_std_ms": 0.044924,
+      "ci95_across_session_means_ms": 0.027844,
+      "chain_size_bytes_mean": 4234.0
+    },
+    {
+      "depth": 10,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 1.384149,
+      "p95_ms": 1.596834,
+      "p99_ms": 2.793542,
+      "min_ms": 1.250708,
+      "max_ms": 6.067375,
+      "session_mean_std_ms": 0.152082,
+      "ci95_across_session_means_ms": 0.094261,
+      "chain_size_bytes_mean": 8538.0
+    }
+  ],
+  "per_session": [
+    {
+      "session": "01",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.74375,
+      "p95_ms": 0.874792
+    },
+    {
+      "session": "02",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.820065,
+      "p95_ms": 1.008666
+    },
+    {
+      "session": "03",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.789158,
+      "p95_ms": 0.968542
+    },
+    {
+      "session": "04",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.80064,
+      "p95_ms": 1.009
+    },
+    {
+      "session": "05",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.826773,
+      "p95_ms": 1.054917
+    },
+    {
+      "session": "06",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.780383,
+      "p95_ms": 0.945958
+    },
+    {
+      "session": "07",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.783857,
+      "p95_ms": 0.950125
+    },
+    {
+      "session": "08",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.889272,
+      "p95_ms": 1.635208
+    },
+    {
+      "session": "09",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.770925,
+      "p95_ms": 0.92775
+    },
+    {
+      "session": "10",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 0.790257,
+      "p95_ms": 1.046416
+    },
+    {
+      "session": "01",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.7818,
+      "p95_ms": 0.821125
+    },
+    {
+      "session": "02",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.814426,
+      "p95_ms": 0.869292
+    },
+    {
+      "session": "03",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.776097,
+      "p95_ms": 0.807166
+    },
+    {
+      "session": "04",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.789006,
+      "p95_ms": 0.83125
+    },
+    {
+      "session": "05",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 1.126151,
+      "p95_ms": 2.576625
+    },
+    {
+      "session": "06",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.785015,
+      "p95_ms": 0.819125
+    },
+    {
+      "session": "07",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.799727,
+      "p95_ms": 0.846875
+    },
+    {
+      "session": "08",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.80296,
+      "p95_ms": 0.876083
+    },
+    {
+      "session": "09",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.774775,
+      "p95_ms": 0.817
+    },
+    {
+      "session": "10",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 0.778229,
+      "p95_ms": 0.815541
+    },
+    {
+      "session": "01",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.863404,
+      "p95_ms": 0.903167
+    },
+    {
+      "session": "02",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.97387,
+      "p95_ms": 1.350208
+    },
+    {
+      "session": "03",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.88667,
+      "p95_ms": 1.065917
+    },
+    {
+      "session": "04",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.830909,
+      "p95_ms": 0.868917
+    },
+    {
+      "session": "05",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.911107,
+      "p95_ms": 1.14125
+    },
+    {
+      "session": "06",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.860217,
+      "p95_ms": 0.902541
+    },
+    {
+      "session": "07",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.86389,
+      "p95_ms": 0.901
+    },
+    {
+      "session": "08",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.852206,
+      "p95_ms": 0.886417
+    },
+    {
+      "session": "09",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.863978,
+      "p95_ms": 0.938875
+    },
+    {
+      "session": "10",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 0.87714,
+      "p95_ms": 0.946208
+    },
+    {
+      "session": "01",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 1.00122,
+      "p95_ms": 1.0445
+    },
+    {
+      "session": "02",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 1.12214,
+      "p95_ms": 1.427625
+    },
+    {
+      "session": "03",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 0.975571,
+      "p95_ms": 1.009375
+    },
+    {
+      "session": "04",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 0.970382,
+      "p95_ms": 1.013584
+    },
+    {
+      "session": "05",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 1.003279,
+      "p95_ms": 1.117875
+    },
+    {
+      "session": "06",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 0.993321,
+      "p95_ms": 1.080875
+    },
+    {
+      "session": "07",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 1.014716,
+      "p95_ms": 1.076958
+    },
+    {
+      "session": "08",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 0.978272,
+      "p95_ms": 1.018875
+    },
+    {
+      "session": "09",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 0.985585,
+      "p95_ms": 1.024417
+    },
+    {
+      "session": "10",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 0.970985,
+      "p95_ms": 1.008875
+    },
+    {
+      "session": "01",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.34032,
+      "p95_ms": 1.400042
+    },
+    {
+      "session": "02",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.387699,
+      "p95_ms": 1.685708
+    },
+    {
+      "session": "03",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.352434,
+      "p95_ms": 1.527625
+    },
+    {
+      "session": "04",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.344002,
+      "p95_ms": 1.394625
+    },
+    {
+      "session": "05",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.317151,
+      "p95_ms": 1.360708
+    },
+    {
+      "session": "06",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.317172,
+      "p95_ms": 1.362042
+    },
+    {
+      "session": "07",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.340473,
+      "p95_ms": 1.412208
+    },
+    {
+      "session": "08",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.320355,
+      "p95_ms": 1.368
+    },
+    {
+      "session": "09",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.3098,
+      "p95_ms": 1.351375
+    },
+    {
+      "session": "10",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 1.812085,
+      "p95_ms": 3.349917
+    }
+  ],
+  "files": {
+    "combined_raw": "results/metrics/chain_depth_sensitivity_multisession_raw.csv",
+    "summary_csv": "results/metrics/chain_depth_sensitivity_multisession_summary.csv"
+  }
+}

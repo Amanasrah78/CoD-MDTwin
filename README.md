@@ -15,8 +15,10 @@ This repository contains the research prototype, experiment scripts, processed r
 | `services/` | Eight HTTP microservices implementing the authorization workflow |
 | `shared/` | Credential, cryptographic, DID, policy, tracing, and selective-disclosure utilities |
 | `experiments/` | Functional, security, performance, replay, revocation, and scalability experiments |
+| `experiments/baselines/wave/` | Pinned Docker wrapper for the public WAVE chain-depth baseline |
 | `tamarin/cod_mdtwin.spthy` | Tamarin model containing the 14 reported lemmas |
 | `results/metrics/` | Processed measurements used to evaluate the prototype |
+| `results/baselines/` | Measurements from independently reproduced external baselines |
 | `docker-compose.yml` | Docker Compose deployment |
 | `IMPLEMENTATION_NOTES.md` | Protocol and implementation details |
 
@@ -150,6 +152,7 @@ Run the short validation configuration:
 
 ```bash
 python3 experiments/run_revocation_propagation.py quick
+```
 
 Performance values depend on the host, container runtime, operating system, and current system load. Security decisions and acceptance or rejection counts should remain consistent under the stated assumptions.
 
@@ -159,6 +162,29 @@ Run the short validation configuration:
 
 ```bash
 python3 experiments/run_stratified_chain_security.py quick
+```
+
+### Public WAVE baseline
+
+The repository includes a Docker wrapper that obtains the official WAVE source
+at a fixed commit and measures warmed, in-process proof verification at
+delegation depths 1, 2, 3, 5, and 10. Build and run it with:
+
+```bash
+docker build --platform linux/arm64 \
+  -t cod-mdtwin-wave-baseline:3b90ec1-arm64 \
+  experiments/baselines/wave
+
+docker run --rm --platform linux/arm64 \
+  -e WAVE_ITERATIONS=100 \
+  -e WAVE_WARMUPS=5 \
+  -e WAVE_RESULTS_PATH=/results/wave_depth_results.json \
+  -v "$(pwd)/results/baselines:/results" \
+  cod-mdtwin-wave-baseline:3b90ec1-arm64
+```
+
+See `experiments/baselines/wave/README.md` for the measured path,
+reproducibility details, recorded values, and comparison limitations.
 
 ## Formal verification
 
@@ -192,6 +218,7 @@ The model represents a bounded instance with three delegation credentials, two d
 | Capability tests | `python3 experiments/run_http_capability_tests.py` | Invalid holder proofs and replay rejected |
 | Concurrent replay | `python3 experiments/run_http_stress.py replay 50` | One accepted request; remaining attempts rejected |
 | Single-use renewal | `python3 experiments/run_single_use_renewal.py full` | Both renewal modes accept valid operations and reject all post-revocation operations |
+| Public WAVE baseline | Commands in `experiments/baselines/wave/README.md` | WAVE proof-verification measurements at five delegation depths |
 | Tamarin verification | `tamarin-prover tamarin/cod_mdtwin.spthy` | All 14 lemmas verified |
 | Full evaluation | `python3 experiments/run_holder_pop_evaluation.py full` | Updated result files under `results/metrics/` |
 
@@ -206,6 +233,7 @@ This repository contains a research prototype, not a production authorization se
 - Audit anchoring uses a local append-only service with simulated IOTA-style receipts.
 - Selective disclosure is represented by a salted-hash simulation and is not a standards-complete SD-JWT or BBS+ implementation.
 - The evaluation does not represent production industrial throughput, public-ledger finality, or geographically distributed operation.
+- The external WAVE baseline uses warmed in-process proof verification; its raw latency is not directly comparable with the HTTP-based CoD-MDTwin measurement.
 
 ## Security
 

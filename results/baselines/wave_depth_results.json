@@ -1,0 +1,72 @@
+[
+  {
+    "system": "WAVE",
+    "source_commit": "3b90ec17ea9dde89e995a9a46222a93df0f992d4",
+    "depth": 1,
+    "iterations": 100,
+    "warmups": 5,
+    "proof_bytes": 49026,
+    "mean_ms": 3.3614099499999996,
+    "p50_ms": 3.345625,
+    "p95_ms": 3.622083,
+    "p99_ms": 3.675916,
+    "min_ms": 3.112083,
+    "max_ms": 3.743834
+  },
+  {
+    "system": "WAVE",
+    "source_commit": "3b90ec17ea9dde89e995a9a46222a93df0f992d4",
+    "depth": 2,
+    "iterations": 100,
+    "warmups": 5,
+    "proof_bytes": 96035,
+    "mean_ms": 5.45661543,
+    "p50_ms": 5.443875,
+    "p95_ms": 5.6795,
+    "p99_ms": 5.77775,
+    "min_ms": 5.047584,
+    "max_ms": 5.921458
+  },
+  {
+    "system": "WAVE",
+    "source_commit": "3b90ec17ea9dde89e995a9a46222a93df0f992d4",
+    "depth": 3,
+    "iterations": 100,
+    "warmups": 5,
+    "proof_bytes": 143040,
+    "mean_ms": 7.418982519999999,
+    "p50_ms": 7.378792,
+    "p95_ms": 7.829,
+    "p99_ms": 7.909167,
+    "min_ms": 6.872,
+    "max_ms": 8.163167
+  },
+  {
+    "system": "WAVE",
+    "source_commit": "3b90ec17ea9dde89e995a9a46222a93df0f992d4",
+    "depth": 5,
+    "iterations": 100,
+    "warmups": 5,
+    "proof_bytes": 237050,
+    "mean_ms": 11.51735921,
+    "p50_ms": 11.452251,
+    "p95_ms": 12.342792,
+    "p99_ms": 12.429416,
+    "min_ms": 10.917583,
+    "max_ms": 13.035792
+  },
+  {
+    "system": "WAVE",
+    "source_commit": "3b90ec17ea9dde89e995a9a46222a93df0f992d4",
+    "depth": 10,
+    "iterations": 100,
+    "warmups": 5,
+    "proof_bytes": 472075,
+    "mean_ms": 21.5969671,
+    "p50_ms": 21.5015,
+    "p95_ms": 22.417542,
+    "p99_ms": 23.619375,
+    "min_ms": 20.734625,
+    "max_ms": 24.308583
+  }
+]

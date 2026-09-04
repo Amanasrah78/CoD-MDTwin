@@ -1,0 +1,457 @@
+{
+  "test": "wave_depth_multisession",
+  "source_commit": "3b90ec17ea9dde89e995a9a46222a93df0f992d4",
+  "methodology": {
+    "sessions": 10,
+    "depths": [
+      1,
+      2,
+      3,
+      5,
+      10
+    ],
+    "warmups_per_depth_per_session": 5,
+    "measured_iterations_per_depth_per_session": 100,
+    "total_measured_operations": 5000,
+    "mean_and_percentiles": "pooled accepted-proof verification latencies",
+    "ci95": "normal-approximation confidence interval across ten session means"
+  },
+  "summary": [
+    {
+      "depth": 1,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 3.20394,
+      "p95_ms": 3.526125,
+      "p99_ms": 3.688125,
+      "min_ms": 2.949375,
+      "max_ms": 5.205208,
+      "session_mean_std_ms": 0.041615,
+      "ci95_across_session_means_ms": 0.025793,
+      "proof_bytes_mean": 49026.0
+    },
+    {
+      "depth": 2,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 5.148987,
+      "p95_ms": 5.594166,
+      "p99_ms": 7.207251,
+      "min_ms": 4.710791,
+      "max_ms": 14.67075,
+      "session_mean_std_ms": 0.247688,
+      "ci95_across_session_means_ms": 0.153519,
+      "proof_bytes_mean": 96035.0
+    },
+    {
+      "depth": 3,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 7.045997,
+      "p95_ms": 7.529041,
+      "p99_ms": 9.113625,
+      "min_ms": 6.480416,
+      "max_ms": 20.392375,
+      "session_mean_std_ms": 0.231027,
+      "ci95_across_session_means_ms": 0.143192,
+      "proof_bytes_mean": 143040.0
+    },
+    {
+      "depth": 5,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 10.877199,
+      "p95_ms": 11.688292,
+      "p99_ms": 12.439833,
+      "min_ms": 10.087709,
+      "max_ms": 29.279958,
+      "session_mean_std_ms": 0.211844,
+      "ci95_across_session_means_ms": 0.131302,
+      "proof_bytes_mean": 237050.0
+    },
+    {
+      "depth": 10,
+      "sessions": 10,
+      "iterations_per_session": 100,
+      "accepted": 1000,
+      "rejected": 0,
+      "count": 1000,
+      "mean_ms": 20.621655,
+      "p95_ms": 22.732542,
+      "p99_ms": 26.605041,
+      "min_ms": 19.282834,
+      "max_ms": 48.849416,
+      "session_mean_std_ms": 0.246059,
+      "ci95_across_session_means_ms": 0.152509,
+      "proof_bytes_mean": 472075.0
+    }
+  ],
+  "per_session": [
+    {
+      "session": "01",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.169442,
+      "p95_ms": 3.506958
+    },
+    {
+      "session": "02",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.156825,
+      "p95_ms": 3.543042
+    },
+    {
+      "session": "03",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.206266,
+      "p95_ms": 3.473584
+    },
+    {
+      "session": "04",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.196283,
+      "p95_ms": 3.498709
+    },
+    {
+      "session": "05",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.172541,
+      "p95_ms": 3.51025
+    },
+    {
+      "session": "06",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.237704,
+      "p95_ms": 3.45975
+    },
+    {
+      "session": "07",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.206791,
+      "p95_ms": 3.426375
+    },
+    {
+      "session": "08",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.239912,
+      "p95_ms": 3.561625
+    },
+    {
+      "session": "09",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.165025,
+      "p95_ms": 3.404041
+    },
+    {
+      "session": "10",
+      "depth": 1,
+      "accepted": 100,
+      "mean_ms": 3.288614,
+      "p95_ms": 3.687625
+    },
+    {
+      "session": "01",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 4.900653,
+      "p95_ms": 5.122458
+    },
+    {
+      "session": "02",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.063464,
+      "p95_ms": 5.365458
+    },
+    {
+      "session": "03",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.170941,
+      "p95_ms": 6.01675
+    },
+    {
+      "session": "04",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.004111,
+      "p95_ms": 5.238917
+    },
+    {
+      "session": "05",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.024472,
+      "p95_ms": 5.248458
+    },
+    {
+      "session": "06",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.30298,
+      "p95_ms": 5.887875
+    },
+    {
+      "session": "07",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.108531,
+      "p95_ms": 5.348958
+    },
+    {
+      "session": "08",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.066586,
+      "p95_ms": 5.318875
+    },
+    {
+      "session": "09",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.786495,
+      "p95_ms": 11.85975
+    },
+    {
+      "session": "10",
+      "depth": 2,
+      "accepted": 100,
+      "mean_ms": 5.061635,
+      "p95_ms": 5.319209
+    },
+    {
+      "session": "01",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 6.82178,
+      "p95_ms": 7.450375
+    },
+    {
+      "session": "02",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 7.601496,
+      "p95_ms": 12.132375
+    },
+    {
+      "session": "03",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 6.804288,
+      "p95_ms": 7.031333
+    },
+    {
+      "session": "04",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 6.931949,
+      "p95_ms": 7.240916
+    },
+    {
+      "session": "05",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 7.01991,
+      "p95_ms": 7.524208
+    },
+    {
+      "session": "06",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 7.125391,
+      "p95_ms": 7.796625
+    },
+    {
+      "session": "07",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 6.957764,
+      "p95_ms": 7.228584
+    },
+    {
+      "session": "08",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 6.98724,
+      "p95_ms": 7.315833
+    },
+    {
+      "session": "09",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 7.216607,
+      "p95_ms": 7.959666
+    },
+    {
+      "session": "10",
+      "depth": 3,
+      "accepted": 100,
+      "mean_ms": 6.993542,
+      "p95_ms": 7.254167
+    },
+    {
+      "session": "01",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 10.511372,
+      "p95_ms": 10.840042
+    },
+    {
+      "session": "02",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 11.16798,
+      "p95_ms": 12.125708
+    },
+    {
+      "session": "03",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 11.091553,
+      "p95_ms": 12.439833
+    },
+    {
+      "session": "04",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 10.686814,
+      "p95_ms": 11.218667
+    },
+    {
+      "session": "05",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 10.707931,
+      "p95_ms": 11.255042
+    },
+    {
+      "session": "06",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 11.010018,
+      "p95_ms": 12.012625
+    },
+    {
+      "session": "07",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 10.799271,
+      "p95_ms": 11.2065
+    },
+    {
+      "session": "08",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 10.807449,
+      "p95_ms": 11.224625
+    },
+    {
+      "session": "09",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 11.0908,
+      "p95_ms": 12.016042
+    },
+    {
+      "session": "10",
+      "depth": 5,
+      "accepted": 100,
+      "mean_ms": 10.898798,
+      "p95_ms": 11.399084
+    },
+    {
+      "session": "01",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.143235,
+      "p95_ms": 22.4315
+    },
+    {
+      "session": "02",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.70798,
+      "p95_ms": 23.043917
+    },
+    {
+      "session": "03",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.239828,
+      "p95_ms": 22.287125
+    },
+    {
+      "session": "04",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.870329,
+      "p95_ms": 22.204417
+    },
+    {
+      "session": "05",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.553915,
+      "p95_ms": 22.842458
+    },
+    {
+      "session": "06",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.703641,
+      "p95_ms": 22.065542
+    },
+    {
+      "session": "07",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.650399,
+      "p95_ms": 22.638375
+    },
+    {
+      "session": "08",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.843077,
+      "p95_ms": 23.035125
+    },
+    {
+      "session": "09",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.805708,
+      "p95_ms": 22.559542
+    },
+    {
+      "session": "10",
+      "depth": 10,
+      "accepted": 100,
+      "mean_ms": 20.698438,
+      "p95_ms": 22.655625
+    }
+  ],
+  "files": {
+    "combined_raw": "results/baselines/wave_depth_multisession_raw.csv",
+    "summary_csv": "results/baselines/wave_depth_multisession_summary.csv"
+  }
+}

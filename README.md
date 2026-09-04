@@ -187,25 +187,19 @@ python3 experiments/run_stratified_chain_security.py quick
 
 ### Public WAVE baseline
 
-The repository includes a Docker wrapper that obtains the official WAVE source
-at a fixed commit and measures warmed, in-process proof verification at
-delegation depths 1, 2, 3, 5, and 10. Build and run it with:
+The repository includes a Docker wrapper that obtains the official WAVE source at commit `3b90ec17ea9dde89e995a9a46222a93df0f992d4`. It measures warmed, in-process proof verification at delegation depths 1, 2, 3, 5, and 10.
+
+The archived publication-scale experiment contains ten independent sessions, 100 measured verifications per depth and session, and five untimed warm-up verifications per depth. Per-operation raw measurements, per-session results, an aggregate summary, and the processing utility are included under `results/baselines/` and `experiments/baselines/wave/`.
+
+Build the pinned native ARM64 image with:
 
 ```bash
 docker build --platform linux/arm64 \
   -t cod-mdtwin-wave-baseline:3b90ec1-arm64 \
   experiments/baselines/wave
-
-docker run --rm --platform linux/arm64 \
-  -e WAVE_ITERATIONS=100 \
-  -e WAVE_WARMUPS=5 \
-  -e WAVE_RESULTS_PATH=/results/wave_depth_results.json \
-  -v "$(pwd)/results/baselines:/results" \
-  cod-mdtwin-wave-baseline:3b90ec1-arm64
 ```
 
-See `experiments/baselines/wave/README.md` for the measured path,
-reproducibility details, recorded values, and comparison limitations.
+See `experiments/baselines/wave/README.md` for the exact ten-session commands, recorded results, measured path, and comparison limitations.
 
 ## Formal verification
 

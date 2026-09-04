@@ -2,6 +2,7 @@ package main
 
 import (
 	"context"
+	"encoding/csv"
 	"encoding/json"
 	"fmt"
 	"io/ioutil"
@@ -21,6 +22,7 @@ const waveCommit = "3b90ec17ea9dde89e995a9a46222a93df0f992d4"
 type waveDepthResult struct {
 	System       string  `json:"system"`
 	SourceCommit string  `json:"source_commit"`
+	Session      string  `json:"session"`
 	Depth        int     `json:"depth"`
 	Iterations   int     `json:"iterations"`
 	Warmups      int     `json:"warmups"`
@@ -33,6 +35,14 @@ type waveDepthResult struct {
 	MaxMS        float64 `json:"max_ms"`
 }
 
+type waveDepthSample struct {
+	Session    string
+	Depth      int
+	Iteration  int
+	LatencyNS  int64
+	ProofBytes int
+}
+
 func envInt(name string, fallback int) int {
 	raw := os.Getenv(name)
 	if raw == "" {
@@ -41,6 +51,14 @@ func envInt(name string, fallback int) int {
 	value, err := strconv.Atoi(raw)
 	if err != nil || value < 1 {
 		panic(fmt.Sprintf("%s must be a positive integer", name))
+	}
+	return value
+}
+
+func envString(name, fallback string) string {
+	value := os.Getenv(name)
+	if value == "" {
+		return fallback
 	}
 	return value
 }
@@ -103,7 +121,7 @@ func percentileNS(sorted []int64, percentile int) int64 {
 	return sorted[index-1]
 }
 
-func summarizeWaveDepth(depth, iterations, warmups, proofBytes int, samples []int64) waveDepthResult {
+func summarizeWaveDepth(session string, depth, iterations, warmups, proofBytes int, samples []int64) waveDepthResult {
 	sorted := append([]int64(nil), samples...)
 	sort.Slice(sorted, func(i, j int) bool { return sorted[i] < sorted[j] })
 	var total int64
@@ -114,6 +132,7 @@ func summarizeWaveDepth(depth, iterations, warmups, proofBytes int, samples []in
 	return waveDepthResult{
 		System:       "WAVE",
 		SourceCommit: waveCommit,
+		Session:      session,
 		Depth:        depth,
 		Iterations:   iterations,
 		Warmups:      warmups,
@@ -127,12 +146,51 @@ func summarizeWaveDepth(depth, iterations, warmups, proofBytes int, samples []in
 	}
 }
 
+func writeWaveRaw(path string, samples []waveDepthSample) error {
+	file, err := os.Create(path)
+	if err != nil {
+		return err
+	}
+	writer := csv.NewWriter(file)
+	if err := writer.Write([]string{
+		"session", "system", "source_commit", "depth", "iteration",
+		"accepted", "latency_ms", "proof_bytes",
+	}); err != nil {
+		file.Close()
+		return err
+	}
+	for _, sample := range samples {
+		latencyMS := float64(sample.LatencyNS) / float64(time.Millisecond)
+		if err := writer.Write([]string{
+			sample.Session,
+			"WAVE",
+			waveCommit,
+			strconv.Itoa(sample.Depth),
+			strconv.Itoa(sample.Iteration),
+			"true",
+			strconv.FormatFloat(latencyMS, 'f', 9, 64),
+			strconv.Itoa(sample.ProofBytes),
+		}); err != nil {
+			file.Close()
+			return err
+		}
+	}
+	writer.Flush()
+	if err := writer.Error(); err != nil {
+		file.Close()
+		return err
+	}
+	return file.Close()
+}
+
 func TestWaveDepthComparison(t *testing.T) {
 	runtime.GOMAXPROCS(1)
 	iterations := envInt("WAVE_ITERATIONS", 100)
 	warmups := envInt("WAVE_WARMUPS", 5)
+	session := envString("WAVE_SESSION", "01")
 	depths := []int{1, 2, 3, 5, 10}
 	results := make([]waveDepthResult, 0, len(depths))
+	rawSamples := make([]waveDepthSample, 0, len(depths)*iterations)
 
 	for _, depth := range depths {
 		proof := buildLinearWaveProof(t, depth)
@@ -141,12 +199,20 @@ func TestWaveDepthComparison(t *testing.T) {
 		}
 
 		samples := make([]int64, 0, iterations)
-		for iteration := 0; iteration < iterations; iteration++ {
+		for iteration := 1; iteration <= iterations; iteration++ {
 			started := time.Now()
 			verifyWaveProof(t, proof)
-			samples = append(samples, time.Since(started).Nanoseconds())
+			latencyNS := time.Since(started).Nanoseconds()
+			samples = append(samples, latencyNS)
+			rawSamples = append(rawSamples, waveDepthSample{
+				Session:    session,
+				Depth:      depth,
+				Iteration:  iteration,
+				LatencyNS:  latencyNS,
+				ProofBytes: len(proof),
+			})
 		}
-		result := summarizeWaveDepth(depth, iterations, warmups, len(proof), samples)
+		result := summarizeWaveDepth(session, depth, iterations, warmups, len(proof), samples)
 		results = append(results, result)
 		encoded, err := json.Marshal(result)
 		require.NoError(t, err)
@@ -157,5 +223,8 @@ func TestWaveDepthComparison(t *testing.T) {
 		encoded, err := json.MarshalIndent(results, "", "  ")
 		require.NoError(t, err)
 		require.NoError(t, ioutil.WriteFile(outputPath, append(encoded, '\n'), 0644))
+	}
+	if rawPath := os.Getenv("WAVE_RAW_PATH"); rawPath != "" {
+		require.NoError(t, writeWaveRaw(rawPath, rawSamples))
 	}
 }

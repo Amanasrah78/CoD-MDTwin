@@ -258,7 +258,7 @@ Do not use the example identities, keys, policies, or deployment configuration i
 
 If you use this artifact, cite the versioned software release:
 
-> Ahmed Manasrah. *CoD-MDTwin* (Version 1.3.0). Zenodo. https://doi.org/10.5281/zenodo.21953261
+> Ahmed Manasrah. *CoD-MDTwin* (Version 1.3.0). Zenodo. https://doi.org/10.5281/zenodo.22305188
 
 Machine-readable citation metadata is provided in `CITATION.cff`.
 
